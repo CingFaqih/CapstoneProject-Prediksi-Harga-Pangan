@@ -1,0 +1,36 @@
+
+# Node.js
+node_modules/
+build/
+dist/
+coverage/
+*.log
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python / Flask
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Konfigurasi database lokal
+backend/config.py
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak

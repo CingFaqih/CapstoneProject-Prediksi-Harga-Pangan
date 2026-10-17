@@ -1,0 +1,6 @@
+{
+  "name": "Maluku Food Price LSTM Forecasting Dashboard",
+  "description": "Dashboard Monitoring dan Prediksi Harga 10 Komoditas Pangan di Provinsi Maluku Menggunakan Algoritma Long Short-Term Memory (LSTM) Berbasis Data PIHPS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
