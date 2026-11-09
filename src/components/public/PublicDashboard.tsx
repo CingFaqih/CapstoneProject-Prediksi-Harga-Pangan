@@ -1,336 +1,1686 @@
-import React, { useState, useMemo } from 'react';
-import { Commodity, PriceRecord, PublicNavTab } from '../../types.ts';
-import { MetricCard } from '../common/MetricCard.tsx';
-import { SimpleLineChart } from '../common/SimpleLineChart.tsx';
+import React, {
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
+
 import {
-  Calendar,
-  Layers,
-  Cpu,
-  TrendingUp,
-  ArrowUpRight,
+  Commodity,
+  PriceRecord,
+  PublicNavTab,
+} from '../../types.ts';
+
+import {
+  SimpleLineChart,
+} from '../common/SimpleLineChart.tsx';
+
+import {
+  BarChart3,
+  ChevronRight,
+  Clock3,
   Database,
-  Info,
-  CheckCircle2,
+  Layers3,
+  LineChart,
+  TrendingDown,
+  TrendingUp,
 } from 'lucide-react';
+
+
+/* =========================================================
+   PROPS
+   ========================================================= */
 
 interface PublicDashboardProps {
   commodities: Commodity[];
   historicalPrices: PriceRecord[];
-  onNavigate: (tab: PublicNavTab) => void;
-  onSelectCommodityForHistory: (commodityId: string) => void;
+
+  onNavigate:
+    (tab: PublicNavTab) => void;
+
+  onSelectCommodityForHistory:
+    (commodityId: string) => void;
 }
 
-export const PublicDashboard: React.FC<PublicDashboardProps> = ({
+
+/* =========================================================
+   COMPONENT
+   ========================================================= */
+
+export const PublicDashboard:
+React.FC<PublicDashboardProps> = ({
   commodities,
   historicalPrices,
   onNavigate,
   onSelectCommodityForHistory,
 }) => {
-  const [selectedQuickCommodity, setSelectedQuickCommodity] = useState<string>('beras');
 
-  const activeCommodity = useMemo(() => {
-    return commodities.find((c) => c.id === selectedQuickCommodity) || commodities[0];
-  }, [commodities, selectedQuickCommodity]);
+  /* =======================================================
+     SELECTED COMMODITY
+     ======================================================= */
 
-  // Extract weekly dates and prices for active commodity (last 24 weeks for overview chart)
-  const chartData = useMemo(() => {
-    if (!activeCommodity) return { labels: [], data: [] };
-    const filtered = historicalPrices.filter((p) => p.commodityId === activeCommodity.id);
-    const recent = filtered.slice(-26); // last 26 weeks (~6 months)
-    return {
-      labels: recent.map((r) => {
-        const parts = r.date.split('-');
-        return `${parts[2]}/${parts[1]}/${parts[0].slice(2)}`;
-      }),
-      data: recent.map((r) => r.price),
+  const [
+    selectedCommodityId,
+    setSelectedCommodityId,
+  ] = useState<string>('');
+
+
+  useEffect(() => {
+
+    if (
+      commodities.length === 0
+    ) {
+      return;
+    }
+
+
+    const exists =
+      commodities.some(
+        (
+          commodity
+        ) =>
+          commodity.id ===
+          selectedCommodityId
+      );
+
+
+    if (!exists) {
+
+      setSelectedCommodityId(
+        commodities[0].id
+      );
+
+    }
+
+  }, [
+    commodities,
+    selectedCommodityId,
+  ]);
+
+
+  /* =======================================================
+     ACTIVE COMMODITY
+     ======================================================= */
+
+  const activeCommodity =
+    useMemo(() => {
+
+      return (
+        commodities.find(
+          (
+            commodity
+          ) =>
+            commodity.id ===
+            selectedCommodityId
+        ) ||
+        commodities[0]
+      );
+
+    }, [
+      commodities,
+      selectedCommodityId,
+    ]);
+
+
+  /* =======================================================
+     ACTIVE HISTORICAL DATA
+     ======================================================= */
+
+  const activeHistory =
+    useMemo(() => {
+
+      if (
+        !activeCommodity
+      ) {
+        return [];
+      }
+
+
+      return historicalPrices
+        .filter(
+          (
+            record
+          ) =>
+            record.commodityId ===
+            activeCommodity.id
+        )
+        .sort(
+          (
+            a,
+            b
+          ) =>
+            new Date(
+              `${a.date}T00:00:00`
+            ).getTime() -
+            new Date(
+              `${b.date}T00:00:00`
+            ).getTime()
+        );
+
+    }, [
+      historicalPrices,
+      activeCommodity,
+    ]);
+
+
+  /* =======================================================
+     FORMATTERS
+     ======================================================= */
+
+  const formatPrice =
+    (
+      value: number
+    ) => {
+
+      return Number(
+        value
+      ).toLocaleString(
+        'id-ID',
+        {
+          maximumFractionDigits:
+            2,
+        }
+      );
+
     };
-  }, [historicalPrices, activeCommodity]);
+
+
+  const formatShortDate =
+    (
+      dateString: string
+    ) => {
+
+      if (
+        !dateString
+      ) {
+        return '—';
+      }
+
+
+      return new Date(
+        `${dateString}T00:00:00`
+      ).toLocaleDateString(
+        'id-ID',
+        {
+          day:
+            '2-digit',
+
+          month:
+            'short',
+
+          year:
+            'numeric',
+        }
+      );
+
+    };
+
+
+  const formatLongDate =
+    (
+      dateString: string
+    ) => {
+
+      if (
+        !dateString
+      ) {
+        return '—';
+      }
+
+
+      return new Date(
+        `${dateString}T00:00:00`
+      ).toLocaleDateString(
+        'id-ID',
+        {
+          day:
+            'numeric',
+
+          month:
+            'long',
+
+          year:
+            'numeric',
+        }
+      );
+
+    };
+
+
+  /* =======================================================
+     HISTORICAL SUMMARY
+     ======================================================= */
+
+  const historicalSummary =
+    useMemo(() => {
+
+      if (
+        activeHistory.length ===
+        0
+      ) {
+
+        return {
+          count:
+            0,
+
+          min:
+            0,
+
+          max:
+            0,
+
+          average:
+            0,
+        };
+
+      }
+
+
+      const values =
+        activeHistory.map(
+          (
+            record
+          ) =>
+            Number(
+              record.price
+            )
+        );
+
+
+      const total =
+        values.reduce(
+          (
+            sum,
+            value
+          ) =>
+            sum +
+            value,
+          0
+        );
+
+
+      return {
+
+        count:
+          values.length,
+
+        min:
+          Math.min(
+            ...values
+          ),
+
+        max:
+          Math.max(
+            ...values
+          ),
+
+        average:
+          total /
+          values.length,
+
+      };
+
+    }, [
+      activeHistory,
+    ]);
+
+
+  /* =======================================================
+     CHART DATA
+     26 MINGGU TERAKHIR
+     ======================================================= */
+
+  const chartData =
+    useMemo(() => {
+
+      if (
+        activeHistory.length ===
+        0
+      ) {
+
+        return {
+          labels:
+            [] as string[],
+
+          data:
+            [] as number[],
+
+          startDate:
+            '',
+
+          endDate:
+            '',
+        };
+
+      }
+
+
+      const lastRecord =
+        activeHistory[
+          activeHistory.length -
+          1
+        ];
+
+
+      const endDate =
+        new Date(
+          `${lastRecord.date}T00:00:00`
+        );
+
+
+      const startDate =
+        new Date(
+          endDate
+        );
+
+
+      startDate.setDate(
+        startDate.getDate() -
+        26 * 7
+      );
+
+
+      const recent =
+        activeHistory.filter(
+          (
+            record
+          ) => {
+
+            const recordDate =
+              new Date(
+                `${record.date}T00:00:00`
+              );
+
+
+            return (
+              recordDate >=
+                startDate &&
+              recordDate <=
+                endDate
+            );
+
+          }
+        );
+
+
+      return {
+
+        labels:
+          recent.map(
+            (
+              record
+            ) => {
+
+              const [
+                year,
+                month,
+                day,
+              ] =
+                record.date.split(
+                  '-'
+                );
+
+
+              return (
+                `${day}/${month}/` +
+                `${year.slice(
+                  2
+                )}`
+              );
+
+            }
+          ),
+
+
+        data:
+          recent.map(
+            (
+              record
+            ) =>
+              Number(
+                record.price
+              )
+          ),
+
+
+        startDate:
+          recent[0]?.date ||
+          '',
+
+
+        endDate:
+          recent[
+            recent.length -
+            1
+          ]?.date ||
+          '',
+
+      };
+
+    }, [
+      activeHistory,
+    ]);
+
+
+  /* =======================================================
+     EMPTY STATE
+     ======================================================= */
+
+  if (
+    commodities.length ===
+      0 ||
+    !activeCommodity
+  ) {
+
+    return (
+
+      <div
+        className="
+          rounded-xl
+          border
+          border-slate-200
+          bg-white
+          p-8
+          text-center
+          text-sm
+          text-slate-500
+        "
+      >
+
+        Data dashboard belum tersedia.
+
+      </div>
+
+    );
+
+  }
+
+
+  /* =======================================================
+     RENDER
+     ======================================================= */
 
   return (
-    <div className="space-y-8 pb-12">
-      {/* Hero Header Area */}
-      <section className="relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-xs">
-        <div className="relative z-10 max-w-3xl space-y-3">
-          <div className="flex items-center gap-2 text-xs font-semibold text-emerald-800 tracking-wide uppercase">
-            <span>Penelitian Skripsi & Analitika Pangan</span>
-            <span aria-hidden="true">·</span>
-            <span>PIHPS Maluku</span>
-          </div>
 
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            Prediksi Harga Pangan Provinsi Maluku
-          </h1>
+    <div
+      className="
+        space-y-5
+        pb-8
+      "
+    >
 
-          <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
-            Dashboard Monitoring dan Prediksi Harga 10 Komoditas Pangan Menggunakan Algoritma Long Short-Term Memory (LSTM).
-          </p>
+      {/* =================================================
+          DASHBOARD HEADER
+          ================================================= */}
 
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-2 text-xs text-slate-500 font-medium">
-            <span className="flex items-center gap-1.5">
-              <Calendar className="h-3.5 w-3.5 text-slate-400" />
-              Periode Data: <strong className="text-slate-700 font-semibold">31 Januari 2023 – 31 Agustus 2026</strong>
-            </span>
-            <span aria-hidden="true" className="text-slate-300">·</span>
-            <span className="flex items-center gap-1.5">
-              <Cpu className="h-3.5 w-3.5 text-slate-400" />
-              Model: <strong className="text-slate-700 font-semibold">Long Short-Term Memory (LSTM)</strong>
-            </span>
-            <span aria-hidden="true" className="text-slate-300">·</span>
-            <span className="flex items-center gap-1.5">
-              <TrendingUp className="h-3.5 w-3.5 text-slate-400" />
-              Periode Ramalan: <strong className="text-slate-700 font-semibold">September – Desember 2026</strong>
-            </span>
-          </div>
-        </div>
+      <header
+        className="
+          border-b
+          border-slate-200
+          pb-4
+        "
+      >
 
-        {/* Decorative Watermark-Free Visual Badge */}
-        <div className="mt-6 flex flex-wrap gap-2 pt-4 border-t border-slate-100">
-          <button
-            onClick={() => onNavigate('aktual-prediksi')}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-white bg-slate-900 hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
-          >
-            <span>Lihat Aktual vs Prediksi</span>
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </button>
-          <button
-            onClick={() => onNavigate('prediksi')}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition-colors cursor-pointer"
-          >
-            <span>Hasil Ramalan Sep–Des 2026</span>
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </button>
-          <button
-            onClick={() => onNavigate('evaluasi')}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200/80 rounded-lg transition-colors cursor-pointer"
-          >
-            <span>Evaluasi Model (MAE, RMSE, MAPE)</span>
-          </button>
-        </div>
+        <h1
+          className="
+            text-xl
+            font-bold
+            tracking-tight
+            text-slate-900
+
+            sm:text-2xl
+          "
+        >
+
+          Dashboard Prediksi Harga Pangan Provinsi Maluku
+
+        </h1>
+
+
+        <p
+          className="
+            mt-1
+            max-w-2xl
+            text-sm
+            leading-relaxed
+            text-slate-500
+          "
+        >
+
+          Ringkasan harga mingguan,
+          evaluasi model LSTM,
+          dan ramalan harga pangan.
+
+        </p>
+
+      </header>
+
+
+      {/* =================================================
+          KPI CARDS
+          ================================================= */}
+
+      <section
+        className="
+          grid
+          grid-cols-2
+          gap-3
+
+          md:grid-cols-3
+          xl:grid-cols-5
+        "
+      >
+
+        <DashboardStatCard
+          label="Komoditas"
+          value={
+            `${commodities.length}`
+          }
+          helper="Komoditas pangan"
+          icon={
+
+            <Layers3
+              className="
+                h-4
+                w-4
+              "
+            />
+
+          }
+        />
+
+
+        <DashboardStatCard
+          label="Observasi"
+          value={
+            `${historicalSummary.count}`
+          }
+          helper="Per komoditas"
+          icon={
+
+            <Database
+              className="
+                h-4
+                w-4
+              "
+            />
+
+          }
+        />
+
+
+        <DashboardStatCard
+          label="Frekuensi"
+          value="Mingguan"
+          helper="Data harga PIHPS"
+          icon={
+
+            <Clock3
+              className="
+                h-4
+                w-4
+              "
+            />
+
+          }
+        />
+
+
+        <DashboardStatCard
+          label="Data Uji"
+          value="30"
+          helper="Per komoditas"
+          icon={
+
+            <BarChart3
+              className="
+                h-4
+                w-4
+              "
+            />
+
+          }
+        />
+
+
+        <DashboardStatCard
+          label="Ramalan"
+          value="18"
+          helper="Minggu / komoditas"
+          icon={
+
+            <TrendingUp
+              className="
+                h-4
+                w-4
+              "
+            />
+
+          }
+        />
+
       </section>
 
-      {/* 4 Summary Cards (as specified in prompt) */}
-      <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <MetricCard
-          label="1. Komoditas Pangan"
-          value="10 Komoditas"
-          subtext="Komoditas Strategis PIHPS"
-          secondaryText="Provinsi Maluku"
-          icon={<Layers className="h-4 w-4" />}
-        />
-        <MetricCard
-          label="2. Frekuensi & Data"
-          value="Data Mingguan"
-          subtext="187 Titik Data / Komoditas"
-          secondaryText="31 Jan 2023 – 31 Agu 2026"
-          icon={<Database className="h-4 w-4" />}
-        />
-        <MetricCard
-          label="3. Algoritma Machine Learning"
-          value="Model LSTM"
-          subtext="Recurrent Neural Network"
-          secondaryText="Lag 4 Minggu · Adam"
-          icon={<Cpu className="h-4 w-4" />}
-        />
-        <MetricCard
-          label="4. Periode Ramalan"
-          value="Sep – Des 2026"
-          subtext="18 Minggu ke Depan"
-          secondaryText="HBKN Akhir Tahun"
-          icon={<TrendingUp className="h-4 w-4" />}
-        />
-      </section>
 
-      {/* Main Chart Section: Ringkasan Perkembangan Harga */}
-      <section className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xs">
-        <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-slate-100 pb-4">
-          <div>
-            <h2 className="text-lg font-bold text-slate-900">
-              Perkembangan Harga Historis ({activeCommodity?.name})
-            </h2>
-            <p className="text-xs text-slate-500 mt-0.5">
-              Grafik 26 minggu terakhir berdasarkan catatan PIHPS Maluku
-            </p>
-          </div>
+      {/* =================================================
+          MAIN GRID
+          ================================================= */}
 
-          {/* Quick Commodity Selector */}
-          <div className="flex items-center gap-2">
-            <label htmlFor="quick-comm" className="text-xs font-medium text-slate-600">
-              Pilih Komoditas:
-            </label>
+      <section
+        className="
+          grid
+          grid-cols-1
+          gap-4
+
+          xl:grid-cols-12
+        "
+      >
+
+        {/* =================================================
+            HISTORICAL CHART
+            ================================================= */}
+
+        <div
+          className="
+            overflow-hidden
+
+            rounded-xl
+            border
+            border-slate-200
+            bg-white
+
+            shadow-sm
+
+            xl:col-span-8
+          "
+        >
+
+          {/* CHART HEADER */}
+
+          <div
+            className="
+              flex
+              flex-col
+              gap-3
+
+              border-b
+              border-slate-100
+
+              px-5
+              py-4
+
+              sm:flex-row
+              sm:items-center
+              sm:justify-between
+            "
+          >
+
+            <div>
+
+              <h2
+                className="
+                  text-sm
+                  font-bold
+                  text-slate-900
+                "
+              >
+
+                Perkembangan Harga Historis
+
+              </h2>
+
+
+              <p
+                className="
+                  mt-0.5
+                  text-[11px]
+                  text-slate-500
+                "
+              >
+
+                26 minggu terakhir · {activeCommodity.name}
+
+              </p>
+
+            </div>
+
+
+            {/* COMMODITY SELECT */}
+
             <select
-              id="quick-comm"
-              value={selectedQuickCommodity}
-              onChange={(e) => setSelectedQuickCommodity(e.target.value)}
-              className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold text-slate-800 shadow-2xs focus:border-emerald-600 focus:outline-none"
+              value={
+                selectedCommodityId
+              }
+              onChange={
+                (
+                  event
+                ) =>
+                  setSelectedCommodityId(
+                    event.target.value
+                  )
+              }
+              className="
+                min-w-[180px]
+
+                rounded-lg
+                border
+                border-slate-200
+                bg-slate-50
+
+                px-3
+                py-2
+
+                text-xs
+                font-medium
+                text-slate-700
+
+                outline-none
+                transition
+
+                focus:border-[#0F8A78]
+                focus:bg-white
+                focus:ring-2
+                focus:ring-emerald-100
+              "
             >
-              {commodities.map((c) => (
-                <option key={c.id} value={c.id}>
-                  {c.name} ({c.unit})
-                </option>
-              ))}
+
+              {commodities.map(
+                (
+                  commodity
+                ) => (
+
+                  <option
+                    key={
+                      commodity.id
+                    }
+                    value={
+                      commodity.id
+                    }
+                  >
+
+                    {commodity.name}
+
+                  </option>
+
+                )
+              )}
+
             </select>
-          </div>
-        </div>
 
-        {/* Quick Highlights for the active commodity */}
-        <div className="mb-5 grid grid-cols-2 gap-3 sm:grid-cols-4 text-xs">
-          <div className="rounded-lg bg-slate-50 p-3 border border-slate-100">
-            <span className="text-slate-500 block">Harga Terkini (31 Agu 2026)</span>
-            <span className="text-base font-bold font-mono text-slate-900">
-              Rp {activeCommodity.currentPrice.toLocaleString('id-ID')} / {activeCommodity.unit}
-            </span>
           </div>
-          <div className="rounded-lg bg-slate-50 p-3 border border-slate-100">
-            <span className="text-slate-500 block">Perubahan Mingguan</span>
-            <span
-              className={`text-base font-bold font-mono ${
-                activeCommodity.changePercent > 0
-                  ? 'text-rose-600'
-                  : activeCommodity.changePercent < 0
-                  ? 'text-emerald-600'
-                  : 'text-slate-600'
-              }`}
+
+
+          {/* CHART */}
+
+          <div
+            className="
+              px-4
+              py-5
+            "
+          >
+
+            <SimpleLineChart
+              labels={
+                chartData.labels
+              }
+              series={[
+                {
+                  id:
+                    'historical-series',
+
+                  name:
+                    `Harga ${activeCommodity.name}`,
+
+                  color:
+                    '#097B27',
+
+                  data:
+                    chartData.data,
+                },
+              ]}
+              height={
+                330
+              }
+              yAxisLabel={
+                `Harga (${activeCommodity.unit})`
+              }
+            />
+
+          </div>
+
+
+          {/* CHART FOOTER */}
+
+          <div
+            className="
+              flex
+              flex-col
+              gap-2
+
+              border-t
+              border-slate-100
+
+              px-5
+              py-3
+
+              text-[11px]
+              text-slate-500
+
+              sm:flex-row
+              sm:items-center
+              sm:justify-between
+            "
+          >
+
+            <span>
+
+              Periode grafik:{' '}
+
+              <strong
+                className="
+                  font-medium
+                  text-slate-700
+                "
+              >
+
+                {formatShortDate(
+                  chartData.startDate
+                )}
+
+                {' – '}
+
+                {formatShortDate(
+                  chartData.endDate
+                )}
+
+              </strong>
+
+            </span>
+
+
+            <button
+              type="button"
+              onClick={
+                () =>
+                  onSelectCommodityForHistory(
+                    activeCommodity.id
+                  )
+              }
+              className="
+                inline-flex
+                cursor-pointer
+                items-center
+                gap-1
+
+                font-semibold
+                text-[#0F8A78]
+
+                hover:underline
+              "
             >
-              {activeCommodity.changePercent > 0 ? '+' : ''}
-              {activeCommodity.changePercent.toFixed(2)}%
-            </span>
+
+              Lihat harga historis
+
+              <ChevronRight
+                className="
+                  h-3
+                  w-3
+                "
+              />
+
+            </button>
+
           </div>
-          <div className="rounded-lg bg-slate-50 p-3 border border-slate-100">
-            <span className="text-slate-500 block">Kategori Bahan Pangan</span>
-            <span className="text-sm font-semibold text-slate-800">
-              {activeCommodity.category}
-            </span>
-          </div>
-          <div className="rounded-lg bg-slate-50 p-3 border border-slate-100">
-            <span className="text-slate-500 block">Akurasi Model (MAPE)</span>
-            <span className="text-base font-bold font-mono text-emerald-700">
-              {activeCommodity.mape ? `${activeCommodity.mape.toFixed(2)}%` : '—'}
-            </span>
-          </div>
+
         </div>
 
-        {/* Responsive Line Chart */}
-        <SimpleLineChart
-          labels={chartData.labels}
-          series={[
-            {
-              id: 'historical-series',
-              name: `Harga Historis ${activeCommodity.name}`,
-              color: '#0284c7', // Sky-600
-              data: chartData.data,
-            },
-          ]}
-          height={290}
-          yAxisLabel={`Harga ${activeCommodity.name} (Rp/${activeCommodity.unit})`}
+
+        {/* =================================================
+            COMMODITY SUMMARY
+            ================================================= */}
+
+        <aside
+          className="
+            overflow-hidden
+
+            rounded-xl
+            border
+            border-slate-200
+            bg-white
+
+            shadow-sm
+
+            xl:col-span-4
+          "
+        >
+
+          {/* SUMMARY HEADER */}
+
+          <div
+            className="
+              border-b
+              border-slate-100
+
+              px-5
+              py-4
+            "
+          >
+
+            <div
+              className="
+                flex
+                items-start
+                justify-between
+                gap-3
+              "
+            >
+
+              <div>
+
+                <span
+                  className="
+                    text-[10px]
+                    font-semibold
+                    uppercase
+                    tracking-wider
+                    text-slate-400
+                  "
+                >
+
+                  Ringkasan Komoditas
+
+                </span>
+
+
+                <h2
+                  className="
+                    mt-1
+                    text-lg
+                    font-bold
+                    text-slate-900
+                  "
+                >
+
+                  {activeCommodity.name}
+
+                </h2>
+
+
+                <p
+                  className="
+                    mt-0.5
+                    text-xs
+                    text-slate-500
+                  "
+                >
+
+                  {activeCommodity.category}
+
+                  {' · '}
+
+                  {activeCommodity.unit}
+
+                </p>
+
+              </div>
+
+
+              <div
+                className="
+                  flex
+                  h-9
+                  w-9
+                  items-center
+                  justify-center
+
+                  rounded-lg
+
+                  bg-emerald-50
+                  text-[#0F8A78]
+                "
+              >
+
+                <LineChart
+                  className="
+                    h-4
+                    w-4
+                  "
+                />
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* CURRENT PRICE */}
+
+          <div
+            className="
+              border-b
+              border-slate-100
+
+              px-5
+              py-5
+            "
+          >
+
+            <span
+              className="
+                text-[11px]
+                text-slate-500
+              "
+            >
+
+              Harga Terbaru
+
+            </span>
+
+
+            <div
+              className="
+                mt-1
+
+                text-3xl
+                font-bold
+                tracking-tight
+                text-slate-950
+              "
+            >
+
+              Rp{' '}
+
+              {formatPrice(
+                activeCommodity.currentPrice
+              )}
+
+            </div>
+
+
+            <div
+              className="
+                mt-2
+
+                flex
+                items-center
+                justify-between
+
+                text-xs
+              "
+            >
+
+              <span
+                className="
+                  text-slate-500
+                "
+              >
+
+                {formatLongDate(
+                  activeCommodity.lastUpdated
+                )}
+
+              </span>
+
+
+              <PriceChangeBadge
+                value={
+                  activeCommodity.changePercent
+                }
+              />
+
+            </div>
+
+          </div>
+
+
+          {/* =================================================
+              STATISTICS
+              ================================================= */}
+
+          <div
+            className="
+              grid
+              grid-cols-2
+
+              border-b
+              border-slate-100
+            "
+          >
+
+            <SummaryValue
+              label="Harga Terendah"
+              value={
+                `Rp ${formatPrice(
+                  historicalSummary.min
+                )}`
+              }
+            />
+
+
+            <SummaryValue
+              label="Harga Tertinggi"
+              value={
+                `Rp ${formatPrice(
+                  historicalSummary.max
+                )}`
+              }
+              borderLeft
+            />
+
+
+            <SummaryValue
+              label="Harga Rata-rata"
+              value={
+                `Rp ${formatPrice(
+                  historicalSummary.average
+                )}`
+              }
+              borderTop
+            />
+
+
+            <SummaryValue
+              label="MAPE Model"
+              value={
+                activeCommodity.mape !==
+                  undefined &&
+                activeCommodity.mape !==
+                  null
+                  ? `${activeCommodity.mape.toFixed(
+                      2
+                    )}%`
+                  : '—'
+              }
+              borderLeft
+              borderTop
+            />
+
+          </div>
+
+
+          {/* =================================================
+              QUICK ACTIONS
+              ================================================= */}
+
+          <div
+            className="
+              space-y-2
+              p-4
+            "
+          >
+
+            {/* ACTUAL VS PREDICTED */}
+
+            <button
+              type="button"
+              onClick={
+                () =>
+                  onNavigate(
+                    'aktual-prediksi'
+                  )
+              }
+              className="
+                group
+
+                flex
+                w-full
+                cursor-pointer
+                items-center
+                justify-between
+
+                rounded-lg
+                border
+                border-slate-200
+                bg-white
+
+                px-3
+                py-2.5
+
+                text-xs
+                font-semibold
+                text-slate-700
+
+                transition-all
+                duration-150
+
+                hover:border-[#0F8A78]
+                hover:bg-[#0F8A78]
+                hover:text-white
+              "
+            >
+
+              <span>
+                Aktual vs Prediksi
+              </span>
+
+
+              <ChevronRight
+                className="
+                  h-4
+                  w-4
+
+                  transition-transform
+                  duration-150
+
+                  group-hover:translate-x-0.5
+                "
+              />
+
+            </button>
+
+
+            {/* EVALUATION */}
+
+            <button
+              type="button"
+              onClick={
+                () =>
+                  onNavigate(
+                    'evaluasi'
+                  )
+              }
+              className="
+                group
+
+                flex
+                w-full
+                cursor-pointer
+                items-center
+                justify-between
+
+                rounded-lg
+                border
+                border-slate-200
+                bg-white
+
+                px-3
+                py-2.5
+
+                text-xs
+                font-semibold
+                text-slate-700
+
+                transition-all
+                duration-150
+
+                hover:border-[#0F8A78]
+                hover:bg-[#0F8A78]
+                hover:text-white
+              "
+            >
+
+              <span>
+                Evaluasi Model
+              </span>
+
+
+              <ChevronRight
+                className="
+                  h-4
+                  w-4
+
+                  transition-transform
+                  duration-150
+
+                  group-hover:translate-x-0.5
+                "
+              />
+
+            </button>
+
+
+            {/* FORECAST */}
+
+            <button
+              type="button"
+              onClick={
+                () =>
+                  onNavigate(
+                    'prediksi'
+                  )
+              }
+              className="
+                group
+
+                flex
+                w-full
+                cursor-pointer
+                items-center
+                justify-between
+
+                rounded-lg
+                border
+                border-slate-200
+                bg-white
+
+                px-3
+                py-2.5
+
+                text-xs
+                font-semibold
+                text-slate-700
+
+                transition-all
+                duration-150
+
+                hover:border-[#0F8A78]
+                hover:bg-[#0F8A78]
+                hover:text-white
+              "
+            >
+
+              <span>
+                Prediksi Harga
+              </span>
+
+
+              <ChevronRight
+                className="
+                  h-4
+                  w-4
+
+                  transition-transform
+                  duration-150
+
+                  group-hover:translate-x-0.5
+                "
+              />
+
+            </button>
+
+          </div>
+
+        </aside>
+
+      </section>
+
+    </div>
+
+  );
+
+};
+
+
+/* =========================================================
+   DASHBOARD STAT CARD
+   ========================================================= */
+
+interface DashboardStatCardProps {
+  label: string;
+  value: string;
+  helper: string;
+  icon: React.ReactNode;
+}
+
+
+const DashboardStatCard:
+React.FC<DashboardStatCardProps> = ({
+  label,
+  value,
+  helper,
+  icon,
+}) => {
+
+  return (
+
+    <div
+      className="
+        rounded-xl
+        border
+        border-slate-200
+        bg-white
+
+        p-4
+
+        shadow-sm
+
+        transition
+
+        hover:border-emerald-200
+        hover:shadow-md
+      "
+    >
+
+      <div
+        className="
+          flex
+          items-start
+          justify-between
+          gap-3
+        "
+      >
+
+        <div>
+
+          <div
+            className="
+              text-[10px]
+              font-semibold
+              uppercase
+              tracking-wider
+              text-slate-400
+            "
+          >
+
+            {label}
+
+          </div>
+
+
+          <div
+            className="
+              mt-2
+              text-xl
+              font-bold
+              tracking-tight
+              text-slate-900
+            "
+          >
+
+            {value}
+
+          </div>
+
+
+          <div
+            className="
+              mt-1
+              text-[10px]
+              text-slate-500
+            "
+          >
+
+            {helper}
+
+          </div>
+
+        </div>
+
+
+        <div
+          className="
+            flex
+            h-9
+            w-9
+            shrink-0
+            items-center
+            justify-center
+
+            rounded-lg
+
+            bg-emerald-50
+            text-[#0F8A78]
+          "
+        >
+
+          {icon}
+
+        </div>
+
+      </div>
+
+    </div>
+
+  );
+
+};
+
+
+/* =========================================================
+   SUMMARY VALUE
+   ========================================================= */
+
+interface SummaryValueProps {
+  label: string;
+  value: string;
+  borderLeft?: boolean;
+  borderTop?: boolean;
+}
+
+
+const SummaryValue:
+React.FC<SummaryValueProps> = ({
+  label,
+  value,
+  borderLeft = false,
+  borderTop = false,
+}) => {
+
+  return (
+
+    <div
+      className={`
+        p-4
+
+        ${
+          borderLeft
+            ? 'border-l border-slate-100'
+            : ''
+        }
+
+        ${
+          borderTop
+            ? 'border-t border-slate-100'
+            : ''
+        }
+      `}
+    >
+
+      <div
+        className="
+          text-[10px]
+          text-slate-400
+        "
+      >
+
+        {label}
+
+      </div>
+
+
+      <div
+        className="
+          mt-1
+          text-sm
+          font-bold
+          tabular-nums
+          text-slate-900
+        "
+      >
+
+        {value}
+
+      </div>
+
+    </div>
+
+  );
+
+};
+
+
+/* =========================================================
+   PRICE CHANGE BADGE
+   ========================================================= */
+
+interface PriceChangeBadgeProps {
+  value: number;
+}
+
+
+const PriceChangeBadge:
+React.FC<PriceChangeBadgeProps> = ({
+  value,
+}) => {
+
+  const positive =
+    value > 0;
+
+
+  const negative =
+    value < 0;
+
+
+  return (
+
+    <span
+      className={`
+        inline-flex
+        items-center
+        gap-1
+
+        rounded-md
+
+        px-2
+        py-1
+
+        text-[10px]
+        font-semibold
+        tabular-nums
+
+        ${
+          positive
+            ? 'bg-rose-50 text-rose-600'
+            : negative
+            ? 'bg-emerald-50 text-emerald-700'
+            : 'bg-slate-100 text-slate-500'
+        }
+      `}
+    >
+
+      {positive ? (
+
+        <TrendingUp
+          className="
+            h-3
+            w-3
+          "
         />
 
-        <div className="mt-4 flex items-center justify-between text-xs text-slate-500 border-t border-slate-100 pt-3">
-          <span className="flex items-center gap-1.5">
-            <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-            <span>Sumber: Pusat Informasi Harga Pangan Strategis (PIHPS) Maluku</span>
-          </span>
-          <button
-            onClick={() => onSelectCommodityForHistory(activeCommodity.id)}
-            className="font-medium text-emerald-700 hover:text-emerald-800 transition-colors cursor-pointer"
-          >
-            Buka Analisis Lengkap & Data Tabel →
-          </button>
-        </div>
-      </section>
+      ) : negative ? (
 
-      {/* 10 Commodities Overview Table */}
-      <section className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xs">
-        <div className="mb-4 flex items-center justify-between border-b border-slate-100 pb-3">
-          <div>
-            <h3 className="text-base font-bold text-slate-900">
-              Ringkasan 10 Komoditas Pangan Strategis
-            </h3>
-            <p className="text-xs text-slate-500">
-              Pantauan harga acuan Provinsi Maluku per 31 Agustus 2026
-            </p>
-          </div>
-          <button
-            onClick={() => onNavigate('komoditas')}
-            className="text-xs font-semibold text-emerald-700 hover:text-emerald-800 cursor-pointer"
-          >
-            Lihat Semua Detail →
-          </button>
-        </div>
+        <TrendingDown
+          className="
+            h-3
+            w-3
+          "
+        />
 
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
-            <thead>
-              <tr className="border-b border-slate-200 bg-slate-50/80 text-slate-600">
-                <th className="py-2.5 px-3 font-semibold">Komoditas</th>
-                <th className="py-2.5 px-3 font-semibold">Kategori</th>
-                <th className="py-2.5 px-3 font-semibold text-right">Harga Terbaru</th>
-                <th className="py-2.5 px-3 font-semibold text-right">Perubahan</th>
-                <th className="py-2.5 px-3 font-semibold">Status PIHPS</th>
-                <th className="py-2.5 px-3 font-semibold text-right">MAPE LSTM</th>
-                <th className="py-2.5 px-3 font-semibold text-center">Aksi</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100">
-              {commodities.map((item) => (
-                <tr key={item.id} className="hover:bg-slate-50/60 transition-colors">
-                  <td className="py-2.5 px-3 font-semibold text-slate-900">
-                    {item.name}
-                  </td>
-                  <td className="py-2.5 px-3 text-slate-500">
-                    {item.category}
-                  </td>
-                  <td className="py-2.5 px-3 text-right font-mono font-medium text-slate-800 tabular-nums">
-                    Rp {item.currentPrice.toLocaleString('id-ID')} / {item.unit}
-                  </td>
-                  <td className="py-2.5 px-3 text-right font-mono tabular-nums">
-                    <span
-                      className={`font-semibold ${
-                        item.changePercent > 0
-                          ? 'text-rose-600'
-                          : item.changePercent < 0
-                          ? 'text-emerald-600'
-                          : 'text-slate-500'
-                      }`}
-                    >
-                      {item.changePercent > 0 ? '+' : ''}
-                      {item.changePercent.toFixed(2)}%
-                    </span>
-                  </td>
-                  <td className="py-2.5 px-3 text-slate-600">
-                    <span className="text-[11px] text-emerald-800 font-medium">
-                      ● Terverifikasi
-                    </span>
-                  </td>
-                  <td className="py-2.5 px-3 text-right font-mono tabular-nums text-slate-700">
-                    {item.mape ? `${item.mape.toFixed(2)}%` : '—'}
-                  </td>
-                  <td className="py-2.5 px-3 text-center">
-                    <button
-                      onClick={() => onSelectCommodityForHistory(item.id)}
-                      className="text-xs text-sky-700 hover:text-sky-900 font-medium cursor-pointer"
-                    >
-                      Lihat Tren
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
+      ) : null}
 
-      {/* Academic Context Footnote */}
-      <section className="rounded-xl border border-slate-200/80 bg-slate-50 p-5 text-xs text-slate-600 flex items-start gap-3">
-        <Info className="h-5 w-5 text-slate-400 shrink-0 mt-0.5" />
-        <div className="space-y-1">
-          <p className="font-semibold text-slate-800">
-            Catatan Metodologi Penelitian
-          </p>
-          <p className="leading-relaxed">
-            Data harga diperoleh secara resmi dari Pusat Informasi Harga Pangan Strategis (PIHPS) Kantor Perwakilan Bank Indonesia Provinsi Maluku. Pemodelan Long Short-Term Memory (LSTM) dirancang khusus untuk menangani dependensi temporal dan musiman harga pangan akibat ketergantungan pasokan logistik maritim antarprovinsi.
-          </p>
-        </div>
-      </section>
-    </div>
+
+      {positive
+        ? '+'
+        : ''}
+
+      {value.toFixed(
+        2
+      )}
+
+      %
+
+    </span>
+
   );
+
 };

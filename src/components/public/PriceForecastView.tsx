@@ -1,10 +1,24 @@
-import React, { useState, useMemo } from 'react';
-import { Commodity, ForecastRecord } from '../../types.ts';
-import { SimpleLineChart } from '../common/SimpleLineChart.tsx';
-import { MetricCard } from '../common/MetricCard.tsx';
+import React, {
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
+
+import {
+  Commodity,
+  ForecastRecord,
+} from '../../types.ts';
+
+import {
+  SimpleLineChart,
+} from '../common/SimpleLineChart.tsx';
+
+import {
+  MetricCard,
+} from '../common/MetricCard.tsx';
+
 import {
   Calendar,
-  AlertTriangle,
   Download,
   Sparkles,
   TrendingUp,
@@ -12,319 +26,1919 @@ import {
   Compass,
 } from 'lucide-react';
 
+
+/* =========================================================
+   PROPS
+   ========================================================= */
+
 interface PriceForecastViewProps {
   commodities: Commodity[];
   forecastData: ForecastRecord[];
   initialCommodityId?: string;
 }
 
-export const PriceForecastView: React.FC<PriceForecastViewProps> = ({
+
+/* =========================================================
+   COMPONENT
+   ========================================================= */
+
+export const PriceForecastView:
+React.FC<PriceForecastViewProps> = ({
   commodities,
   forecastData,
   initialCommodityId,
 }) => {
-  const [selectedCommodityId, setSelectedCommodityId] = useState<string>(
-    initialCommodityId || 'beras'
+
+  /* =======================================================
+     STATE
+     ======================================================= */
+
+  const [
+    selectedCommodityId,
+    setSelectedCommodityId,
+  ] = useState<string>(
+    initialCommodityId || ''
   );
-  const [selectedMonth, setSelectedMonth] = useState<string>('all');
 
-  const activeCommodity = useMemo(() => {
-    return commodities.find((c) => c.id === selectedCommodityId) || commodities[0];
-  }, [commodities, selectedCommodityId]);
 
-  // Filter forecasts
-  const filteredForecasts = useMemo(() => {
-    let list = forecastData.filter((f) => f.commodityId === selectedCommodityId);
-    if (selectedMonth !== 'all') {
-      list = list.filter((f) => f.month === selectedMonth);
+  const [
+    selectedMonth,
+    setSelectedMonth,
+  ] = useState<string>(
+    'all'
+  );
+
+
+  const [
+    currentPage,
+    setCurrentPage,
+  ] = useState<number>(
+    1
+  );
+
+
+  /*
+   * 18 ramalan / 6 baris
+   * = 3 halaman ketika semua bulan ditampilkan.
+   */
+  const pageSize = 6;
+
+
+  /* =======================================================
+     SYNC SELECTED COMMODITY
+     ======================================================= */
+
+  useEffect(() => {
+
+    if (
+      commodities.length === 0
+    ) {
+      return;
     }
-    return list;
-  }, [forecastData, selectedCommodityId, selectedMonth]);
 
-  // Forecast summaries
-  const forecastStats = useMemo(() => {
-    if (!filteredForecasts.length) {
-      return { average: 0, minPredicted: 0, maxPredicted: 0, endOfYearPrice: 0 };
+
+    const exists =
+      commodities.some(
+        (
+          commodity
+        ) =>
+          commodity.id ===
+          selectedCommodityId
+      );
+
+
+    if (exists) {
+      return;
     }
-    const prices = filteredForecasts.map((f) => f.predictedPrice);
-    const average = Math.round(prices.reduce((a, b) => a + b, 0) / prices.length);
-    const minPredicted = Math.min(...prices);
-    const maxPredicted = Math.max(...prices);
-    const endOfYearPrice = prices[prices.length - 1];
 
-    return { average, minPredicted, maxPredicted, endOfYearPrice };
-  }, [filteredForecasts]);
 
-  // Prepare chart series
-  const chartLabels = useMemo(() => {
-    return filteredForecasts.map((f) => {
-      const parts = f.date.split('-');
-      return `${parts[2]}/${parts[1]}`;
-    });
-  }, [filteredForecasts]);
+    const initialExists =
+      initialCommodityId &&
+      commodities.some(
+        (
+          commodity
+        ) =>
+          commodity.id ===
+          initialCommodityId
+      );
 
-  const predictedValues = useMemo(() => {
-    return filteredForecasts.map((f) => f.predictedPrice);
-  }, [filteredForecasts]);
 
-  const upperBounds = useMemo(() => {
-    return filteredForecasts.map((f) => f.upperBound);
-  }, [filteredForecasts]);
+    setSelectedCommodityId(
+      initialExists
+        ? initialCommodityId!
+        : commodities[0].id
+    );
 
-  const lowerBounds = useMemo(() => {
-    return filteredForecasts.map((f) => f.lowerBound);
-  }, [filteredForecasts]);
+  }, [
+    commodities,
+    initialCommodityId,
+    selectedCommodityId,
+  ]);
 
-  // Export CSV
-  const handleExportCSV = () => {
-    const headers = ['Minggu Ke', 'Tanggal', 'Bulan', 'Komoditas', 'Harga Ramalan LSTM (Rp)', 'Batas Bawah 95%', 'Batas Atas 95%', 'Kecenderungan Tren'];
-    const rows = filteredForecasts.map((f) => [
-      f.weekIndex,
-      f.date,
-      f.month,
-      `"${f.commodityName}"`,
-      f.predictedPrice,
-      f.lowerBound,
-      f.upperBound,
-      f.trend,
+
+  /* =======================================================
+     RESET PAGE
+     ======================================================= */
+
+  useEffect(() => {
+
+    setCurrentPage(
+      1
+    );
+
+  }, [
+    selectedCommodityId,
+    selectedMonth,
+  ]);
+
+
+  /* =======================================================
+     ACTIVE COMMODITY
+     ======================================================= */
+
+  const activeCommodity =
+    useMemo(() => {
+
+      return (
+        commodities.find(
+          (
+            commodity
+          ) =>
+            commodity.id ===
+            selectedCommodityId
+        ) ||
+        commodities[0]
+      );
+
+    }, [
+      commodities,
+      selectedCommodityId,
     ]);
-    const csvContent = 'data:text/csv;charset=utf-8,' + [headers.join(','), ...rows.map((e) => e.join(','))].join('\n');
-    const encodedUri = encodeURI(csvContent);
-    const link = document.createElement('a');
-    link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `ramalan_lstm_${selectedCommodityId}_sep_des_2026.csv`);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+
+
+  /* =======================================================
+     FORECAST DATA FOR COMMODITY
+     ======================================================= */
+
+  const commodityForecasts =
+    useMemo(() => {
+
+      return forecastData
+        .filter(
+          (
+            forecast
+          ) =>
+            forecast.commodityId ===
+            selectedCommodityId
+        )
+        .sort(
+          (
+            a,
+            b
+          ) =>
+            new Date(
+              `${a.date}T00:00:00`
+            ).getTime() -
+            new Date(
+              `${b.date}T00:00:00`
+            ).getTime()
+        );
+
+    }, [
+      forecastData,
+      selectedCommodityId,
+    ]);
+
+
+  /* =======================================================
+     MONTH FILTER
+     ======================================================= */
+
+  const filteredForecasts =
+    useMemo(() => {
+
+      if (
+        selectedMonth ===
+        'all'
+      ) {
+
+        return commodityForecasts;
+
+      }
+
+
+      return commodityForecasts.filter(
+        (
+          forecast
+        ) =>
+          forecast.month ===
+          selectedMonth
+      );
+
+    }, [
+      commodityForecasts,
+      selectedMonth,
+    ]);
+
+
+  /* =======================================================
+     FORMAT PRICE
+     ======================================================= */
+
+  const formatPrice =
+    (
+      value: number,
+      decimals = true
+    ) => {
+
+      return Number(
+        value
+      ).toLocaleString(
+        'id-ID',
+        {
+          minimumFractionDigits:
+            decimals
+              ? 2
+              : 0,
+
+          maximumFractionDigits:
+            decimals
+              ? 2
+              : 0,
+        }
+      );
+
+    };
+
+
+  /* =======================================================
+     FORMAT DATE
+     ======================================================= */
+
+  const formatDate =
+    (
+      dateString: string
+    ) => {
+
+      if (!dateString) {
+        return '—';
+      }
+
+
+      return new Date(
+        `${dateString}T00:00:00`
+      ).toLocaleDateString(
+        'id-ID',
+        {
+          day:
+            'numeric',
+
+          month:
+            'long',
+
+          year:
+            'numeric',
+        }
+      );
+
+    };
+
+
+  /* =======================================================
+     FORECAST STATISTICS
+     ======================================================= */
+
+  const forecastStats =
+    useMemo(() => {
+
+      if (
+        filteredForecasts.length ===
+        0
+      ) {
+
+        return {
+          average:
+            0,
+
+          minPredicted:
+            0,
+
+          maxPredicted:
+            0,
+
+          finalPrice:
+            0,
+
+          finalDate:
+            '',
+        };
+
+      }
+
+
+      const values =
+        filteredForecasts.map(
+          (
+            forecast
+          ) =>
+            Number(
+              forecast.predictedPrice
+            )
+        );
+
+
+      const average =
+        values.reduce(
+          (
+            total,
+            value
+          ) =>
+            total +
+            value,
+          0
+        ) /
+        values.length;
+
+
+      const lastForecast =
+        filteredForecasts[
+          filteredForecasts.length -
+          1
+        ];
+
+
+      return {
+
+        average,
+
+        minPredicted:
+          Math.min(
+            ...values
+          ),
+
+        maxPredicted:
+          Math.max(
+            ...values
+          ),
+
+        finalPrice:
+          Number(
+            lastForecast.predictedPrice
+          ),
+
+        finalDate:
+          lastForecast.date,
+
+      };
+
+    }, [
+      filteredForecasts,
+    ]);
+
+
+  /* =======================================================
+     CHART DATA
+     ======================================================= */
+
+  const chartLabels =
+    useMemo(() => {
+
+      return filteredForecasts.map(
+        (
+          forecast
+        ) => {
+
+          const [
+            year,
+            month,
+            day,
+          ] =
+            forecast.date.split(
+              '-'
+            );
+
+
+          return (
+            `${day}/${month}/` +
+            `${year.slice(
+              2
+            )}`
+          );
+
+        }
+      );
+
+    }, [
+      filteredForecasts,
+    ]);
+
+
+  const predictedValues =
+    useMemo(() => {
+
+      return filteredForecasts.map(
+        (
+          forecast
+        ) =>
+          Number(
+            forecast.predictedPrice
+          )
+      );
+
+    }, [
+      filteredForecasts,
+    ]);
+
+
+  const upperBounds =
+    useMemo(() => {
+
+      return filteredForecasts.map(
+        (
+          forecast
+        ) =>
+          Number(
+            forecast.upperBound
+          )
+      );
+
+    }, [
+      filteredForecasts,
+    ]);
+
+
+  const lowerBounds =
+    useMemo(() => {
+
+      return filteredForecasts.map(
+        (
+          forecast
+        ) =>
+          Number(
+            forecast.lowerBound
+          )
+      );
+
+    }, [
+      filteredForecasts,
+    ]);
+
+
+  /* =======================================================
+     PAGINATION
+     ======================================================= */
+
+  const totalPages =
+    Math.max(
+      1,
+      Math.ceil(
+        filteredForecasts.length /
+        pageSize
+      )
+    );
+
+
+  useEffect(() => {
+
+    if (
+      currentPage >
+      totalPages
+    ) {
+
+      setCurrentPage(
+        totalPages
+      );
+
+    }
+
+  }, [
+    currentPage,
+    totalPages,
+  ]);
+
+
+  const paginatedForecasts =
+    useMemo(() => {
+
+      const startIndex =
+        (
+          currentPage -
+          1
+        ) *
+        pageSize;
+
+
+      return filteredForecasts.slice(
+        startIndex,
+        startIndex +
+          pageSize
+      );
+
+    }, [
+      filteredForecasts,
+      currentPage,
+    ]);
+
+
+  /* =======================================================
+     EXPORT CSV
+     ======================================================= */
+
+  const handleExportCSV =
+    () => {
+
+      const headers = [
+        'Minggu Ke',
+        'Tanggal',
+        'Bulan',
+        'Komoditas',
+        'Harga Ramalan LSTM (Rp)',
+        'Batas Bawah 95%',
+        'Batas Atas 95%',
+        'Kecenderungan Tren',
+      ];
+
+
+      const rows =
+        filteredForecasts.map(
+          (
+            forecast
+          ) => [
+
+            forecast.weekIndex,
+
+            forecast.date,
+
+            forecast.month,
+
+            `"${forecast.commodityName}"`,
+
+            forecast.predictedPrice,
+
+            forecast.lowerBound,
+
+            forecast.upperBound,
+
+            forecast.trend,
+
+          ]
+        );
+
+
+      const csvContent =
+        'data:text/csv;charset=utf-8,' +
+        [
+          headers.join(
+            ','
+          ),
+
+          ...rows.map(
+            (
+              row
+            ) =>
+              row.join(
+                ','
+              )
+          ),
+        ].join(
+          '\n'
+        );
+
+
+      const encodedUri =
+        encodeURI(
+          csvContent
+        );
+
+
+      const link =
+        document.createElement(
+          'a'
+        );
+
+
+      link.setAttribute(
+        'href',
+        encodedUri
+      );
+
+
+      link.setAttribute(
+        'download',
+        `ramalan_lstm_${selectedCommodityId}_sep_des_2026.csv`
+      );
+
+
+      document.body.appendChild(
+        link
+      );
+
+
+      link.click();
+
+
+      document.body.removeChild(
+        link
+      );
+
+    };
+
+
+  /* =======================================================
+     EMPTY STATE
+     ======================================================= */
+
+  if (
+    commodities.length === 0 ||
+    !activeCommodity
+  ) {
+
+    return (
+
+      <div
+        className="
+          rounded-xl
+          border
+          border-slate-200
+          bg-white
+          p-8
+          text-center
+          text-sm
+          text-slate-500
+        "
+      >
+
+        Data ramalan belum tersedia.
+
+      </div>
+
+    );
+
+  }
+
+
+  /* =======================================================
+     RENDER
+     ======================================================= */
 
   return (
-    <div className="space-y-6 pb-12">
-      {/* Visual Disclaimer Banner (MANDATORY REQUIREMENT) */}
-      <div className="rounded-2xl border-2 border-amber-300 bg-amber-50/70 p-5 shadow-xs">
-        <div className="flex items-start gap-3.5">
-          <AlertTriangle className="h-6 w-6 text-amber-700 shrink-0 mt-0.5" />
-          <div className="space-y-1">
-            <h2 className="text-sm font-bold text-amber-900 tracking-tight">
-              PERHATIAN: DATA HASIL RAMALAN ALGORITMA LSTM (BUKAN HARGA TRANSAKSI AKTUAL)
-            </h2>
-            <p className="text-xs text-amber-800 leading-relaxed">
-              Seluruh angka pada halaman ini merupakan <strong>hasil estimasi dan proyeksi model deep learning Long Short-Term Memory (LSTM)</strong> untuk horizon waktu <strong>September hingga Desember 2026</strong>. Angka ini disajikan untuk keperluan analisis akademis dan peringatan dini fluktuasi harga pangan strategis di Provinsi Maluku menjelang HBKN akhir tahun, bukan harga transaksi fisik di pasar saat ini.
-            </p>
-          </div>
-        </div>
-      </div>
 
-      {/* Main Header & Filter Control */}
-      <div className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xs">
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between border-b border-slate-100 pb-4">
+    <div
+      className="
+        space-y-6
+        pb-12
+      "
+    >
+
+      {/* =================================================
+          HEADER
+          ================================================= */}
+
+      <section
+        className="
+          rounded-2xl
+          border
+          border-slate-200/90
+          bg-white
+          p-6
+          shadow-sm
+        "
+      >
+
+        {/* HEADER TOP */}
+
+        <div
+          className="
+            flex
+            flex-col
+            gap-4
+
+            border-b
+            border-slate-100
+
+            pb-4
+
+            md:flex-row
+            md:items-center
+            md:justify-between
+          "
+        >
+
+          {/* TITLE */}
+
           <div>
-            <div className="flex items-center gap-2 text-xs font-semibold text-emerald-800 tracking-wide uppercase">
-              <span>Horizon Peramalan Masa Depan</span>
-              <span aria-hidden="true">·</span>
-              <span>18 Minggu ke Depan</span>
-            </div>
-            <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 mt-1">
-              Ramalan Harga Pangan: September – Desember 2026
-            </h1>
-            <p className="text-xs text-slate-500 mt-1">
-              Proyeksi harga mingguan menggunakan model LSTM terlatih berdasarkan deret waktu PIHPS Maluku
-            </p>
-          </div>
 
-          <div className="flex items-center gap-2">
-            <button
-              onClick={handleExportCSV}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200/80 rounded-lg transition-colors cursor-pointer"
+            <h1
+              className="
+                text-xl
+                font-bold
+                tracking-tight
+                text-slate-900
+
+                sm:text-2xl
+              "
             >
-              <Download className="h-3.5 w-3.5" />
-              <span>Export Ramalan CSV</span>
-            </button>
+
+              Ramalan Harga Pangan: September – Desember 2026
+
+            </h1>
+
+
+            <p
+              className="
+                mt-1
+                text-xs
+                leading-relaxed
+                text-slate-500
+              "
+            >
+
+              Hasil ramalan harga mingguan model LSTM berdasarkan
+              data historis PIHPS Maluku.
+
+            </p>
+
           </div>
+
+
+          {/* EXPORT */}
+
+          <button
+            type="button"
+            onClick={
+              handleExportCSV
+            }
+            disabled={
+              filteredForecasts.length ===
+              0
+            }
+            className="
+              inline-flex
+              cursor-pointer
+              items-center
+              gap-1.5
+
+              rounded-lg
+              bg-slate-100
+
+              px-3
+              py-1.5
+
+              text-xs
+              font-semibold
+              text-slate-700
+
+              transition-colors
+
+              hover:bg-slate-200/80
+
+              disabled:cursor-not-allowed
+              disabled:opacity-50
+            "
+          >
+
+            <Download
+              className="
+                h-3.5
+                w-3.5
+              "
+            />
+
+
+            <span>
+              Export Ramalan CSV
+            </span>
+
+          </button>
+
         </div>
 
-        {/* Filter Controls Row */}
-        <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {/* Dropdown Komoditas */}
+
+        {/* =================================================
+            FILTERS
+            ================================================= */}
+
+        <div
+          className="
+            mt-4
+
+            grid
+            grid-cols-1
+            gap-4
+
+            sm:grid-cols-2
+          "
+        >
+
+          {/* COMMODITY */}
+
           <div>
-            <label htmlFor="comm-forecast" className="block text-xs font-medium text-slate-600 mb-1">
+
+            <label
+              htmlFor="comm-forecast"
+              className="
+                mb-1
+                block
+
+                text-xs
+                font-medium
+                text-slate-600
+              "
+            >
+
               Pilih Komoditas:
+
             </label>
+
+
             <select
               id="comm-forecast"
-              value={selectedCommodityId}
-              onChange={(e) => setSelectedCommodityId(e.target.value)}
-              className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-900 shadow-2xs focus:border-emerald-600 focus:outline-none"
+              value={
+                selectedCommodityId
+              }
+              onChange={
+                (
+                  event
+                ) =>
+                  setSelectedCommodityId(
+                    event.target.value
+                  )
+              }
+              className="
+                w-full
+
+                rounded-lg
+                border
+                border-slate-300
+                bg-white
+
+                px-3
+                py-2
+
+                text-xs
+                font-semibold
+                text-slate-900
+
+                shadow-2xs
+
+                focus:border-[#0F8A78]
+                focus:outline-none
+                focus:ring-2
+                focus:ring-emerald-100
+              "
             >
-              {commodities.map((c) => (
-                <option key={c.id} value={c.id}>
-                  {c.name} ({c.unit}) — {c.category}
-                </option>
-              ))}
+
+              {commodities.map(
+                (
+                  commodity
+                ) => (
+
+                  <option
+                    key={
+                      commodity.id
+                    }
+                    value={
+                      commodity.id
+                    }
+                  >
+
+                    {commodity.name}
+
+                    {' ('}
+
+                    {commodity.unit}
+
+                    {') — '}
+
+                    {commodity.category}
+
+                  </option>
+
+                )
+              )}
+
             </select>
+
           </div>
 
-          {/* Filter Bulan */}
+
+          {/* MONTH */}
+
           <div>
-            <label htmlFor="month-forecast" className="block text-xs font-medium text-slate-600 mb-1">
-              Filter Bulan Proyeksi:
+
+            <label
+              htmlFor="month-forecast"
+              className="
+                mb-1
+                block
+
+                text-xs
+                font-medium
+                text-slate-600
+              "
+            >
+
+              Filter Bulan Ramalan:
+
             </label>
+
+
             <select
               id="month-forecast"
-              value={selectedMonth}
-              onChange={(e) => setSelectedMonth(e.target.value)}
-              className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-medium text-slate-800 shadow-2xs focus:border-emerald-600 focus:outline-none"
+              value={
+                selectedMonth
+              }
+              onChange={
+                (
+                  event
+                ) =>
+                  setSelectedMonth(
+                    event.target.value
+                  )
+              }
+              className="
+                w-full
+
+                rounded-lg
+                border
+                border-slate-300
+                bg-white
+
+                px-3
+                py-2
+
+                text-xs
+                font-medium
+                text-slate-800
+
+                shadow-2xs
+
+                focus:border-[#0F8A78]
+                focus:outline-none
+                focus:ring-2
+                focus:ring-emerald-100
+              "
             >
-              <option value="all">Semua Bulan (September – Desember 2026)</option>
-              <option value="September">September 2026 (Minggu 1 – 4)</option>
-              <option value="Oktober">Oktober 2026 (Minggu 5 – 8)</option>
-              <option value="November">November 2026 (Minggu 9 – 13)</option>
-              <option value="Desember">Desember 2026 (Minggu 14 – 18 / HBKN)</option>
+
+              <option value="all">
+                Semua Bulan (September – Desember 2026)
+              </option>
+
+
+              <option value="September">
+                September 2026
+              </option>
+
+
+              <option value="Oktober">
+                Oktober 2026
+              </option>
+
+
+              <option value="November">
+                November 2026
+              </option>
+
+
+              <option value="Desember">
+                Desember 2026
+              </option>
+
             </select>
+
           </div>
+
         </div>
-      </div>
 
-      {/* Summary Forecast Metric Cards */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <MetricCard
-          label="Harga Basis Terkini"
-          value={`Rp ${activeCommodity.currentPrice.toLocaleString('id-ID')}`}
-          subtext="Per 31 Agustus 2026"
-          secondaryText="Data Riil Terakhir"
-          icon={<Calendar className="h-4 w-4 text-slate-600" />}
-        />
-        <MetricCard
-          label="Rata-rata Ramalan"
-          value={`Rp ${forecastStats.average.toLocaleString('id-ID')}`}
-          subtext={`Proyeksi ${filteredForecasts.length} minggu`}
-          secondaryText="Mean Forecast"
-          icon={<Sparkles className="h-4 w-4 text-emerald-600" />}
-        />
-        <MetricCard
-          label="Rentang Proyeksi"
-          value={`Rp ${forecastStats.minPredicted.toLocaleString('id-ID')}`}
-          subtext={`s/d Rp ${forecastStats.maxPredicted.toLocaleString('id-ID')}`}
-          secondaryText="Min - Max LSTM"
-          icon={<Compass className="h-4 w-4 text-sky-600" />}
-        />
-        <MetricCard
-          label="Estimasi Akhir Tahun"
-          value={`Rp ${forecastStats.endOfYearPrice.toLocaleString('id-ID')}`}
-          subtext="Desember 2026 (HBKN)"
-          secondaryText="Potensi Kenaikan"
-          icon={<TrendingUp className="h-4 w-4 text-amber-600" />}
-        />
-      </div>
+      </section>
 
-      {/* Forecast Line Chart with Confidence Interval */}
-      <div className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xs">
-        <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between border-b border-slate-100 pb-3">
+
+      {/* =================================================
+          METRICS
+          ================================================= */}
+
+      <section
+        className="
+          grid
+          grid-cols-1
+          gap-4
+
+          sm:grid-cols-2
+          xl:grid-cols-4
+        "
+      >
+
+        {/* ACTUAL PRICE */}
+
+        <MetricCard
+          label="Harga Aktual Terakhir"
+          value={
+            `Rp ${formatPrice(
+              Number(
+                activeCommodity.currentPrice
+              ),
+              false
+            )}`
+          }
+          subtext={
+            activeCommodity.lastUpdated
+              ? `Per ${formatDate(
+                  activeCommodity.lastUpdated
+                )}`
+              : 'Data aktual terakhir'
+          }
+          secondaryText="Data Historis PIHPS"
+          icon={
+
+            <Calendar
+              className="
+                h-4
+                w-4
+                text-slate-600
+              "
+            />
+
+          }
+        />
+
+
+        {/* AVERAGE */}
+
+        <MetricCard
+          label="Rata-Rata Ramalan"
+          value={
+            `Rp ${formatPrice(
+              forecastStats.average
+            )}`
+          }
+          subtext={
+            `${filteredForecasts.length} observasi ramalan`
+          }
+          secondaryText={
+            selectedMonth ===
+            'all'
+              ? 'September – Desember 2026'
+              : `${selectedMonth} 2026`
+          }
+          icon={
+
+            <Sparkles
+              className="
+                h-4
+                w-4
+                text-emerald-600
+              "
+            />
+
+          }
+        />
+
+
+        {/* RANGE */}
+
+        <MetricCard
+          label="Rentang Ramalan"
+          value={
+            `Rp ${formatPrice(
+              forecastStats.minPredicted
+            )}`
+          }
+          subtext={
+            `s/d Rp ${formatPrice(
+              forecastStats.maxPredicted
+            )}`
+          }
+          secondaryText="Minimum – Maksimum"
+          icon={
+
+            <Compass
+              className="
+                h-4
+                w-4
+                text-sky-600
+              "
+            />
+
+          }
+        />
+
+
+        {/* FINAL */}
+
+        <MetricCard
+          label="Ramalan Akhir Periode"
+          value={
+            `Rp ${formatPrice(
+              forecastStats.finalPrice
+            )}`
+          }
+          subtext={
+            forecastStats.finalDate
+              ? formatDate(
+                  forecastStats.finalDate
+                )
+              : '—'
+          }
+          secondaryText="Titik Ramalan Terakhir"
+          icon={
+
+            <TrendingUp
+              className="
+                h-4
+                w-4
+                text-amber-600
+              "
+            />
+
+          }
+        />
+
+      </section>
+
+
+      {/* =================================================
+          CHART
+          ================================================= */}
+
+      <section
+        className="
+          rounded-2xl
+          border
+          border-slate-200/90
+          bg-white
+          p-6
+          shadow-sm
+        "
+      >
+
+        <div
+          className="
+            mb-4
+
+            flex
+            flex-col
+            gap-2
+
+            border-b
+            border-slate-100
+
+            pb-3
+
+            sm:flex-row
+            sm:items-center
+            sm:justify-between
+          "
+        >
+
           <div>
-            <h3 className="text-base font-bold text-slate-900">
-              Grafik Lintasan Ramalan Mingguan — {activeCommodity.name}
-            </h3>
-            <p className="text-xs text-slate-500">
-              Garis putus-putus menunjukkan ramalan LSTM dengan pita konfidensi 95%
+
+            <h2
+              className="
+                text-base
+                font-bold
+                text-slate-900
+              "
+            >
+
+              Grafik Ramalan Harga Mingguan — {activeCommodity.name}
+
+            </h2>
+
+
+            <p
+              className="
+                mt-0.5
+                text-xs
+                text-slate-500
+              "
+            >
+
+              Garis putus-putus menunjukkan hasil ramalan
+              harga mingguan model LSTM.
+
             </p>
+
           </div>
-          <div className="flex items-center gap-2 text-xs font-mono text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md">
-            <span>Model: LSTM 64 Units</span>
+
+
+          <div
+            className="
+              font-mono
+              text-xs
+              text-slate-400
+            "
+          >
+
+            {filteredForecasts.length} Titik Ramalan
+
           </div>
+
         </div>
+
 
         <SimpleLineChart
-          labels={chartLabels}
+          labels={
+            chartLabels
+          }
           series={[
             {
-              id: 'forecast-series',
-              name: `Hasil Ramalan LSTM (${activeCommodity.name})`,
-              color: '#059669', // Emerald-600
-              data: predictedValues,
-              dashed: true, // Dashed to denote forecast
+
+              id:
+                'forecast-series',
+
+              name:
+                `Hasil Ramalan LSTM (${activeCommodity.name})`,
+
+              color:
+                '#0F8A78',
+
+              data:
+                predictedValues,
+
+              dashed:
+                true,
+
             },
           ]}
-          confidenceBounds={{
-            upper: upperBounds,
-            lower: lowerBounds,
-          }}
-          height={320}
-          yAxisLabel={`Harga Ramalan (Rp/${activeCommodity.unit})`}
+          confidenceBounds={
+            upperBounds.length >
+              0 &&
+            lowerBounds.length >
+              0
+              ? {
+                  upper:
+                    upperBounds,
+
+                  lower:
+                    lowerBounds,
+                }
+              : undefined
+          }
+          height={
+            320
+          }
+          yAxisLabel={
+            `Harga Ramalan (${activeCommodity.unit})`
+          }
         />
-      </div>
 
-      {/* Forecast Table */}
-      <div className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xs">
-        <div className="mb-4 flex items-center justify-between border-b border-slate-100 pb-3">
+      </section>
+
+
+      {/* =================================================
+          FORECAST TABLE
+          ================================================= */}
+
+      <section
+        className="
+          rounded-2xl
+          border
+          border-slate-200/90
+          bg-white
+          p-6
+          shadow-sm
+        "
+      >
+
+        {/* TABLE HEADER */}
+
+        <div
+          className="
+            mb-4
+
+            flex
+            flex-col
+            gap-2
+
+            border-b
+            border-slate-100
+
+            pb-3
+
+            sm:flex-row
+            sm:items-center
+            sm:justify-between
+          "
+        >
+
           <div>
-            <h3 className="text-base font-bold text-slate-900">
+
+            <h2
+              className="
+                text-base
+                font-bold
+                text-slate-900
+              "
+            >
+
               Tabel Rincian Ramalan Harga Mingguan
-            </h3>
-            <p className="text-xs text-slate-500">
-              Menampilkan {filteredForecasts.length} proyeksi titik waktu mingguan
+
+            </h2>
+
+
+            <p
+              className="
+                mt-0.5
+                text-xs
+                text-slate-500
+              "
+            >
+
+              Menampilkan {paginatedForecasts.length} dari{' '}
+              {filteredForecasts.length} titik ramalan mingguan.
+
             </p>
+
           </div>
-          <div className="text-xs text-slate-400 font-mono">
-            {activeCommodity.name} (Satuan: {activeCommodity.unit})
+
+
+          <div
+            className="
+              text-right
+            "
+          >
+
+            <div
+              className="
+                font-mono
+                text-xs
+                text-slate-400
+              "
+            >
+
+              {activeCommodity.name}
+              {' · '}
+              {activeCommodity.unit}
+
+            </div>
+
+
+            <div
+              className="
+                mt-0.5
+                text-[10px]
+                text-slate-400
+              "
+            >
+
+              Halaman {currentPage} dari {totalPages}
+
+            </div>
+
           </div>
+
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
+
+        {/* =================================================
+            TABLE
+            ================================================= */}
+
+        <div
+          className="
+            overflow-x-auto
+          "
+        >
+
+          <table
+            className="
+              w-full
+              min-w-[850px]
+              text-left
+              text-xs
+            "
+          >
+
             <thead>
-              <tr className="border-b border-slate-200 bg-slate-50/80 text-slate-700">
-                <th className="py-2.5 px-3 font-semibold">Minggu Ke</th>
-                <th className="py-2.5 px-3 font-semibold">Tanggal Proyeksi</th>
-                <th className="py-2.5 px-3 font-semibold">Bulan</th>
-                <th className="py-2.5 px-3 font-semibold text-right">Harga Ramalan (Rp)</th>
-                <th className="py-2.5 px-3 font-semibold text-right">Batas Bawah (95%)</th>
-                <th className="py-2.5 px-3 font-semibold text-right">Batas Atas (95%)</th>
-                <th className="py-2.5 px-3 font-semibold text-center">Kecenderungan Tren</th>
+
+              <tr
+                className="
+                  border-b
+                  border-slate-200
+                  bg-slate-50/80
+                  text-slate-700
+                "
+              >
+
+                <th
+                  className="
+                    px-3
+                    py-2.5
+                    font-semibold
+                  "
+                >
+
+                  Minggu
+
+                </th>
+
+
+                <th
+                  className="
+                    px-3
+                    py-2.5
+                    font-semibold
+                  "
+                >
+
+                  Tanggal Ramalan
+
+                </th>
+
+
+                <th
+                  className="
+                    px-3
+                    py-2.5
+                    font-semibold
+                  "
+                >
+
+                  Bulan
+
+                </th>
+
+
+                <th
+                  className="
+                    px-3
+                    py-2.5
+                    text-right
+                    font-semibold
+                  "
+                >
+
+                  Harga Ramalan ({activeCommodity.unit})
+
+                </th>
+
+
+                <th
+                  className="
+                    px-3
+                    py-2.5
+                    text-center
+                    font-semibold
+                  "
+                >
+
+                  Kecenderungan
+
+                </th>
+
               </tr>
+
             </thead>
-            <tbody className="divide-y divide-slate-100">
-              {filteredForecasts.map((row) => (
-                <tr key={row.id} className="hover:bg-slate-50/60 transition-colors">
-                  <td className="py-2.5 px-3 text-slate-500 font-mono tabular-nums">
-                    Minggu {row.weekIndex}
+
+
+            <tbody
+              className="
+                divide-y
+                divide-slate-100
+              "
+            >
+
+              {paginatedForecasts.length >
+              0 ? (
+
+                paginatedForecasts.map(
+                  (
+                    row
+                  ) => {
+
+                    const normalizedTrend =
+                      String(
+                        row.trend ||
+                        'stabil'
+                      ).toLowerCase();
+
+
+                    const isUp =
+                      normalizedTrend ===
+                      'naik';
+
+
+                    const isDown =
+                      normalizedTrend ===
+                      'turun';
+
+
+                    return (
+
+                      <tr
+                        key={
+                          row.id
+                        }
+                        className="
+                          transition-colors
+                          hover:bg-slate-50/60
+                        "
+                      >
+
+                        {/* WEEK */}
+
+                        <td
+                          className="
+                            px-3
+                            py-2.5
+
+                            font-mono
+                            tabular-nums
+                            text-slate-500
+                          "
+                        >
+
+                          Minggu {row.weekIndex}
+
+                        </td>
+
+
+                        {/* DATE */}
+
+                        <td
+                          className="
+                            px-3
+                            py-2.5
+
+                            font-mono
+                            font-medium
+                            text-slate-900
+                          "
+                        >
+
+                          {row.date}
+
+                        </td>
+
+
+                        {/* MONTH */}
+
+                        <td
+                          className="
+                            px-3
+                            py-2.5
+                            text-slate-700
+                          "
+                        >
+
+                          {row.month} 2026
+
+                        </td>
+
+
+                        {/* FORECAST */}
+
+                        <td
+                          className="
+                            px-3
+                            py-2.5
+
+                            text-right
+
+                            font-mono
+                            font-bold
+                            tabular-nums
+                            text-emerald-800
+                          "
+                        >
+
+                          Rp{' '}
+
+                          {formatPrice(
+                            Number(
+                              row.predictedPrice
+                            )
+                          )}
+
+                        </td>
+
+
+                        {/* TREND */}
+
+                        <td
+                          className="
+                            px-3
+                            py-2.5
+                            text-center
+                          "
+                        >
+
+                          <span
+                            className={`
+                              inline-flex
+                              items-center
+                              gap-1
+
+                              text-[11px]
+                              font-medium
+
+                              ${
+                                isUp
+                                  ? 'text-rose-600'
+                                  : isDown
+                                  ? 'text-emerald-600'
+                                  : 'text-slate-600'
+                              }
+                            `}
+                          >
+
+                            {isUp && (
+
+                              <TrendingUp
+                                className="
+                                  h-3
+                                  w-3
+                                "
+                              />
+
+                            )}
+
+
+                            {isDown && (
+
+                              <TrendingDown
+                                className="
+                                  h-3
+                                  w-3
+                                "
+                              />
+
+                            )}
+
+
+                            {!isUp &&
+                            !isDown && (
+
+                              <span>
+                                —
+                              </span>
+
+                            )}
+
+
+                            <span
+                              className="
+                                capitalize
+                              "
+                            >
+
+                              {normalizedTrend}
+
+                            </span>
+
+                          </span>
+
+                        </td>
+
+                      </tr>
+
+                    );
+
+                  }
+                )
+
+              ) : (
+
+                <tr>
+
+                  <td
+                    colSpan={
+                      5
+                    }
+                    className="
+                      py-10
+                      text-center
+                      text-xs
+                      text-slate-400
+                    "
+                  >
+
+                    Data ramalan tidak tersedia untuk filter yang dipilih.
+
                   </td>
-                  <td className="py-2.5 px-3 font-medium text-slate-900 font-mono">
-                    {row.date}
-                  </td>
-                  <td className="py-2.5 px-3 text-slate-700">
-                    {row.month} 2026
-                  </td>
-                  <td className="py-2.5 px-3 text-right font-mono font-bold text-emerald-800 tabular-nums">
-                    Rp {row.predictedPrice.toLocaleString('id-ID')}
-                  </td>
-                  <td className="py-2.5 px-3 text-right font-mono text-slate-500 tabular-nums">
-                    Rp {row.lowerBound.toLocaleString('id-ID')}
-                  </td>
-                  <td className="py-2.5 px-3 text-right font-mono text-slate-500 tabular-nums">
-                    Rp {row.upperBound.toLocaleString('id-ID')}
-                  </td>
-                  <td className="py-2.5 px-3 text-center">
-                    <span
-                      className={`inline-flex items-center gap-1 font-medium text-[11px] ${
-                        row.trend === 'naik'
-                          ? 'text-rose-600'
-                          : row.trend === 'turun'
-                          ? 'text-emerald-600'
-                          : 'text-slate-600'
-                      }`}
-                    >
-                      {row.trend === 'naik' && <TrendingUp className="h-3 w-3" />}
-                      {row.trend === 'turun' && <TrendingDown className="h-3 w-3" />}
-                      {row.trend === 'stabil' && <span>—</span>}
-                      <span className="capitalize">{row.trend}</span>
-                    </span>
-                  </td>
+
                 </tr>
-              ))}
+
+              )}
+
             </tbody>
+
           </table>
+
         </div>
-      </div>
+
+
+        {/* =================================================
+            PAGINATION
+            ================================================= */}
+
+        {totalPages > 1 && (
+
+          <div
+            className="
+              mt-4
+
+              flex
+              items-center
+              justify-between
+
+              border-t
+              border-slate-100
+
+              pt-4
+            "
+          >
+
+            {/* PREVIOUS */}
+
+            <button
+              type="button"
+              disabled={
+                currentPage ===
+                1
+              }
+              onClick={
+                () =>
+                  setCurrentPage(
+                    (
+                      page
+                    ) =>
+                      Math.max(
+                        1,
+                        page - 1
+                      )
+                  )
+              }
+              className="
+                cursor-pointer
+
+                rounded-lg
+                border
+                border-slate-200
+                bg-white
+
+                px-3
+                py-1.5
+
+                text-xs
+                font-medium
+                text-slate-700
+
+                transition
+
+                hover:bg-slate-50
+
+                disabled:cursor-not-allowed
+                disabled:opacity-40
+              "
+            >
+
+              ← Sebelumnya
+
+            </button>
+
+
+            {/* PAGE NUMBERS */}
+
+            <div
+              className="
+                flex
+                items-center
+                gap-1
+              "
+            >
+
+              {Array.from(
+                {
+                  length:
+                    totalPages,
+                },
+                (
+                  _,
+                  index
+                ) =>
+                  index + 1
+              ).map(
+                (
+                  pageNumber
+                ) => (
+
+                  <button
+                    key={
+                      pageNumber
+                    }
+                    type="button"
+                    onClick={
+                      () =>
+                        setCurrentPage(
+                          pageNumber
+                        )
+                    }
+                    className={`
+                      flex
+                      h-8
+                      min-w-8
+                      cursor-pointer
+                      items-center
+                      justify-center
+
+                      rounded-md
+
+                      px-2
+
+                      font-mono
+                      text-xs
+                      font-semibold
+
+                      transition
+
+                      ${
+                        currentPage ===
+                        pageNumber
+                          ? `
+                            bg-[#0F8A78]
+                            text-white
+                          `
+                          : `
+                            border
+                            border-slate-200
+                            bg-white
+                            text-slate-600
+
+                            hover:border-emerald-200
+                            hover:bg-emerald-50
+                            hover:text-[#0F8A78]
+                          `
+                      }
+                    `}
+                  >
+
+                    {pageNumber}
+
+                  </button>
+
+                )
+              )}
+
+            </div>
+
+
+            {/* NEXT */}
+
+            <button
+              type="button"
+              disabled={
+                currentPage ===
+                totalPages
+              }
+              onClick={
+                () =>
+                  setCurrentPage(
+                    (
+                      page
+                    ) =>
+                      Math.min(
+                        totalPages,
+                        page + 1
+                      )
+                  )
+              }
+              className="
+                cursor-pointer
+
+                rounded-lg
+                border
+                border-slate-200
+                bg-white
+
+                px-3
+                py-1.5
+
+                text-xs
+                font-medium
+                text-slate-700
+
+                transition
+
+                hover:bg-slate-50
+
+                disabled:cursor-not-allowed
+                disabled:opacity-40
+              "
+            >
+
+              Selanjutnya →
+
+            </button>
+
+          </div>
+
+        )}
+
+      </section>
+
     </div>
+
   );
+
 };

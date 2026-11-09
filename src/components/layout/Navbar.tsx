@@ -85,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               title="Akses khusus administrator pengelola data dan model"
             >
               <LogIn className="h-3.5 w-3.5 text-slate-600" />
-              <span>Login Admin</span>
+              <span></span>
             </button>
           )}
 

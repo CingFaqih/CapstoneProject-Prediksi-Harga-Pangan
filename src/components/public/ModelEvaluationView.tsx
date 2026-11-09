@@ -1,251 +1,912 @@
-import React, { useState } from 'react';
-import { ModelEvaluationItem } from '../../types.ts';
-import { BarChartComparison } from '../common/BarChartComparison.tsx';
+import React, {
+  useMemo,
+  useState,
+} from 'react';
+
+import {
+  ModelEvaluationItem,
+} from '../../types.ts';
+
 import {
   Calculator,
-  BookOpen,
   Info,
   CheckCircle2,
-  RefreshCw,
 } from 'lucide-react';
+
+
+/* =========================================================
+   TYPES
+   ========================================================= */
 
 interface ModelEvaluationViewProps {
   evaluationData: ModelEvaluationItem[];
 }
 
-export const ModelEvaluationView: React.FC<ModelEvaluationViewProps> = ({
+type MetricKey =
+  | 'MAPE'
+  | 'MAE'
+  | 'RMSE';
+
+
+/* =========================================================
+   COMPONENT
+   ========================================================= */
+
+export const ModelEvaluationView:
+React.FC<ModelEvaluationViewProps> = ({
   evaluationData,
 }) => {
-  // Allow user to toggle between pristine placeholder state ("—") and evaluated state
-  const [showTrainedMetrics, setShowTrainedMetrics] = useState<boolean>(true);
-  const [activeChartMetric, setActiveChartMetric] = useState<'MAPE' | 'MAE' | 'RMSE'>('MAPE');
 
-  // Prepare display items according to toggle
-  const displayItems = evaluationData.map((item) => {
-    if (!showTrainedMetrics) {
+  /* =======================================================
+     ACTIVE CHART METRIC
+     ======================================================= */
+
+  const [
+    activeChartMetric,
+    setActiveChartMetric,
+  ] = useState<MetricKey>(
+    'MAPE'
+  );
+
+
+  /* =======================================================
+     VALID EVALUATION DATA
+     ======================================================= */
+
+  const displayItems =
+    useMemo(() => {
+
+      return evaluationData.map(
+        (item) => ({
+          ...item,
+
+          mae:
+            item.mae !== null
+              ? Number(item.mae)
+              : null,
+
+          rmse:
+            item.rmse !== null
+              ? Number(item.rmse)
+              : null,
+
+          mape:
+            item.mape !== null
+              ? Number(item.mape)
+              : null,
+        })
+      );
+
+    }, [
+      evaluationData,
+    ]);
+
+
+  /* =======================================================
+     TEST METADATA
+     ======================================================= */
+
+  const testMetadata =
+    useMemo(() => {
+
+      const itemWithPeriod =
+        evaluationData.find(
+          (item) =>
+            item.testPeriod
+        );
+
+
+      const itemWithSamples =
+        evaluationData.find(
+          (item) =>
+            item.testSamplesCount
+        );
+
+
       return {
-        ...item,
-        mae: null,
-        rmse: null,
-        mape: null,
-        isCalculated: false,
-      };
-    }
-    return item;
-  });
 
-  const chartItems = displayItems.map((d) => ({
-    label: d.commodityName,
-    value:
-      activeChartMetric === 'MAPE'
-        ? d.mape
-        : activeChartMetric === 'MAE'
-        ? d.mae
-        : d.rmse,
-  }));
+        period:
+          itemWithPeriod?.testPeriod ||
+          'Periode uji tidak tersedia',
+
+        samples:
+          itemWithSamples
+            ?.testSamplesCount ??
+          null,
+      };
+
+    }, [
+      evaluationData,
+    ]);
+
+
+  /* =======================================================
+     CHART DATA
+     ======================================================= */
+
+  const chartItems =
+    useMemo(() => {
+
+      return displayItems.map(
+        (item) => {
+
+          let value:
+            number | null =
+            null;
+
+
+          if (
+            activeChartMetric ===
+            'MAPE'
+          ) {
+
+            value =
+              item.mape;
+
+          } else if (
+            activeChartMetric ===
+            'MAE'
+          ) {
+
+            value =
+              item.mae;
+
+          } else {
+
+            value =
+              item.rmse;
+          }
+
+
+          return {
+            label:
+              item.commodityName,
+
+            value,
+          };
+        }
+      );
+
+    }, [
+      displayItems,
+      activeChartMetric,
+    ]);
+
+
+  const chartMaximum =
+    useMemo(() => {
+
+      const values =
+        chartItems
+          .map(
+            (item) =>
+              item.value
+          )
+          .filter(
+            (
+              value
+            ): value is number =>
+              value !== null &&
+              Number.isFinite(
+                value
+              )
+          );
+
+
+      if (
+        values.length === 0
+      ) {
+        return 1;
+      }
+
+
+      return Math.max(
+        ...values
+      );
+
+    }, [
+      chartItems,
+    ]);
+
+
+  /* =======================================================
+     FORMATTERS
+     ======================================================= */
+
+  const formatCurrencyMetric = (
+    value: number | null
+  ) => {
+
+    if (
+      value === null ||
+      value === undefined
+    ) {
+      return '—';
+    }
+
+
+    return (
+      'Rp ' +
+      value.toLocaleString(
+        'id-ID',
+        {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }
+      )
+    );
+  };
+
+
+  const formatPercentage = (
+    value: number | null
+  ) => {
+
+    if (
+      value === null ||
+      value === undefined
+    ) {
+      return '—';
+    }
+
+
+    return (
+      value.toLocaleString(
+        'id-ID',
+        {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }
+      ) +
+      '%'
+    );
+  };
+
+
+  const formatChartValue = (
+    value: number | null
+  ) => {
+
+    if (
+      value === null ||
+      value === undefined
+    ) {
+      return '—';
+    }
+
+
+    if (
+      activeChartMetric ===
+      'MAPE'
+    ) {
+
+      return formatPercentage(
+        value
+      );
+    }
+
+
+    return formatCurrencyMetric(
+      value
+    );
+  };
+
+
+  /* =======================================================
+     CHART TEXT
+     ======================================================= */
+
+  const chartSubtitle =
+    useMemo(() => {
+
+      if (
+        activeChartMetric ===
+        'MAPE'
+      ) {
+
+        return (
+          'Perbandingan rata-rata kesalahan absolut ' +
+          'dalam bentuk persentase pada masing-masing komoditas.'
+        );
+      }
+
+
+      if (
+        activeChartMetric ===
+        'MAE'
+      ) {
+
+        return (
+          'Perbandingan rata-rata nilai absolut ' +
+          'kesalahan prediksi pada masing-masing komoditas.'
+        );
+      }
+
+
+      return (
+        'Perbandingan akar rata-rata kuadrat ' +
+        'kesalahan prediksi pada masing-masing komoditas.'
+      );
+
+    }, [
+      activeChartMetric,
+    ]);
+
+
+  /* =======================================================
+     EMPTY STATE
+     ======================================================= */
+
+  if (
+    evaluationData.length === 0
+  ) {
+
+    return (
+
+      <div className="rounded-2xl border border-slate-200 bg-white p-8 text-center text-sm text-slate-500">
+
+        Data evaluasi model belum tersedia.
+
+      </div>
+    );
+  }
+
+
+  /* =======================================================
+     RENDER
+     ======================================================= */
 
   return (
+
     <div className="space-y-6 pb-12">
-      {/* Header Card */}
+
+      {/* =================================================
+          HEADER
+          ================================================= */}
+
       <div className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xs">
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between border-b border-slate-100 pb-4">
+
+        <div className="flex flex-col gap-4 border-b border-slate-100 pb-4 md:flex-row md:items-center md:justify-between">
+
           <div>
-            <div className="flex items-center gap-2 text-xs font-semibold text-emerald-800 tracking-wide uppercase">
-              <span>Metrik Evaluasi Prediksi Time-Series</span>
+
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-emerald-800">
+
             </div>
-            <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 mt-1">
+
+
+            <h1 className="mt-1 text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">
+
               Evaluasi Performa Model LSTM
+
             </h1>
-            <p className="text-xs text-slate-500 mt-1">
-              Pengukuran akurasi peramalan harga pada 10 komoditas pangan strategis Provinsi Maluku
+
+
+            <p className="mt-1 text-xs text-slate-500">
+
+              Hasil evaluasi prediksi harga pada {evaluationData.length} komoditas pangan Provinsi Maluku menggunakan MAE, RMSE, dan MAPE.
+
             </p>
+
           </div>
 
-          {/* Toggle Button for Placeholder vs Trained View */}
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-medium text-slate-600">Mode Tampilan:</span>
-            <button
-              onClick={() => setShowTrainedMetrics(!showTrainedMetrics)}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer border ${
-                showTrainedMetrics
-                  ? 'bg-emerald-50 text-emerald-800 border-emerald-200'
-                  : 'bg-slate-100 text-slate-700 border-slate-300'
-              }`}
-            >
-              <RefreshCw className="h-3.5 w-3.5" />
-              <span>
-                {showTrainedMetrics ? 'Hasil Pelatihan Model (Aktif)' : 'Placeholder (Nilai Belum Dijalankan)'}
-              </span>
-            </button>
-          </div>
+
         </div>
 
-        {/* Academic Note about Placeholder / Zero-Slop Rule */}
-        <div className="mt-4 rounded-xl border border-slate-200/70 bg-slate-50/80 p-3.5 text-xs text-slate-600 flex items-start gap-2.5">
-          <Info className="h-4 w-4 text-slate-500 shrink-0 mt-0.5" />
-          <div className="leading-relaxed">
-            Sesuai pedoman pengujian akademis: Apabila model LSTM belum dijalankan pada server backend, nilai metrik disajikan dengan simbol placeholder <strong>“—”</strong>. Saat pelatihan selesai dieksekusi oleh Administrator, tabel akan memperbarui nilai kalkulasi riil dari dataset uji tahun 2026.
-          </div>
-        </div>
+
+        {/* INFORMATION */}
+
       </div>
 
-      {/* Main Required Evaluation Table */}
+
+      {/* =================================================
+          EVALUATION TABLE
+          ================================================= */}
+
       <div className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-xs">
-        <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between border-b border-slate-100 pb-3">
+
+        <div className="mb-4 flex flex-col gap-2 border-b border-slate-100 pb-3 sm:flex-row sm:items-center sm:justify-between">
+
           <div>
+
             <h3 className="text-base font-bold text-slate-900">
-              Tabel Evaluasi Tiga Metrik Model LSTM (10 Komoditas)
+
+              Tabel Evaluasi Tiga Metrik Model LSTM ({evaluationData.length} Komoditas)
+
             </h3>
+
+
             <p className="text-xs text-slate-500">
-              Periode Pengujian: Januari – Agustus 2026 (Data Uji Mingguan PIHPS Maluku)
+
+              Periode Pengujian: {testMetadata.period}
+
+              {testMetadata.samples !== null
+                ? (
+                    ` · ${testMetadata.samples} observasi uji per komoditas`
+                  )
+                : ''}
+
             </p>
+
           </div>
-          <div className="text-xs text-slate-400 font-mono">
-            {displayItems.length} Komoditas Terdaftar
+
+
+          <div className="font-mono text-xs text-slate-400">
+
+            {displayItems.length} Komoditas
+
           </div>
+
         </div>
+
 
         <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
-            <thead>
-              <tr className="border-b border-slate-200 bg-slate-50/80 text-slate-700">
-                <th className="py-3 px-4 font-semibold">No</th>
-                <th className="py-3 px-4 font-semibold">Komoditas</th>
-                <th className="py-3 px-4 font-semibold text-right">MAE (Mean Absolute Error)</th>
-                <th className="py-3 px-4 font-semibold text-right">RMSE (Root Mean Squared Error)</th>
-                <th className="py-3 px-4 font-semibold text-right">MAPE (%)</th>
-                <th className="py-3 px-4 font-semibold text-center">Tingkat Akurasi</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100">
-              {displayItems.map((item, idx) => {
-                const hasVal = item.mape !== null && item.mae !== null && item.rmse !== null;
-                const mapeVal = item.mape;
 
-                let accuracyCategory = '—';
-                if (mapeVal !== null) {
-                  if (mapeVal < 2.0) accuracyCategory = 'Sangat Tinggi (< 2%)';
-                  else if (mapeVal < 5.0) accuracyCategory = 'Tinggi / Baik (< 5%)';
-                  else accuracyCategory = 'Cukup / Moderat';
+          <table className="w-full text-left text-xs">
+
+            <thead>
+
+              <tr className="border-b border-slate-200 bg-slate-50/80 text-slate-700">
+
+                <th className="px-4 py-3 font-semibold">
+                  No
+                </th>
+
+                <th className="px-4 py-3 font-semibold">
+                  Komoditas
+                </th>
+
+                <th className="px-4 py-3 text-right font-semibold">
+                  MAE
+                </th>
+
+                <th className="px-4 py-3 text-right font-semibold">
+                  RMSE
+                </th>
+
+                <th className="px-4 py-3 text-right font-semibold">
+                  MAPE (%)
+                </th>
+
+                <th className="px-4 py-3 text-center font-semibold">
+                  Data Uji
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody className="divide-y divide-slate-100">
+
+              {displayItems.map(
+                (
+                  item,
+                  index
+                ) => {
+
+                  const hasValues =
+                    item.mae !== null &&
+                    item.rmse !== null &&
+                    item.mape !== null;
+
+
+                  return (
+
+                    <tr
+                      key={
+                        item.commodityId
+                      }
+                      className="transition-colors hover:bg-slate-50/70"
+                    >
+
+                      {/* NO */}
+
+                      <td className="px-4 py-3 font-mono tabular-nums text-slate-400">
+
+                        {index + 1}
+
+                      </td>
+
+
+                      {/* COMMODITY */}
+
+                      <td className="px-4 py-3 font-semibold text-slate-900">
+
+                        {item.commodityName}
+
+                      </td>
+
+
+                      {/* MAE */}
+
+                      <td className="px-4 py-3 text-right font-mono font-medium tabular-nums text-slate-800">
+
+                        {hasValues
+                          ? formatCurrencyMetric(
+                              item.mae
+                            )
+                          : '—'}
+
+                      </td>
+
+
+                      {/* RMSE */}
+
+                      <td className="px-4 py-3 text-right font-mono font-medium tabular-nums text-slate-800">
+
+                        {hasValues
+                          ? formatCurrencyMetric(
+                              item.rmse
+                            )
+                          : '—'}
+
+                      </td>
+
+
+                      {/* MAPE */}
+
+                      <td className="px-4 py-3 text-right font-mono font-bold tabular-nums text-emerald-700">
+
+                        {hasValues
+                          ? formatPercentage(
+                              item.mape
+                            )
+                          : '—'}
+
+                      </td>
+
+
+                      {/* TEST DATA */}
+
+                      <td className="px-4 py-3 text-center font-mono tabular-nums text-slate-600">
+
+                        {item.testSamplesCount ??
+                          '—'}
+
+                      </td>
+
+                    </tr>
+                  );
                 }
+              )}
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+
+      {/* =================================================
+          COMPARISON VISUALIZATION
+          ================================================= */}
+
+      <div className="space-y-4">
+
+        <div className="flex flex-wrap items-center justify-between gap-3">
+
+          <div>
+
+            <h3 className="text-base font-bold text-slate-900">
+
+              Visualisasi Perbandingan Metrik Antar Komoditas
+
+            </h3>
+
+
+            <p className="text-xs text-slate-500">
+
+              Perbandingan hasil evaluasi model LSTM pada data uji untuk masing-masing komoditas.
+
+            </p>
+
+          </div>
+
+
+          {/* METRIC SELECTOR */}
+
+          <div className="flex items-center gap-1.5 rounded-lg bg-slate-100 p-1">
+
+            {(
+              [
+                'MAPE',
+                'MAE',
+                'RMSE',
+              ] as MetricKey[]
+            ).map(
+              (metric) => (
+
+                <button
+                  key={
+                    metric
+                  }
+                  onClick={
+                    () =>
+                      setActiveChartMetric(
+                        metric
+                      )
+                  }
+                  className={
+                    `cursor-pointer rounded-md px-3 py-1.5 text-xs font-semibold transition-colors ` +
+                    (
+                      activeChartMetric ===
+                      metric
+                        ? 'bg-white text-slate-900 shadow-xs'
+                        : 'text-slate-600 hover:text-slate-900'
+                    )
+                  }
+                >
+
+                  {metric}
+
+                </button>
+              )
+            )}
+
+          </div>
+
+        </div>
+
+
+        {/* BAR CHART */}
+
+        <div className="rounded-2xl border border-slate-200/90 bg-white p-5 shadow-xs">
+
+          <div className="border-b border-slate-100 pb-3">
+
+            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+
+              <div>
+
+                <h4 className="text-sm font-bold text-slate-900">
+
+                  Perbandingan {activeChartMetric} untuk {evaluationData.length} Komoditas Pangan Maluku
+
+                </h4>
+
+
+                <p className="mt-0.5 text-xs text-slate-500">
+
+                  {chartSubtitle}
+
+                </p>
+
+              </div>
+
+
+              <span className="font-mono text-xs text-slate-400">
+
+                {activeChartMetric === 'MAPE'
+                  ? 'Satuan: Persentase'
+                  : 'Satuan: mengikuti harga komoditas'}
+
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div className="mt-4 space-y-3">
+
+            {chartItems.map(
+              (
+                item,
+                index
+              ) => {
+
+                const width =
+                  item.value !== null &&
+                  chartMaximum > 0
+
+                    ? (
+                        item.value /
+                        chartMaximum
+                      ) *
+                      100
+
+                    : 0;
+
 
                 return (
-                  <tr key={item.commodityId} className="hover:bg-slate-50/70 transition-colors">
-                    <td className="py-3 px-4 text-slate-400 font-mono tabular-nums">
-                      {idx + 1}
-                    </td>
-                    <td className="py-3 px-4 font-semibold text-slate-900">
-                      {item.commodityName}
-                    </td>
-                    <td className="py-3 px-4 text-right font-mono font-medium text-slate-800 tabular-nums">
-                      {hasVal ? `Rp ${item.mae?.toLocaleString('id-ID', { minimumFractionDigits: 2 })}` : '—'}
-                    </td>
-                    <td className="py-3 px-4 text-right font-mono font-medium text-slate-800 tabular-nums">
-                      {hasVal ? `Rp ${item.rmse?.toLocaleString('id-ID', { minimumFractionDigits: 2 })}` : '—'}
-                    </td>
-                    <td className="py-3 px-4 text-right font-mono font-bold tabular-nums">
-                      {hasVal ? (
-                        <span className="text-emerald-700">{item.mape?.toFixed(2)}%</span>
-                      ) : (
-                        <span className="text-slate-400 font-sans">—</span>
+
+                  <div
+                    key={
+                      `${item.label}-${index}`
+                    }
+                    className="grid grid-cols-[120px_minmax(0,1fr)_110px] items-center gap-3 sm:grid-cols-[140px_minmax(0,1fr)_130px]"
+                  >
+
+                        {/* LABEL */}
+
+                        <div className="truncate text-right text-xs font-medium text-slate-700">
+
+                          {item.label}
+
+                        </div>
+
+
+                        {/* BAR */}
+
+                        <div className="h-7 overflow-hidden rounded-md bg-slate-100">
+
+                          <div
+                            className="
+                              h-full
+                              rounded-full
+                              bg-[#0F8A78]
+                              transition-all
+                              duration-500
+                            "
+                            style={{
+                              width: `${
+                                Math.min(
+                                  100,
+                                  (
+                                    Number(item.value ?? 0) /
+                                    Math.max(
+                                      ...chartItems.map(
+                                        (chartItem) =>
+                                          Number(chartItem.value ?? 0)
+                                      ),
+                                      1
+                                    )
+                                  ) * 100
+                                )
+                              }%`,
+                            }}
+                          />
+
+                        </div>
+
+
+                    {/* VALUE */}
+
+                    <div className="text-right font-mono text-xs font-medium tabular-nums text-slate-700">
+
+                      {formatChartValue(
+                        item.value
                       )}
-                    </td>
-                    <td className="py-3 px-4 text-center">
-                      <span className="text-[11px] text-slate-600 font-medium">
-                        {accuracyCategory}
-                      </span>
-                    </td>
-                  </tr>
+
+                    </div>
+
+                  </div>
                 );
-              })}
-            </tbody>
-          </table>
-        </div>
-      </div>
+              }
+            )}
 
-      {/* Visualisasi Sederhana: Bar Chart Comparison Antar Komoditas */}
-      <div className="space-y-4">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <h3 className="text-base font-bold text-slate-900">
-              Visualisasi Perbandingan Performa Antar Komoditas
-            </h3>
-            <p className="text-xs text-slate-500">
-              Grafik batang komparasi metrik evaluasi model LSTM pada data uji
-            </p>
           </div>
 
-          {/* Metric Selector Buttons */}
-          <div className="flex items-center gap-1.5 p-1 bg-slate-100 rounded-lg">
-            {(['MAPE', 'MAE', 'RMSE'] as const).map((m) => (
-              <button
-                key={m}
-                onClick={() => setActiveChartMetric(m)}
-                className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-colors cursor-pointer ${
-                  activeChartMetric === m
-                    ? 'bg-white text-slate-900 shadow-xs'
-                    : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                {m}
-              </button>
-            ))}
+
+          <div className="mt-4 border-t border-slate-100 pt-3 text-[11px] leading-relaxed text-slate-500">
+
+            Panjang batang menunjukkan besarnya nilai metrik pada masing-masing komoditas. Nilai kesalahan yang lebih kecil menunjukkan hasil prediksi yang lebih dekat terhadap nilai aktual.
+
           </div>
+
         </div>
 
-        <BarChartComparison
-          title={`Perbandingan ${activeChartMetric} untuk 10 Komoditas Pangan Maluku`}
-          subtitle={
-            activeChartMetric === 'MAPE'
-              ? 'Nilai persentase kesalahan rata-rata relatif terhadap harga sebenarnya (semakin kecil semakin akurat)'
-              : `Besaran simpangan dalam satuan mata uang Rupiah per komoditas (${activeChartMetric})`
-          }
-          items={chartItems}
-          metricType={activeChartMetric}
-        />
       </div>
 
-      {/* Tiga Metrik Formulasi & Penjelasan Ilmiah */}
+
+      {/* =================================================
+          METRIC EXPLANATIONS
+          ================================================= */}
+
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-        <div className="rounded-xl border border-slate-200/90 bg-white p-5 shadow-xs space-y-2">
+
+        {/* MAE */}
+
+        <div className="space-y-2 rounded-xl border border-slate-200/90 bg-white p-5 shadow-xs">
+
           <div className="flex items-center gap-2">
+
             <Calculator className="h-4 w-4 text-sky-600" />
-            <h4 className="font-bold text-slate-900 text-sm">Mean Absolute Error (MAE)</h4>
+
+
+            <h4 className="text-sm font-bold text-slate-900">
+
+              Mean Absolute Error (MAE)
+
+            </h4>
+
           </div>
+
+
           <div className="rounded-md bg-slate-50 p-2 font-mono text-[11px] text-slate-700">
-            MAE = (1/n) · Σ |y_t - ŷ_t|
+
+            MAE = (1/n) · Σ |yᵢ − ŷᵢ|
+
           </div>
-          <p className="text-xs text-slate-600 leading-relaxed">
-            Menghitung rata-rata nilai absolut selisih antara harga pangan aktual (y) dengan hasil prediksi LSTM (ŷ). Mengukur besaran kesalahan dalam satuan nominal Rupiah tanpa memberikan bobot berlebih pada outlier.
+
+
+          <p className="text-xs leading-relaxed text-slate-600">
+
+            MAE menghitung rata-rata nilai absolut selisih antara harga aktual dan hasil prediksi. Nilainya menunjukkan besar kesalahan prediksi dalam satuan yang sama dengan data harga.
+
           </p>
+
         </div>
 
-        <div className="rounded-xl border border-slate-200/90 bg-white p-5 shadow-xs space-y-2">
+
+        {/* RMSE */}
+
+        <div className="space-y-2 rounded-xl border border-slate-200/90 bg-white p-5 shadow-xs">
+
           <div className="flex items-center gap-2">
+
             <Calculator className="h-4 w-4 text-amber-600" />
-            <h4 className="font-bold text-slate-900 text-sm">Root Mean Squared Error (RMSE)</h4>
+
+
+            <h4 className="text-sm font-bold text-slate-900">
+
+              Root Mean Squared Error (RMSE)
+
+            </h4>
+
           </div>
+
+
           <div className="rounded-md bg-slate-50 p-2 font-mono text-[11px] text-slate-700">
-            RMSE = √[ (1/n) · Σ (y_t - ŷ_t)² ]
+
+            RMSE = √[(1/n) · Σ (yᵢ − ŷᵢ)²]
+
           </div>
-          <p className="text-xs text-slate-600 leading-relaxed">
-            Akar dari rata-rata kuadrat kesalahan. Memberikan penalti yang lebih besar terhadap kesalahan prediksi yang bernilai ekstrem, sangat krusial untuk komoditas volatil seperti Cabai Rawit dan Bawang Merah.
+
+
+          <p className="text-xs leading-relaxed text-slate-600">
+
+            RMSE dihitung dari akar rata-rata kuadrat selisih antara nilai aktual dan prediksi. Pengkuadratan kesalahan membuat selisih yang lebih besar memberikan pengaruh lebih kuat terhadap nilai RMSE.
+
           </p>
+
         </div>
 
-        <div className="rounded-xl border border-slate-200/90 bg-white p-5 shadow-xs space-y-2">
+
+        {/* MAPE */}
+
+        <div className="space-y-2 rounded-xl border border-slate-200/90 bg-white p-5 shadow-xs">
+
           <div className="flex items-center gap-2">
+
             <Calculator className="h-4 w-4 text-emerald-600" />
-            <h4 className="font-bold text-slate-900 text-sm">Mean Absolute Percentage Error (MAPE)</h4>
+
+
+            <h4 className="text-sm font-bold text-slate-900">
+
+              Mean Absolute Percentage Error (MAPE)
+
+            </h4>
+
           </div>
+
+
           <div className="rounded-md bg-slate-50 p-2 font-mono text-[11px] text-slate-700">
-            MAPE = (100%/n) · Σ |(y_t - ŷ_t) / y_t|
+
+            MAPE = (100%/n) · Σ |(yᵢ − ŷᵢ) / yᵢ|
+
           </div>
-          <p className="text-xs text-slate-600 leading-relaxed">
-            Rata-rata persentase deviasi kesalahan terhadap nilai aktual. Bebas dari skala harga komoditas sehingga memungkinkan komparasi langsung antara komoditas berharga tinggi (Daging Sapi) dan berharga rendah (Beras).
+
+
+          <p className="text-xs leading-relaxed text-slate-600">
+
+            MAPE menyatakan rata-rata kesalahan absolut antara nilai aktual dan prediksi dalam bentuk persentase. Metrik ini memudahkan perbandingan kesalahan relatif antar komoditas dengan tingkat harga yang berbeda.
+
           </p>
+
         </div>
+
       </div>
+
+
+      {/* =================================================
+          SYMBOL INFORMATION
+          ================================================= */}
+
+      
     </div>
   );
 };

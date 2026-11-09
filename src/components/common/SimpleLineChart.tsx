@@ -104,11 +104,29 @@ export const SimpleLineChart: React.FC<SimpleLineChartProps> = ({
     };
   });
 
-  // Pick ~6 readable x-ticks
-  const xTickStep = Math.max(1, Math.floor(labels.length / 6));
-  const xTicks = labels
-    .map((lbl, idx) => ({ label: lbl, idx }))
-    .filter((_, idx) => idx % xTickStep === 0 || idx === labels.length - 1);
+  // Pilih tanggal sumbu X dengan jarak aman, tanpa mengubah titik data.
+  // Selalu tampilkan tanggal pertama dan terakhir; tanggal tengah hanya
+  // ditampilkan jika tidak bertumpuk dengan tanggal lainnya.
+  const longestLabelLength = Math.max(...labels.map((label) => label.length));
+  const minimumTickGap = Math.max(90, longestLabelLength * 7 + 24);
+  const xTicks: { label: string; idx: number }[] = [
+    { label: labels[0], idx: 0 },
+  ];
+  const lastIndex = labels.length - 1;
+  const lastX = getX(lastIndex);
+  let previousTickX = getX(0);
+
+  for (let idx = 1; idx < lastIndex; idx++) {
+    const x = getX(idx);
+    if (x - previousTickX >= minimumTickGap && lastX - x >= minimumTickGap) {
+      xTicks.push({ label: labels[idx], idx });
+      previousTickX = x;
+    }
+  }
+
+  if (lastIndex > 0) {
+    xTicks.push({ label: labels[lastIndex], idx: lastIndex });
+  }
 
   return (
     <div className="w-full">

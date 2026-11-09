@@ -1,0 +1,181 @@
+﻿commodity_id,commodity,date,predicted_price,forecast_origin,horizon_weeks,last_observed_price,lookback,model_stage,forecast_method,seed,refit_epochs,checkpoint_sha256,actual_available_in_dataset
+bawang_putih,Bawang Putih,2026-09-01,44419.27149891853,2026-08-25,1,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-09-08,44438.59428167343,2026-08-25,2,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-09-15,44457.94928073883,2026-08-25,3,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-09-22,44477.32248902321,2026-08-25,4,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-09-29,44496.70550227165,2026-08-25,5,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-10-06,44516.09271764755,2026-08-25,6,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-10-13,44535.47993302345,2026-08-25,7,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-10-20,44554.86714839935,2026-08-25,8,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-10-27,44574.2529630661,2026-08-25,9,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-11-03,44593.6373770237,2026-08-25,10,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-11-10,44613.01898956299,2026-08-25,11,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-11-17,44632.39920139313,2026-08-25,12,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-11-24,44651.778012514114,2026-08-25,13,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-12-01,44671.15542292595,2026-08-25,14,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-12-08,44690.53003191948,2026-08-25,15,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-12-15,44709.90324020386,2026-08-25,16,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-12-22,44729.27504777908,2026-08-25,17,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+bawang_putih,Bawang Putih,2026-12-29,44748.644053936005,2026-08-25,18,44400.0,12,final_refit,recursive_fixed_origin,42,1,515bf7fd182445e3ab835768adb9124d76f40ae7f05ab1f6e37f4db1072332a1,False
+beras,Beras,2026-09-01,17206.379103660583,2026-08-25,1,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-09-08,17212.547540664673,2026-08-25,2,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-09-15,17218.570494651794,2026-08-25,3,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-09-22,17224.482941627502,2026-08-25,4,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-09-29,17230.306124687195,2026-08-25,5,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-10-06,17236.052703857422,2026-08-25,6,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-10-13,17241.73126220703,2026-08-25,7,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-10-20,17247.347593307495,2026-08-25,8,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-10-27,17252.90620326996,2026-08-25,9,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-11-03,17258.41052532196,2026-08-25,10,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-11-10,17263.86227607727,2026-08-25,11,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-11-17,17269.26918029785,2026-08-25,12,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-11-24,17274.629521369934,2026-08-25,13,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-12-01,17279.94372844696,2026-08-25,14,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-12-08,17285.212230682373,2026-08-25,15,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-12-15,17290.435457229614,2026-08-25,16,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-12-22,17295.613622665405,2026-08-25,17,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+beras,Beras,2026-12-29,17300.74715614319,2026-08-25,18,17200.0,12,final_refit,recursive_fixed_origin,42,60,5a9afa3da91370ffe166417ffd9cebcc477dbdec09ebf561c41b0181afd7158e,False
+gula_pasir,Gula pasir,2026-09-01,21585.73016524315,2026-08-25,1,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-09-08,21571.970921754837,2026-08-25,2,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-09-15,21558.845621347427,2026-08-25,3,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-09-22,21546.221926808357,2026-08-25,4,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-09-29,21534.242060780525,2026-08-25,5,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-10-06,21523.256796598434,2026-08-25,6,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-10-13,21513.294515013695,2026-08-25,7,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-10-20,21504.35138940811,2026-08-25,8,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-10-27,21496.173587441444,2026-08-25,9,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-11-03,21488.70594203472,2026-08-25,10,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-11-10,21481.89296722412,2026-08-25,11,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-11-17,21475.68045258522,2026-08-25,12,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-11-24,21470.014506578445,2026-08-25,13,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-12-01,21464.84442651272,2026-08-25,14,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-12-08,21460.123974084854,2026-08-25,15,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-12-15,21455.81201314926,2026-08-25,16,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-12-22,21451.871553063393,2026-08-25,17,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+gula_pasir,Gula pasir,2026-12-29,21448.269110918045,2026-08-25,18,21600.0,8,final_refit,recursive_fixed_origin,42,21,9f541cab07f92e2da1ac4b1eace4b8895e9678ec2e43e5eb81d4c6081953c930,False
+cabai_rawit,Cabai Rawit,2026-09-01,114475.08433759212,2026-08-25,1,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-09-08,111811.19715869427,2026-08-25,2,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-09-15,110065.72905182838,2026-08-25,3,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-09-22,108886.18105649948,2026-08-25,4,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-09-29,108072.95152544975,2026-08-25,5,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-10-06,107504.70064282417,2026-08-25,6,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-10-13,107103.95408570766,2026-08-25,7,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-10-20,106819.51745152473,2026-08-25,8,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-10-27,106616.72131419182,2026-08-25,9,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-11-03,106471.67368233204,2026-08-25,10,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-11-10,106367.69715845585,2026-08-25,11,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-11-17,106293.02992224693,2026-08-25,12,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-11-24,106239.35867846012,2026-08-25,13,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-12-01,106200.73900818825,2026-08-25,14,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-12-08,106172.94122874737,2026-08-25,15,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-12-15,106152.92327105999,2026-08-25,16,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-12-22,106138.49408328533,2026-08-25,17,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+cabai_rawit,Cabai Rawit,2026-12-29,106128.0977010727,2026-08-25,18,118750.0,1,final_refit,recursive_fixed_origin,42,200,f1f8c56ef5063dcf0a446f25265fffc9c95d1d8e0836a96cb90f80be0cfa3ceb,False
+daging_ayam,Daging Ayam,2026-09-01,45925.75643211603,2026-08-25,1,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-09-08,45486.10020726919,2026-08-25,2,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-09-15,45117.13321954012,2026-08-25,3,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-09-22,44807.31069594622,2026-08-25,4,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-09-29,44547.02435731888,2026-08-25,5,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-10-06,44328.26238125563,2026-08-25,6,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-10-13,44144.33531165123,2026-08-25,7,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-10-20,43989.64936733246,2026-08-25,8,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-10-27,43859.5230281353,2026-08-25,9,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-11-03,43750.033159554005,2026-08-25,10,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-11-10,43657.88998901844,2026-08-25,11,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-11-17,43580.3333774209,2026-08-25,12,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-11-24,43515.045577287674,2026-08-25,13,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-12-01,43460.08047759533,2026-08-25,14,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-12-08,43413.80109190941,2026-08-25,15,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-12-15,43374.83215928078,2026-08-25,16,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-12-22,43342.01617985964,2026-08-25,17,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+daging_ayam,Daging Ayam,2026-12-29,43314.380441606045,2026-08-25,18,46450.0,1,final_refit,recursive_fixed_origin,42,18,a35e28ae45d3dbc6b339f257bfe149a6f4adf730c6cfddd2e95be2d402c186d7,False
+minyak_goreng,Minyak Goreng,2026-09-01,26942.372465133667,2026-08-25,1,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-09-08,26985.264205932617,2026-08-25,2,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-09-15,27028.51858139038,2026-08-25,3,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-09-22,27072.040462493896,2026-08-25,4,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-09-29,27115.781211853027,2026-08-25,5,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-10-06,27159.71221923828,2026-08-25,6,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-10-13,27203.791999816895,2026-08-25,7,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-10-20,27248.00910949707,2026-08-25,8,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-10-27,27292.36569404602,2026-08-25,9,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-11-03,27336.861753463745,2026-08-25,10,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-11-10,27381.49800300598,2026-08-25,11,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-11-17,27426.27444267273,2026-08-25,12,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-11-24,27471.191787719727,2026-08-25,13,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-12-01,27516.249322891235,2026-08-25,14,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-12-08,27561.447763442993,2026-08-25,15,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-12-15,27606.787824630737,2026-08-25,16,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-12-22,27652.26879119873,2026-08-25,17,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+minyak_goreng,Minyak Goreng,2026-12-29,27697.89137840271,2026-08-25,18,26900.0,8,final_refit,recursive_fixed_origin,42,6,1bf56a76e98a603d1b49b598f702ec7411518bb5524ebc0ab3ab5ec254c2f80e,False
+telur_ayam,Telur Ayam,2026-09-01,35752.98681855202,2026-08-25,1,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-09-08,36070.56080177426,2026-08-25,2,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-09-15,36345.8898589015,2026-08-25,3,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-09-22,36577.458932995796,2026-08-25,4,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-09-29,36768.2316750288,2026-08-25,5,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-10-06,36923.81772398949,2026-08-25,6,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-10-13,37049.68912154436,2026-08-25,7,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-10-20,37150.85542947054,2026-08-25,8,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-10-27,37231.72400891781,2026-08-25,9,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-11-03,37296.07284069061,2026-08-25,10,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-11-10,37347.0823764801,2026-08-25,11,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-11-17,37387.390322983265,2026-08-25,12,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-11-24,37419.16001588106,2026-08-25,13,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-12-01,37444.14709508419,2026-08-25,14,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-12-08,37463.76660466194,2026-08-25,15,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-12-15,37479.15032505989,2026-08-25,16,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-12-22,37491.19943380356,2026-08-25,17,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+telur_ayam,Telur Ayam,2026-12-29,37500.62867254019,2026-08-25,18,35400.0,4,final_refit,recursive_fixed_origin,42,6,db8172ffc1a6bd30d7d2c4b31d9f400cb4c728f5c1b606f4b182e98735e06272,False
+bawang_merah,Bawang Merah,2026-09-01,46340.46596884727,2026-08-25,1,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-09-08,47310.00438779592,2026-08-25,2,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-09-15,49111.18700504302,2026-08-25,3,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-09-22,50668.74379515647,2026-08-25,4,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-09-29,51981.06372058391,2026-08-25,5,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-10-06,53273.91425073146,2026-08-25,6,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-10-13,53858.43019783496,2026-08-25,7,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-10-20,53984.67249572276,2026-08-25,8,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-10-27,54219.09073293208,2026-08-25,9,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-11-03,54368.65237951278,2026-08-25,10,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-11-10,54591.57501757144,2026-08-25,11,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-11-17,55046.01421654224,2026-08-25,12,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-11-24,55571.155613660805,2026-08-25,13,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-12-01,56168.854421377175,2026-08-25,14,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-12-08,56819.269168376915,2026-08-25,15,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-12-15,57380.04976511001,2026-08-25,16,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-12-22,57830.89222908019,2026-08-25,17,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+bawang_merah,Bawang Merah,2026-12-29,58174.51219856738,2026-08-25,18,45000.0,8,final_refit,recursive_fixed_origin,42,59,6a01ee56dd881a1532fc8ef483181055f1514a737d650aaf3a65374426e62fb9,False
+cabai_merah,Cabai Merah,2026-09-01,95726.04365348814,2026-08-25,1,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-09-08,93659.79390740393,2026-08-25,2,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-09-15,91554.59557175635,2026-08-25,3,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-09-22,89550.01707971095,2026-08-25,4,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-09-29,87716.668009758,2026-08-25,5,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-10-06,86082.76459276676,2026-08-25,6,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-10-13,84652.53979414701,2026-08-25,7,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-10-20,83416.67312830687,2026-08-25,8,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-10-27,82358.65735709667,2026-08-25,9,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-11-03,81459.6206203103,2026-08-25,10,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-11-10,80700.50528496504,2026-08-25,11,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-11-17,80062.56157010794,2026-08-25,12,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-11-24,79528.78595888615,2026-08-25,13,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-12-01,79083.3081483841,2026-08-25,14,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-12-08,78712.27479726076,2026-08-25,15,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-12-15,78403.74336987734,2026-08-25,16,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-12-22,78147.51759469509,2026-08-25,17,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+cabai_merah,Cabai Merah,2026-12-29,77934.95107591152,2026-08-25,18,97500.0,12,final_refit,recursive_fixed_origin,42,2,e69d5599aeaceb504848cfe4d3f6c5104810caac377b4f8dc58ca38bc25d02de,False
+daging_sapi,Daging Sapi,2026-09-01,143751.94519758224,2026-08-25,1,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-09-08,143755.25638461113,2026-08-25,2,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-09-15,143757.66903162003,2026-08-25,3,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-09-22,143759.57876443863,2026-08-25,4,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-09-29,143761.47776842117,2026-08-25,5,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-10-06,143763.36738467216,2026-08-25,6,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-10-13,143765.2476131916,2026-08-25,7,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-10-20,143767.119795084,2026-08-25,8,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-10-27,143768.98258924484,2026-08-25,9,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-11-03,143770.83733677864,2026-08-25,10,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-11-10,143772.6826965809,2026-08-25,11,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-11-17,143774.5200097561,2026-08-25,12,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-11-24,143776.34927630424,2026-08-25,13,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-12-01,143778.16915512085,2026-08-25,14,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-12-08,143779.9809873104,2026-08-25,15,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-12-15,143781.78477287292,2026-08-25,16,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-12-22,143783.5791707039,2026-08-25,17,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False
+daging_sapi,Daging Sapi,2026-12-29,143785.3655219078,2026-08-25,18,143750.0,4,final_refit,recursive_fixed_origin,42,20,54fae7f693d98fb2c18264851b85aa3a99823b1df280b8015ce2aafe273b8a3c,False

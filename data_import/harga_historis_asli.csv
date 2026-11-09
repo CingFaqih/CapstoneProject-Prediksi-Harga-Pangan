@@ -1,0 +1,1871 @@
+﻿date,commodity,price,commodity_id,is_observed
+2023-01-31,Bawang Putih,32500.0,bawang_putih,True
+2023-02-07,Bawang Putih,32500.0,bawang_putih,True
+2023-02-14,Bawang Putih,32900.0,bawang_putih,True
+2023-02-21,Bawang Putih,33250.0,bawang_putih,True
+2023-02-28,Bawang Putih,33750.0,bawang_putih,True
+2023-03-07,Bawang Putih,33750.0,bawang_putih,True
+2023-03-14,Bawang Putih,35900.0,bawang_putih,True
+2023-03-21,Bawang Putih,37500.0,bawang_putih,True
+2023-03-28,Bawang Putih,40400.0,bawang_putih,True
+2023-04-04,Bawang Putih,40000.0,bawang_putih,True
+2023-04-11,Bawang Putih,39400.0,bawang_putih,True
+2023-04-18,Bawang Putih,39400.0,bawang_putih,True
+2023-04-25,Bawang Putih,39400.0,bawang_putih,True
+2023-05-02,Bawang Putih,40000.0,bawang_putih,True
+2023-05-09,Bawang Putih,40000.0,bawang_putih,True
+2023-05-16,Bawang Putih,40400.0,bawang_putih,True
+2023-05-23,Bawang Putih,41650.0,bawang_putih,True
+2023-05-30,Bawang Putih,43750.0,bawang_putih,True
+2023-06-06,Bawang Putih,43750.0,bawang_putih,True
+2023-06-13,Bawang Putih,43750.0,bawang_putih,True
+2023-06-20,Bawang Putih,43750.0,bawang_putih,True
+2023-06-27,Bawang Putih,43750.0,bawang_putih,True
+2023-07-04,Bawang Putih,44400.0,bawang_putih,True
+2023-07-11,Bawang Putih,44400.0,bawang_putih,True
+2023-07-18,Bawang Putih,48750.0,bawang_putih,True
+2023-07-25,Bawang Putih,46900.0,bawang_putih,True
+2023-08-01,Bawang Putih,46650.0,bawang_putih,True
+2023-08-08,Bawang Putih,46250.0,bawang_putih,True
+2023-08-15,Bawang Putih,46650.0,bawang_putih,True
+2023-08-22,Bawang Putih,46650.0,bawang_putih,True
+2023-08-29,Bawang Putih,45900.0,bawang_putih,True
+2023-09-05,Bawang Putih,45900.0,bawang_putih,True
+2023-09-12,Bawang Putih,45000.0,bawang_putih,True
+2023-09-19,Bawang Putih,45000.0,bawang_putih,True
+2023-09-26,Bawang Putih,43750.0,bawang_putih,True
+2023-10-03,Bawang Putih,43750.0,bawang_putih,True
+2023-10-10,Bawang Putih,43750.0,bawang_putih,True
+2023-10-17,Bawang Putih,43750.0,bawang_putih,True
+2023-10-24,Bawang Putih,43750.0,bawang_putih,True
+2023-10-31,Bawang Putih,43150.0,bawang_putih,True
+2023-11-07,Bawang Putih,43150.0,bawang_putih,True
+2023-11-14,Bawang Putih,43150.0,bawang_putih,True
+2023-11-21,Bawang Putih,42500.0,bawang_putih,True
+2023-11-28,Bawang Putih,42500.0,bawang_putih,True
+2023-12-05,Bawang Putih,41900.0,bawang_putih,True
+2023-12-12,Bawang Putih,41900.0,bawang_putih,True
+2023-12-19,Bawang Putih,42250.0,bawang_putih,True
+2023-12-26,Bawang Putih,,bawang_putih,False
+2024-01-02,Bawang Putih,44400.0,bawang_putih,True
+2024-01-09,Bawang Putih,46900.0,bawang_putih,True
+2024-01-16,Bawang Putih,45650.0,bawang_putih,True
+2024-01-23,Bawang Putih,45650.0,bawang_putih,True
+2024-01-30,Bawang Putih,44400.0,bawang_putih,True
+2024-02-06,Bawang Putih,46250.0,bawang_putih,True
+2024-02-13,Bawang Putih,46250.0,bawang_putih,True
+2024-02-20,Bawang Putih,44400.0,bawang_putih,True
+2024-02-27,Bawang Putih,44400.0,bawang_putih,True
+2024-03-05,Bawang Putih,45650.0,bawang_putih,True
+2024-03-12,Bawang Putih,45650.0,bawang_putih,True
+2024-03-19,Bawang Putih,46900.0,bawang_putih,True
+2024-03-26,Bawang Putih,48150.0,bawang_putih,True
+2024-04-02,Bawang Putih,47500.0,bawang_putih,True
+2024-04-09,Bawang Putih,47500.0,bawang_putih,True
+2024-04-16,Bawang Putih,51900.0,bawang_putih,True
+2024-04-23,Bawang Putih,53750.0,bawang_putih,True
+2024-04-30,Bawang Putih,56000.0,bawang_putih,True
+2024-05-07,Bawang Putih,50650.0,bawang_putih,True
+2024-05-14,Bawang Putih,51900.0,bawang_putih,True
+2024-05-21,Bawang Putih,51250.0,bawang_putih,True
+2024-05-28,Bawang Putih,50650.0,bawang_putih,True
+2024-06-04,Bawang Putih,50650.0,bawang_putih,True
+2024-06-11,Bawang Putih,50650.0,bawang_putih,True
+2024-06-18,Bawang Putih,50650.0,bawang_putih,True
+2024-06-25,Bawang Putih,48750.0,bawang_putih,True
+2024-07-02,Bawang Putih,48150.0,bawang_putih,True
+2024-07-09,Bawang Putih,48150.0,bawang_putih,True
+2024-07-16,Bawang Putih,46900.0,bawang_putih,True
+2024-07-23,Bawang Putih,46250.0,bawang_putih,True
+2024-07-30,Bawang Putih,48150.0,bawang_putih,True
+2024-08-06,Bawang Putih,48750.0,bawang_putih,True
+2024-08-13,Bawang Putih,48150.0,bawang_putih,True
+2024-08-20,Bawang Putih,47500.0,bawang_putih,True
+2024-08-27,Bawang Putih,46900.0,bawang_putih,True
+2024-09-03,Bawang Putih,47500.0,bawang_putih,True
+2024-09-10,Bawang Putih,44150.0,bawang_putih,True
+2024-09-17,Bawang Putih,44150.0,bawang_putih,True
+2024-09-24,Bawang Putih,44150.0,bawang_putih,True
+2024-10-01,Bawang Putih,44150.0,bawang_putih,True
+2024-10-08,Bawang Putih,43500.0,bawang_putih,True
+2024-10-15,Bawang Putih,43500.0,bawang_putih,True
+2024-10-22,Bawang Putih,44150.0,bawang_putih,True
+2024-10-29,Bawang Putih,43500.0,bawang_putih,True
+2024-11-05,Bawang Putih,44150.0,bawang_putih,True
+2024-11-12,Bawang Putih,44750.0,bawang_putih,True
+2024-11-19,Bawang Putih,45400.0,bawang_putih,True
+2024-11-26,Bawang Putih,44750.0,bawang_putih,True
+2024-12-03,Bawang Putih,44750.0,bawang_putih,True
+2024-12-10,Bawang Putih,45000.0,bawang_putih,True
+2024-12-17,Bawang Putih,48750.0,bawang_putih,True
+2024-12-24,Bawang Putih,48750.0,bawang_putih,True
+2024-12-31,Bawang Putih,50650.0,bawang_putih,True
+2025-01-07,Bawang Putih,49400.0,bawang_putih,True
+2025-01-14,Bawang Putih,49400.0,bawang_putih,True
+2025-01-21,Bawang Putih,49400.0,bawang_putih,True
+2025-01-28,Bawang Putih,47900.0,bawang_putih,True
+2025-02-04,Bawang Putih,47250.0,bawang_putih,True
+2025-02-11,Bawang Putih,,bawang_putih,False
+2025-02-18,Bawang Putih,46650.0,bawang_putih,True
+2025-02-25,Bawang Putih,46650.0,bawang_putih,True
+2025-03-04,Bawang Putih,46650.0,bawang_putih,True
+2025-03-11,Bawang Putih,46000.0,bawang_putih,True
+2025-03-18,Bawang Putih,47500.0,bawang_putih,True
+2025-03-25,Bawang Putih,51250.0,bawang_putih,True
+2025-04-01,Bawang Putih,51250.0,bawang_putih,True
+2025-04-08,Bawang Putih,49400.0,bawang_putih,True
+2025-04-15,Bawang Putih,49400.0,bawang_putih,True
+2025-04-22,Bawang Putih,50650.0,bawang_putih,True
+2025-04-29,Bawang Putih,50650.0,bawang_putih,True
+2025-05-06,Bawang Putih,48500.0,bawang_putih,True
+2025-05-13,Bawang Putih,48500.0,bawang_putih,True
+2025-05-20,Bawang Putih,47500.0,bawang_putih,True
+2025-05-27,Bawang Putih,46900.0,bawang_putih,True
+2025-06-03,Bawang Putih,46900.0,bawang_putih,True
+2025-06-10,Bawang Putih,46250.0,bawang_putih,True
+2025-06-17,Bawang Putih,46250.0,bawang_putih,True
+2025-06-24,Bawang Putih,46250.0,bawang_putih,True
+2025-07-01,Bawang Putih,45150.0,bawang_putih,True
+2025-07-08,Bawang Putih,46400.0,bawang_putih,True
+2025-07-15,Bawang Putih,45000.0,bawang_putih,True
+2025-07-22,Bawang Putih,45000.0,bawang_putih,True
+2025-07-29,Bawang Putih,45650.0,bawang_putih,True
+2025-08-05,Bawang Putih,43750.0,bawang_putih,True
+2025-08-12,Bawang Putih,43750.0,bawang_putih,True
+2025-08-19,Bawang Putih,43750.0,bawang_putih,True
+2025-08-26,Bawang Putih,42500.0,bawang_putih,True
+2025-09-02,Bawang Putih,42500.0,bawang_putih,True
+2025-09-09,Bawang Putih,42500.0,bawang_putih,True
+2025-09-16,Bawang Putih,42500.0,bawang_putih,True
+2025-09-23,Bawang Putih,42500.0,bawang_putih,True
+2025-09-30,Bawang Putih,42500.0,bawang_putih,True
+2025-10-07,Bawang Putih,41900.0,bawang_putih,True
+2025-10-14,Bawang Putih,41900.0,bawang_putih,True
+2025-10-21,Bawang Putih,42500.0,bawang_putih,True
+2025-10-28,Bawang Putih,42500.0,bawang_putih,True
+2025-11-04,Bawang Putih,41900.0,bawang_putih,True
+2025-11-11,Bawang Putih,41900.0,bawang_putih,True
+2025-11-18,Bawang Putih,42500.0,bawang_putih,True
+2025-11-25,Bawang Putih,42500.0,bawang_putih,True
+2025-12-02,Bawang Putih,42500.0,bawang_putih,True
+2025-12-09,Bawang Putih,42500.0,bawang_putih,True
+2025-12-16,Bawang Putih,42500.0,bawang_putih,True
+2025-12-23,Bawang Putih,42500.0,bawang_putih,True
+2025-12-30,Bawang Putih,42500.0,bawang_putih,True
+2026-01-06,Bawang Putih,41900.0,bawang_putih,True
+2026-01-13,Bawang Putih,41900.0,bawang_putih,True
+2026-01-20,Bawang Putih,41900.0,bawang_putih,True
+2026-01-27,Bawang Putih,42500.0,bawang_putih,True
+2026-02-03,Bawang Putih,42500.0,bawang_putih,True
+2026-02-10,Bawang Putih,42500.0,bawang_putih,True
+2026-02-17,Bawang Putih,42500.0,bawang_putih,True
+2026-02-24,Bawang Putih,42500.0,bawang_putih,True
+2026-03-03,Bawang Putih,42500.0,bawang_putih,True
+2026-03-10,Bawang Putih,42500.0,bawang_putih,True
+2026-03-17,Bawang Putih,43150.0,bawang_putih,True
+2026-03-24,Bawang Putih,43150.0,bawang_putih,True
+2026-03-31,Bawang Putih,45000.0,bawang_putih,True
+2026-04-07,Bawang Putih,43750.0,bawang_putih,True
+2026-04-14,Bawang Putih,42500.0,bawang_putih,True
+2026-04-21,Bawang Putih,42500.0,bawang_putih,True
+2026-04-28,Bawang Putih,42500.0,bawang_putih,True
+2026-05-05,Bawang Putih,42500.0,bawang_putih,True
+2026-05-12,Bawang Putih,42500.0,bawang_putih,True
+2026-05-19,Bawang Putih,42500.0,bawang_putih,True
+2026-05-26,Bawang Putih,42500.0,bawang_putih,True
+2026-06-02,Bawang Putih,42500.0,bawang_putih,True
+2026-06-09,Bawang Putih,44400.0,bawang_putih,True
+2026-06-16,Bawang Putih,48150.0,bawang_putih,True
+2026-06-23,Bawang Putih,50650.0,bawang_putih,True
+2026-06-30,Bawang Putih,50650.0,bawang_putih,True
+2026-07-07,Bawang Putih,50650.0,bawang_putih,True
+2026-07-14,Bawang Putih,49400.0,bawang_putih,True
+2026-07-21,Bawang Putih,48750.0,bawang_putih,True
+2026-07-28,Bawang Putih,48150.0,bawang_putih,True
+2026-08-04,Bawang Putih,46250.0,bawang_putih,True
+2026-08-11,Bawang Putih,45650.0,bawang_putih,True
+2026-08-18,Bawang Putih,44400.0,bawang_putih,True
+2026-08-25,Bawang Putih,44400.0,bawang_putih,True
+2023-01-31,Beras,13700.0,beras,True
+2023-02-07,Beras,13950.0,beras,True
+2023-02-14,Beras,13950.0,beras,True
+2023-02-21,Beras,13950.0,beras,True
+2023-02-28,Beras,14000.0,beras,True
+2023-03-07,Beras,14100.0,beras,True
+2023-03-14,Beras,14100.0,beras,True
+2023-03-21,Beras,14400.0,beras,True
+2023-03-28,Beras,14400.0,beras,True
+2023-04-04,Beras,14450.0,beras,True
+2023-04-11,Beras,14500.0,beras,True
+2023-04-18,Beras,14550.0,beras,True
+2023-04-25,Beras,14550.0,beras,True
+2023-05-02,Beras,14550.0,beras,True
+2023-05-09,Beras,14550.0,beras,True
+2023-05-16,Beras,14750.0,beras,True
+2023-05-23,Beras,14800.0,beras,True
+2023-05-30,Beras,14800.0,beras,True
+2023-06-06,Beras,14650.0,beras,True
+2023-06-13,Beras,14650.0,beras,True
+2023-06-20,Beras,14650.0,beras,True
+2023-06-27,Beras,14700.0,beras,True
+2023-07-04,Beras,14750.0,beras,True
+2023-07-11,Beras,14750.0,beras,True
+2023-07-18,Beras,14750.0,beras,True
+2023-07-25,Beras,14700.0,beras,True
+2023-08-01,Beras,14700.0,beras,True
+2023-08-08,Beras,14100.0,beras,True
+2023-08-15,Beras,14050.0,beras,True
+2023-08-22,Beras,13950.0,beras,True
+2023-08-29,Beras,14150.0,beras,True
+2023-09-05,Beras,14200.0,beras,True
+2023-09-12,Beras,14450.0,beras,True
+2023-09-19,Beras,14650.0,beras,True
+2023-09-26,Beras,14650.0,beras,True
+2023-10-03,Beras,14650.0,beras,True
+2023-10-10,Beras,14650.0,beras,True
+2023-10-17,Beras,14800.0,beras,True
+2023-10-24,Beras,15150.0,beras,True
+2023-10-31,Beras,15050.0,beras,True
+2023-11-07,Beras,15150.0,beras,True
+2023-11-14,Beras,15250.0,beras,True
+2023-11-21,Beras,15250.0,beras,True
+2023-11-28,Beras,15250.0,beras,True
+2023-12-05,Beras,15250.0,beras,True
+2023-12-12,Beras,15250.0,beras,True
+2023-12-19,Beras,15200.0,beras,True
+2023-12-26,Beras,,beras,False
+2024-01-02,Beras,15200.0,beras,True
+2024-01-09,Beras,15200.0,beras,True
+2024-01-16,Beras,15200.0,beras,True
+2024-01-23,Beras,15200.0,beras,True
+2024-01-30,Beras,15150.0,beras,True
+2024-02-06,Beras,15400.0,beras,True
+2024-02-13,Beras,15400.0,beras,True
+2024-02-20,Beras,15550.0,beras,True
+2024-02-27,Beras,15600.0,beras,True
+2024-03-05,Beras,15650.0,beras,True
+2024-03-12,Beras,15700.0,beras,True
+2024-03-19,Beras,15850.0,beras,True
+2024-03-26,Beras,15850.0,beras,True
+2024-04-02,Beras,15900.0,beras,True
+2024-04-09,Beras,15950.0,beras,True
+2024-04-16,Beras,15950.0,beras,True
+2024-04-23,Beras,15900.0,beras,True
+2024-04-30,Beras,15850.0,beras,True
+2024-05-07,Beras,15850.0,beras,True
+2024-05-14,Beras,16050.0,beras,True
+2024-05-21,Beras,16100.0,beras,True
+2024-05-28,Beras,16150.0,beras,True
+2024-06-04,Beras,16200.0,beras,True
+2024-06-11,Beras,16200.0,beras,True
+2024-06-18,Beras,16200.0,beras,True
+2024-06-25,Beras,16200.0,beras,True
+2024-07-02,Beras,16150.0,beras,True
+2024-07-09,Beras,16150.0,beras,True
+2024-07-16,Beras,16150.0,beras,True
+2024-07-23,Beras,16150.0,beras,True
+2024-07-30,Beras,16150.0,beras,True
+2024-08-06,Beras,16150.0,beras,True
+2024-08-13,Beras,16200.0,beras,True
+2024-08-20,Beras,16200.0,beras,True
+2024-08-27,Beras,16200.0,beras,True
+2024-09-03,Beras,16200.0,beras,True
+2024-09-10,Beras,16200.0,beras,True
+2024-09-17,Beras,16200.0,beras,True
+2024-09-24,Beras,16150.0,beras,True
+2024-10-01,Beras,16150.0,beras,True
+2024-10-08,Beras,16300.0,beras,True
+2024-10-15,Beras,16150.0,beras,True
+2024-10-22,Beras,16150.0,beras,True
+2024-10-29,Beras,16150.0,beras,True
+2024-11-05,Beras,16150.0,beras,True
+2024-11-12,Beras,16150.0,beras,True
+2024-11-19,Beras,16150.0,beras,True
+2024-11-26,Beras,16150.0,beras,True
+2024-12-03,Beras,16100.0,beras,True
+2024-12-10,Beras,16100.0,beras,True
+2024-12-17,Beras,16100.0,beras,True
+2024-12-24,Beras,16100.0,beras,True
+2024-12-31,Beras,16100.0,beras,True
+2025-01-07,Beras,16100.0,beras,True
+2025-01-14,Beras,16100.0,beras,True
+2025-01-21,Beras,16100.0,beras,True
+2025-01-28,Beras,16100.0,beras,True
+2025-02-04,Beras,16050.0,beras,True
+2025-02-11,Beras,,beras,False
+2025-02-18,Beras,16200.0,beras,True
+2025-02-25,Beras,16200.0,beras,True
+2025-03-04,Beras,16200.0,beras,True
+2025-03-11,Beras,16250.0,beras,True
+2025-03-18,Beras,16150.0,beras,True
+2025-03-25,Beras,16150.0,beras,True
+2025-04-01,Beras,16150.0,beras,True
+2025-04-08,Beras,16150.0,beras,True
+2025-04-15,Beras,16200.0,beras,True
+2025-04-22,Beras,16200.0,beras,True
+2025-04-29,Beras,16200.0,beras,True
+2025-05-06,Beras,16200.0,beras,True
+2025-05-13,Beras,16200.0,beras,True
+2025-05-20,Beras,16450.0,beras,True
+2025-05-27,Beras,16800.0,beras,True
+2025-06-03,Beras,16650.0,beras,True
+2025-06-10,Beras,16700.0,beras,True
+2025-06-17,Beras,16850.0,beras,True
+2025-06-24,Beras,16900.0,beras,True
+2025-07-01,Beras,16950.0,beras,True
+2025-07-08,Beras,17100.0,beras,True
+2025-07-15,Beras,17150.0,beras,True
+2025-07-22,Beras,17000.0,beras,True
+2025-07-29,Beras,16850.0,beras,True
+2025-08-05,Beras,16850.0,beras,True
+2025-08-12,Beras,16850.0,beras,True
+2025-08-19,Beras,16900.0,beras,True
+2025-08-26,Beras,16900.0,beras,True
+2025-09-02,Beras,16850.0,beras,True
+2025-09-09,Beras,16850.0,beras,True
+2025-09-16,Beras,16850.0,beras,True
+2025-09-23,Beras,16850.0,beras,True
+2025-09-30,Beras,16950.0,beras,True
+2025-10-07,Beras,16950.0,beras,True
+2025-10-14,Beras,16900.0,beras,True
+2025-10-21,Beras,16900.0,beras,True
+2025-10-28,Beras,16900.0,beras,True
+2025-11-04,Beras,16850.0,beras,True
+2025-11-11,Beras,16850.0,beras,True
+2025-11-18,Beras,16750.0,beras,True
+2025-11-25,Beras,16700.0,beras,True
+2025-12-02,Beras,16700.0,beras,True
+2025-12-09,Beras,16700.0,beras,True
+2025-12-16,Beras,16700.0,beras,True
+2025-12-23,Beras,16650.0,beras,True
+2025-12-30,Beras,16650.0,beras,True
+2026-01-06,Beras,16650.0,beras,True
+2026-01-13,Beras,16650.0,beras,True
+2026-01-20,Beras,16650.0,beras,True
+2026-01-27,Beras,16700.0,beras,True
+2026-02-03,Beras,16700.0,beras,True
+2026-02-10,Beras,16700.0,beras,True
+2026-02-17,Beras,16700.0,beras,True
+2026-02-24,Beras,16700.0,beras,True
+2026-03-03,Beras,16700.0,beras,True
+2026-03-10,Beras,16700.0,beras,True
+2026-03-17,Beras,16750.0,beras,True
+2026-03-24,Beras,16750.0,beras,True
+2026-03-31,Beras,16750.0,beras,True
+2026-04-07,Beras,16750.0,beras,True
+2026-04-14,Beras,16750.0,beras,True
+2026-04-21,Beras,16750.0,beras,True
+2026-04-28,Beras,16800.0,beras,True
+2026-05-05,Beras,16800.0,beras,True
+2026-05-12,Beras,16850.0,beras,True
+2026-05-19,Beras,16850.0,beras,True
+2026-05-26,Beras,16850.0,beras,True
+2026-06-02,Beras,16850.0,beras,True
+2026-06-09,Beras,16900.0,beras,True
+2026-06-16,Beras,16900.0,beras,True
+2026-06-23,Beras,16900.0,beras,True
+2026-06-30,Beras,16950.0,beras,True
+2026-07-07,Beras,16950.0,beras,True
+2026-07-14,Beras,16950.0,beras,True
+2026-07-21,Beras,16950.0,beras,True
+2026-07-28,Beras,16950.0,beras,True
+2026-08-04,Beras,16950.0,beras,True
+2026-08-11,Beras,16900.0,beras,True
+2026-08-18,Beras,17300.0,beras,True
+2026-08-25,Beras,17200.0,beras,True
+2023-01-31,Gula pasir,16450.0,gula_pasir,True
+2023-02-07,Gula pasir,16550.0,gula_pasir,True
+2023-02-14,Gula pasir,16600.0,gula_pasir,True
+2023-02-21,Gula pasir,16600.0,gula_pasir,True
+2023-02-28,Gula pasir,16600.0,gula_pasir,True
+2023-03-07,Gula pasir,16600.0,gula_pasir,True
+2023-03-14,Gula pasir,16600.0,gula_pasir,True
+2023-03-21,Gula pasir,16550.0,gula_pasir,True
+2023-03-28,Gula pasir,16600.0,gula_pasir,True
+2023-04-04,Gula pasir,16650.0,gula_pasir,True
+2023-04-11,Gula pasir,16650.0,gula_pasir,True
+2023-04-18,Gula pasir,16650.0,gula_pasir,True
+2023-04-25,Gula pasir,16650.0,gula_pasir,True
+2023-05-02,Gula pasir,16700.0,gula_pasir,True
+2023-05-09,Gula pasir,16700.0,gula_pasir,True
+2023-05-16,Gula pasir,16700.0,gula_pasir,True
+2023-05-23,Gula pasir,16700.0,gula_pasir,True
+2023-05-30,Gula pasir,16700.0,gula_pasir,True
+2023-06-06,Gula pasir,16700.0,gula_pasir,True
+2023-06-13,Gula pasir,16650.0,gula_pasir,True
+2023-06-20,Gula pasir,16350.0,gula_pasir,True
+2023-06-27,Gula pasir,16400.0,gula_pasir,True
+2023-07-04,Gula pasir,16350.0,gula_pasir,True
+2023-07-11,Gula pasir,16350.0,gula_pasir,True
+2023-07-18,Gula pasir,16350.0,gula_pasir,True
+2023-07-25,Gula pasir,16350.0,gula_pasir,True
+2023-08-01,Gula pasir,16500.0,gula_pasir,True
+2023-08-08,Gula pasir,16600.0,gula_pasir,True
+2023-08-15,Gula pasir,16500.0,gula_pasir,True
+2023-08-22,Gula pasir,16400.0,gula_pasir,True
+2023-08-29,Gula pasir,16600.0,gula_pasir,True
+2023-09-05,Gula pasir,16600.0,gula_pasir,True
+2023-09-12,Gula pasir,16600.0,gula_pasir,True
+2023-09-19,Gula pasir,16600.0,gula_pasir,True
+2023-09-26,Gula pasir,16850.0,gula_pasir,True
+2023-10-03,Gula pasir,17200.0,gula_pasir,True
+2023-10-10,Gula pasir,17200.0,gula_pasir,True
+2023-10-17,Gula pasir,17150.0,gula_pasir,True
+2023-10-24,Gula pasir,17150.0,gula_pasir,True
+2023-10-31,Gula pasir,17350.0,gula_pasir,True
+2023-11-07,Gula pasir,17700.0,gula_pasir,True
+2023-11-14,Gula pasir,17700.0,gula_pasir,True
+2023-11-21,Gula pasir,18150.0,gula_pasir,True
+2023-11-28,Gula pasir,18200.0,gula_pasir,True
+2023-12-05,Gula pasir,18200.0,gula_pasir,True
+2023-12-12,Gula pasir,18200.0,gula_pasir,True
+2023-12-19,Gula pasir,18600.0,gula_pasir,True
+2023-12-26,Gula pasir,,gula_pasir,False
+2024-01-02,Gula pasir,18700.0,gula_pasir,True
+2024-01-09,Gula pasir,18700.0,gula_pasir,True
+2024-01-16,Gula pasir,18850.0,gula_pasir,True
+2024-01-23,Gula pasir,18700.0,gula_pasir,True
+2024-01-30,Gula pasir,18850.0,gula_pasir,True
+2024-02-06,Gula pasir,18850.0,gula_pasir,True
+2024-02-13,Gula pasir,19150.0,gula_pasir,True
+2024-02-20,Gula pasir,18950.0,gula_pasir,True
+2024-02-27,Gula pasir,19050.0,gula_pasir,True
+2024-03-05,Gula pasir,19300.0,gula_pasir,True
+2024-03-12,Gula pasir,19550.0,gula_pasir,True
+2024-03-19,Gula pasir,19950.0,gula_pasir,True
+2024-03-26,Gula pasir,19850.0,gula_pasir,True
+2024-04-02,Gula pasir,20000.0,gula_pasir,True
+2024-04-09,Gula pasir,20000.0,gula_pasir,True
+2024-04-16,Gula pasir,20150.0,gula_pasir,True
+2024-04-23,Gula pasir,20200.0,gula_pasir,True
+2024-04-30,Gula pasir,20350.0,gula_pasir,True
+2024-05-07,Gula pasir,20350.0,gula_pasir,True
+2024-05-14,Gula pasir,20350.0,gula_pasir,True
+2024-05-21,Gula pasir,20350.0,gula_pasir,True
+2024-05-28,Gula pasir,20350.0,gula_pasir,True
+2024-06-04,Gula pasir,20650.0,gula_pasir,True
+2024-06-11,Gula pasir,20800.0,gula_pasir,True
+2024-06-18,Gula pasir,20800.0,gula_pasir,True
+2024-06-25,Gula pasir,20600.0,gula_pasir,True
+2024-07-02,Gula pasir,20750.0,gula_pasir,True
+2024-07-09,Gula pasir,20750.0,gula_pasir,True
+2024-07-16,Gula pasir,20700.0,gula_pasir,True
+2024-07-23,Gula pasir,20450.0,gula_pasir,True
+2024-07-30,Gula pasir,20450.0,gula_pasir,True
+2024-08-06,Gula pasir,20450.0,gula_pasir,True
+2024-08-13,Gula pasir,20500.0,gula_pasir,True
+2024-08-20,Gula pasir,20200.0,gula_pasir,True
+2024-08-27,Gula pasir,20100.0,gula_pasir,True
+2024-09-03,Gula pasir,20150.0,gula_pasir,True
+2024-09-10,Gula pasir,20150.0,gula_pasir,True
+2024-09-17,Gula pasir,20100.0,gula_pasir,True
+2024-09-24,Gula pasir,20000.0,gula_pasir,True
+2024-10-01,Gula pasir,20200.0,gula_pasir,True
+2024-10-08,Gula pasir,20200.0,gula_pasir,True
+2024-10-15,Gula pasir,20250.0,gula_pasir,True
+2024-10-22,Gula pasir,20250.0,gula_pasir,True
+2024-10-29,Gula pasir,20250.0,gula_pasir,True
+2024-11-05,Gula pasir,20500.0,gula_pasir,True
+2024-11-12,Gula pasir,20350.0,gula_pasir,True
+2024-11-19,Gula pasir,20350.0,gula_pasir,True
+2024-11-26,Gula pasir,20350.0,gula_pasir,True
+2024-12-03,Gula pasir,20350.0,gula_pasir,True
+2024-12-10,Gula pasir,20350.0,gula_pasir,True
+2024-12-17,Gula pasir,20350.0,gula_pasir,True
+2024-12-24,Gula pasir,20350.0,gula_pasir,True
+2024-12-31,Gula pasir,20350.0,gula_pasir,True
+2025-01-07,Gula pasir,20400.0,gula_pasir,True
+2025-01-14,Gula pasir,20650.0,gula_pasir,True
+2025-01-21,Gula pasir,20650.0,gula_pasir,True
+2025-01-28,Gula pasir,20700.0,gula_pasir,True
+2025-02-04,Gula pasir,21000.0,gula_pasir,True
+2025-02-11,Gula pasir,,gula_pasir,False
+2025-02-18,Gula pasir,21150.0,gula_pasir,True
+2025-02-25,Gula pasir,21250.0,gula_pasir,True
+2025-03-04,Gula pasir,21250.0,gula_pasir,True
+2025-03-11,Gula pasir,21350.0,gula_pasir,True
+2025-03-18,Gula pasir,21350.0,gula_pasir,True
+2025-03-25,Gula pasir,21300.0,gula_pasir,True
+2025-04-01,Gula pasir,21350.0,gula_pasir,True
+2025-04-08,Gula pasir,21350.0,gula_pasir,True
+2025-04-15,Gula pasir,21350.0,gula_pasir,True
+2025-04-22,Gula pasir,21350.0,gula_pasir,True
+2025-04-29,Gula pasir,21350.0,gula_pasir,True
+2025-05-06,Gula pasir,21350.0,gula_pasir,True
+2025-05-13,Gula pasir,21350.0,gula_pasir,True
+2025-05-20,Gula pasir,21450.0,gula_pasir,True
+2025-05-27,Gula pasir,21450.0,gula_pasir,True
+2025-06-03,Gula pasir,21550.0,gula_pasir,True
+2025-06-10,Gula pasir,21500.0,gula_pasir,True
+2025-06-17,Gula pasir,21400.0,gula_pasir,True
+2025-06-24,Gula pasir,21550.0,gula_pasir,True
+2025-07-01,Gula pasir,21550.0,gula_pasir,True
+2025-07-08,Gula pasir,21400.0,gula_pasir,True
+2025-07-15,Gula pasir,21450.0,gula_pasir,True
+2025-07-22,Gula pasir,21350.0,gula_pasir,True
+2025-07-29,Gula pasir,21300.0,gula_pasir,True
+2025-08-05,Gula pasir,21300.0,gula_pasir,True
+2025-08-12,Gula pasir,21250.0,gula_pasir,True
+2025-08-19,Gula pasir,21250.0,gula_pasir,True
+2025-08-26,Gula pasir,21250.0,gula_pasir,True
+2025-09-02,Gula pasir,21250.0,gula_pasir,True
+2025-09-09,Gula pasir,21250.0,gula_pasir,True
+2025-09-16,Gula pasir,21250.0,gula_pasir,True
+2025-09-23,Gula pasir,21400.0,gula_pasir,True
+2025-09-30,Gula pasir,21250.0,gula_pasir,True
+2025-10-07,Gula pasir,21200.0,gula_pasir,True
+2025-10-14,Gula pasir,21100.0,gula_pasir,True
+2025-10-21,Gula pasir,21000.0,gula_pasir,True
+2025-10-28,Gula pasir,21000.0,gula_pasir,True
+2025-11-04,Gula pasir,20900.0,gula_pasir,True
+2025-11-11,Gula pasir,20800.0,gula_pasir,True
+2025-11-18,Gula pasir,20700.0,gula_pasir,True
+2025-11-25,Gula pasir,20850.0,gula_pasir,True
+2025-12-02,Gula pasir,20650.0,gula_pasir,True
+2025-12-09,Gula pasir,20600.0,gula_pasir,True
+2025-12-16,Gula pasir,20700.0,gula_pasir,True
+2025-12-23,Gula pasir,20650.0,gula_pasir,True
+2025-12-30,Gula pasir,20750.0,gula_pasir,True
+2026-01-06,Gula pasir,20700.0,gula_pasir,True
+2026-01-13,Gula pasir,20650.0,gula_pasir,True
+2026-01-20,Gula pasir,20600.0,gula_pasir,True
+2026-01-27,Gula pasir,20850.0,gula_pasir,True
+2026-02-03,Gula pasir,20900.0,gula_pasir,True
+2026-02-10,Gula pasir,21100.0,gula_pasir,True
+2026-02-17,Gula pasir,21050.0,gula_pasir,True
+2026-02-24,Gula pasir,20950.0,gula_pasir,True
+2026-03-03,Gula pasir,21050.0,gula_pasir,True
+2026-03-10,Gula pasir,20900.0,gula_pasir,True
+2026-03-17,Gula pasir,21100.0,gula_pasir,True
+2026-03-24,Gula pasir,21100.0,gula_pasir,True
+2026-03-31,Gula pasir,21350.0,gula_pasir,True
+2026-04-07,Gula pasir,21550.0,gula_pasir,True
+2026-04-14,Gula pasir,21550.0,gula_pasir,True
+2026-04-21,Gula pasir,21550.0,gula_pasir,True
+2026-04-28,Gula pasir,21550.0,gula_pasir,True
+2026-05-05,Gula pasir,21550.0,gula_pasir,True
+2026-05-12,Gula pasir,21550.0,gula_pasir,True
+2026-05-19,Gula pasir,21700.0,gula_pasir,True
+2026-05-26,Gula pasir,21600.0,gula_pasir,True
+2026-06-02,Gula pasir,21550.0,gula_pasir,True
+2026-06-09,Gula pasir,21650.0,gula_pasir,True
+2026-06-16,Gula pasir,21650.0,gula_pasir,True
+2026-06-23,Gula pasir,21650.0,gula_pasir,True
+2026-06-30,Gula pasir,21650.0,gula_pasir,True
+2026-07-07,Gula pasir,21650.0,gula_pasir,True
+2026-07-14,Gula pasir,21650.0,gula_pasir,True
+2026-07-21,Gula pasir,21600.0,gula_pasir,True
+2026-07-28,Gula pasir,21600.0,gula_pasir,True
+2026-08-04,Gula pasir,21650.0,gula_pasir,True
+2026-08-11,Gula pasir,21650.0,gula_pasir,True
+2026-08-18,Gula pasir,21650.0,gula_pasir,True
+2026-08-25,Gula pasir,21600.0,gula_pasir,True
+2023-01-31,Cabai Rawit,65000.0,cabai_rawit,True
+2023-02-07,Cabai Rawit,81250.0,cabai_rawit,True
+2023-02-14,Cabai Rawit,64400.0,cabai_rawit,True
+2023-02-21,Cabai Rawit,64400.0,cabai_rawit,True
+2023-02-28,Cabai Rawit,75650.0,cabai_rawit,True
+2023-03-07,Cabai Rawit,77200.0,cabai_rawit,True
+2023-03-14,Cabai Rawit,74700.0,cabai_rawit,True
+2023-03-21,Cabai Rawit,92850.0,cabai_rawit,True
+2023-03-28,Cabai Rawit,110000.0,cabai_rawit,True
+2023-04-04,Cabai Rawit,66250.0,cabai_rawit,True
+2023-04-11,Cabai Rawit,67500.0,cabai_rawit,True
+2023-04-18,Cabai Rawit,55000.0,cabai_rawit,True
+2023-04-25,Cabai Rawit,55000.0,cabai_rawit,True
+2023-05-02,Cabai Rawit,53150.0,cabai_rawit,True
+2023-05-09,Cabai Rawit,72850.0,cabai_rawit,True
+2023-05-16,Cabai Rawit,92850.0,cabai_rawit,True
+2023-05-23,Cabai Rawit,81250.0,cabai_rawit,True
+2023-05-30,Cabai Rawit,74400.0,cabai_rawit,True
+2023-06-06,Cabai Rawit,81250.0,cabai_rawit,True
+2023-06-13,Cabai Rawit,64400.0,cabai_rawit,True
+2023-06-20,Cabai Rawit,69700.0,cabai_rawit,True
+2023-06-27,Cabai Rawit,91900.0,cabai_rawit,True
+2023-07-04,Cabai Rawit,99700.0,cabai_rawit,True
+2023-07-11,Cabai Rawit,92200.0,cabai_rawit,True
+2023-07-18,Cabai Rawit,81900.0,cabai_rawit,True
+2023-07-25,Cabai Rawit,63450.0,cabai_rawit,True
+2023-08-01,Cabai Rawit,63750.0,cabai_rawit,True
+2023-08-08,Cabai Rawit,69100.0,cabai_rawit,True
+2023-08-15,Cabai Rawit,81600.0,cabai_rawit,True
+2023-08-22,Cabai Rawit,80950.0,cabai_rawit,True
+2023-08-29,Cabai Rawit,77850.0,cabai_rawit,True
+2023-09-05,Cabai Rawit,73750.0,cabai_rawit,True
+2023-09-12,Cabai Rawit,78150.0,cabai_rawit,True
+2023-09-19,Cabai Rawit,68250.0,cabai_rawit,True
+2023-09-26,Cabai Rawit,83600.0,cabai_rawit,True
+2023-10-03,Cabai Rawit,81400.0,cabai_rawit,True
+2023-10-10,Cabai Rawit,96100.0,cabai_rawit,True
+2023-10-17,Cabai Rawit,94700.0,cabai_rawit,True
+2023-10-24,Cabai Rawit,81600.0,cabai_rawit,True
+2023-10-31,Cabai Rawit,97500.0,cabai_rawit,True
+2023-11-07,Cabai Rawit,112500.0,cabai_rawit,True
+2023-11-14,Cabai Rawit,103750.0,cabai_rawit,True
+2023-11-21,Cabai Rawit,107200.0,cabai_rawit,True
+2023-11-28,Cabai Rawit,132850.0,cabai_rawit,True
+2023-12-05,Cabai Rawit,129100.0,cabai_rawit,True
+2023-12-12,Cabai Rawit,125650.0,cabai_rawit,True
+2023-12-19,Cabai Rawit,110350.0,cabai_rawit,True
+2023-12-26,Cabai Rawit,,cabai_rawit,False
+2024-01-02,Cabai Rawit,142500.0,cabai_rawit,True
+2024-01-09,Cabai Rawit,121900.0,cabai_rawit,True
+2024-01-16,Cabai Rawit,104400.0,cabai_rawit,True
+2024-01-23,Cabai Rawit,110000.0,cabai_rawit,True
+2024-01-30,Cabai Rawit,63450.0,cabai_rawit,True
+2024-02-06,Cabai Rawit,58450.0,cabai_rawit,True
+2024-02-13,Cabai Rawit,54100.0,cabai_rawit,True
+2024-02-20,Cabai Rawit,53750.0,cabai_rawit,True
+2024-02-27,Cabai Rawit,50950.0,cabai_rawit,True
+2024-03-05,Cabai Rawit,49400.0,cabai_rawit,True
+2024-03-12,Cabai Rawit,50950.0,cabai_rawit,True
+2024-03-19,Cabai Rawit,65350.0,cabai_rawit,True
+2024-03-26,Cabai Rawit,59400.0,cabai_rawit,True
+2024-04-02,Cabai Rawit,60000.0,cabai_rawit,True
+2024-04-09,Cabai Rawit,61600.0,cabai_rawit,True
+2024-04-16,Cabai Rawit,77500.0,cabai_rawit,True
+2024-04-23,Cabai Rawit,87500.0,cabai_rawit,True
+2024-04-30,Cabai Rawit,97500.0,cabai_rawit,True
+2024-05-07,Cabai Rawit,100950.0,cabai_rawit,True
+2024-05-14,Cabai Rawit,88750.0,cabai_rawit,True
+2024-05-21,Cabai Rawit,88150.0,cabai_rawit,True
+2024-05-28,Cabai Rawit,86900.0,cabai_rawit,True
+2024-06-04,Cabai Rawit,77200.0,cabai_rawit,True
+2024-06-11,Cabai Rawit,80350.0,cabai_rawit,True
+2024-06-18,Cabai Rawit,79700.0,cabai_rawit,True
+2024-06-25,Cabai Rawit,75000.0,cabai_rawit,True
+2024-07-02,Cabai Rawit,71600.0,cabai_rawit,True
+2024-07-09,Cabai Rawit,72850.0,cabai_rawit,True
+2024-07-16,Cabai Rawit,67200.0,cabai_rawit,True
+2024-07-23,Cabai Rawit,76900.0,cabai_rawit,True
+2024-07-30,Cabai Rawit,83750.0,cabai_rawit,True
+2024-08-06,Cabai Rawit,82200.0,cabai_rawit,True
+2024-08-13,Cabai Rawit,96250.0,cabai_rawit,True
+2024-08-20,Cabai Rawit,95650.0,cabai_rawit,True
+2024-08-27,Cabai Rawit,96900.0,cabai_rawit,True
+2024-09-03,Cabai Rawit,81600.0,cabai_rawit,True
+2024-09-10,Cabai Rawit,73750.0,cabai_rawit,True
+2024-09-17,Cabai Rawit,73150.0,cabai_rawit,True
+2024-09-24,Cabai Rawit,73750.0,cabai_rawit,True
+2024-10-01,Cabai Rawit,70350.0,cabai_rawit,True
+2024-10-08,Cabai Rawit,66900.0,cabai_rawit,True
+2024-10-15,Cabai Rawit,61250.0,cabai_rawit,True
+2024-10-22,Cabai Rawit,63750.0,cabai_rawit,True
+2024-10-29,Cabai Rawit,59100.0,cabai_rawit,True
+2024-11-05,Cabai Rawit,54700.0,cabai_rawit,True
+2024-11-12,Cabai Rawit,53450.0,cabai_rawit,True
+2024-11-19,Cabai Rawit,54400.0,cabai_rawit,True
+2024-11-26,Cabai Rawit,56600.0,cabai_rawit,True
+2024-12-03,Cabai Rawit,57850.0,cabai_rawit,True
+2024-12-10,Cabai Rawit,67200.0,cabai_rawit,True
+2024-12-17,Cabai Rawit,75650.0,cabai_rawit,True
+2024-12-24,Cabai Rawit,77500.0,cabai_rawit,True
+2024-12-31,Cabai Rawit,117500.0,cabai_rawit,True
+2025-01-07,Cabai Rawit,105950.0,cabai_rawit,True
+2025-01-14,Cabai Rawit,155950.0,cabai_rawit,True
+2025-01-21,Cabai Rawit,99700.0,cabai_rawit,True
+2025-01-28,Cabai Rawit,93450.0,cabai_rawit,True
+2025-02-04,Cabai Rawit,79400.0,cabai_rawit,True
+2025-02-11,Cabai Rawit,,cabai_rawit,False
+2025-02-18,Cabai Rawit,74700.0,cabai_rawit,True
+2025-02-25,Cabai Rawit,84700.0,cabai_rawit,True
+2025-03-04,Cabai Rawit,97500.0,cabai_rawit,True
+2025-03-11,Cabai Rawit,79400.0,cabai_rawit,True
+2025-03-18,Cabai Rawit,86900.0,cabai_rawit,True
+2025-03-25,Cabai Rawit,126250.0,cabai_rawit,True
+2025-04-01,Cabai Rawit,134400.0,cabai_rawit,True
+2025-04-08,Cabai Rawit,108150.0,cabai_rawit,True
+2025-04-15,Cabai Rawit,112500.0,cabai_rawit,True
+2025-04-22,Cabai Rawit,106900.0,cabai_rawit,True
+2025-04-29,Cabai Rawit,122500.0,cabai_rawit,True
+2025-05-06,Cabai Rawit,106250.0,cabai_rawit,True
+2025-05-13,Cabai Rawit,106900.0,cabai_rawit,True
+2025-05-20,Cabai Rawit,102200.0,cabai_rawit,True
+2025-05-27,Cabai Rawit,100350.0,cabai_rawit,True
+2025-06-03,Cabai Rawit,93450.0,cabai_rawit,True
+2025-06-10,Cabai Rawit,97500.0,cabai_rawit,True
+2025-06-17,Cabai Rawit,100000.0,cabai_rawit,True
+2025-06-24,Cabai Rawit,101250.0,cabai_rawit,True
+2025-07-01,Cabai Rawit,101250.0,cabai_rawit,True
+2025-07-08,Cabai Rawit,101900.0,cabai_rawit,True
+2025-07-15,Cabai Rawit,120000.0,cabai_rawit,True
+2025-07-22,Cabai Rawit,110000.0,cabai_rawit,True
+2025-07-29,Cabai Rawit,101600.0,cabai_rawit,True
+2025-08-05,Cabai Rawit,103750.0,cabai_rawit,True
+2025-08-12,Cabai Rawit,112500.0,cabai_rawit,True
+2025-08-19,Cabai Rawit,88750.0,cabai_rawit,True
+2025-08-26,Cabai Rawit,94400.0,cabai_rawit,True
+2025-09-02,Cabai Rawit,71900.0,cabai_rawit,True
+2025-09-09,Cabai Rawit,72200.0,cabai_rawit,True
+2025-09-16,Cabai Rawit,67850.0,cabai_rawit,True
+2025-09-23,Cabai Rawit,65000.0,cabai_rawit,True
+2025-09-30,Cabai Rawit,66900.0,cabai_rawit,True
+2025-10-07,Cabai Rawit,61900.0,cabai_rawit,True
+2025-10-14,Cabai Rawit,60650.0,cabai_rawit,True
+2025-10-21,Cabai Rawit,63150.0,cabai_rawit,True
+2025-10-28,Cabai Rawit,59400.0,cabai_rawit,True
+2025-11-04,Cabai Rawit,72500.0,cabai_rawit,True
+2025-11-11,Cabai Rawit,73750.0,cabai_rawit,True
+2025-11-18,Cabai Rawit,81900.0,cabai_rawit,True
+2025-11-25,Cabai Rawit,67500.0,cabai_rawit,True
+2025-12-02,Cabai Rawit,75000.0,cabai_rawit,True
+2025-12-09,Cabai Rawit,85950.0,cabai_rawit,True
+2025-12-16,Cabai Rawit,110000.0,cabai_rawit,True
+2025-12-23,Cabai Rawit,106900.0,cabai_rawit,True
+2025-12-30,Cabai Rawit,97500.0,cabai_rawit,True
+2026-01-06,Cabai Rawit,101250.0,cabai_rawit,True
+2026-01-13,Cabai Rawit,104400.0,cabai_rawit,True
+2026-01-20,Cabai Rawit,109400.0,cabai_rawit,True
+2026-01-27,Cabai Rawit,85950.0,cabai_rawit,True
+2026-02-03,Cabai Rawit,82500.0,cabai_rawit,True
+2026-02-10,Cabai Rawit,81600.0,cabai_rawit,True
+2026-02-17,Cabai Rawit,82200.0,cabai_rawit,True
+2026-02-24,Cabai Rawit,97500.0,cabai_rawit,True
+2026-03-03,Cabai Rawit,97500.0,cabai_rawit,True
+2026-03-10,Cabai Rawit,103750.0,cabai_rawit,True
+2026-03-17,Cabai Rawit,126900.0,cabai_rawit,True
+2026-03-24,Cabai Rawit,126900.0,cabai_rawit,True
+2026-03-31,Cabai Rawit,151900.0,cabai_rawit,True
+2026-04-07,Cabai Rawit,146250.0,cabai_rawit,True
+2026-04-14,Cabai Rawit,125000.0,cabai_rawit,True
+2026-04-21,Cabai Rawit,96250.0,cabai_rawit,True
+2026-04-28,Cabai Rawit,80000.0,cabai_rawit,True
+2026-05-05,Cabai Rawit,80950.0,cabai_rawit,True
+2026-05-12,Cabai Rawit,80650.0,cabai_rawit,True
+2026-05-19,Cabai Rawit,77850.0,cabai_rawit,True
+2026-05-26,Cabai Rawit,85650.0,cabai_rawit,True
+2026-06-02,Cabai Rawit,86900.0,cabai_rawit,True
+2026-06-09,Cabai Rawit,90000.0,cabai_rawit,True
+2026-06-16,Cabai Rawit,93750.0,cabai_rawit,True
+2026-06-23,Cabai Rawit,96250.0,cabai_rawit,True
+2026-06-30,Cabai Rawit,94400.0,cabai_rawit,True
+2026-07-07,Cabai Rawit,85650.0,cabai_rawit,True
+2026-07-14,Cabai Rawit,86250.0,cabai_rawit,True
+2026-07-21,Cabai Rawit,82200.0,cabai_rawit,True
+2026-07-28,Cabai Rawit,83750.0,cabai_rawit,True
+2026-08-04,Cabai Rawit,92500.0,cabai_rawit,True
+2026-08-11,Cabai Rawit,88150.0,cabai_rawit,True
+2026-08-18,Cabai Rawit,100350.0,cabai_rawit,True
+2026-08-25,Cabai Rawit,118750.0,cabai_rawit,True
+2023-01-31,Daging Ayam,39650.0,daging_ayam,True
+2023-02-07,Daging Ayam,40150.0,daging_ayam,True
+2023-02-14,Daging Ayam,41900.0,daging_ayam,True
+2023-02-21,Daging Ayam,41950.0,daging_ayam,True
+2023-02-28,Daging Ayam,39450.0,daging_ayam,True
+2023-03-07,Daging Ayam,39400.0,daging_ayam,True
+2023-03-14,Daging Ayam,40850.0,daging_ayam,True
+2023-03-21,Daging Ayam,39250.0,daging_ayam,True
+2023-03-28,Daging Ayam,41150.0,daging_ayam,True
+2023-04-04,Daging Ayam,39400.0,daging_ayam,True
+2023-04-11,Daging Ayam,42200.0,daging_ayam,True
+2023-04-18,Daging Ayam,40550.0,daging_ayam,True
+2023-04-25,Daging Ayam,40550.0,daging_ayam,True
+2023-05-02,Daging Ayam,44250.0,daging_ayam,True
+2023-05-09,Daging Ayam,42350.0,daging_ayam,True
+2023-05-16,Daging Ayam,43350.0,daging_ayam,True
+2023-05-23,Daging Ayam,40650.0,daging_ayam,True
+2023-05-30,Daging Ayam,42900.0,daging_ayam,True
+2023-06-06,Daging Ayam,40700.0,daging_ayam,True
+2023-06-13,Daging Ayam,43750.0,daging_ayam,True
+2023-06-20,Daging Ayam,43800.0,daging_ayam,True
+2023-06-27,Daging Ayam,47000.0,daging_ayam,True
+2023-07-04,Daging Ayam,45400.0,daging_ayam,True
+2023-07-11,Daging Ayam,46300.0,daging_ayam,True
+2023-07-18,Daging Ayam,38900.0,daging_ayam,True
+2023-07-25,Daging Ayam,36850.0,daging_ayam,True
+2023-08-01,Daging Ayam,36950.0,daging_ayam,True
+2023-08-08,Daging Ayam,36050.0,daging_ayam,True
+2023-08-15,Daging Ayam,39450.0,daging_ayam,True
+2023-08-22,Daging Ayam,39200.0,daging_ayam,True
+2023-08-29,Daging Ayam,39050.0,daging_ayam,True
+2023-09-05,Daging Ayam,42000.0,daging_ayam,True
+2023-09-12,Daging Ayam,43050.0,daging_ayam,True
+2023-09-19,Daging Ayam,41800.0,daging_ayam,True
+2023-09-26,Daging Ayam,45100.0,daging_ayam,True
+2023-10-03,Daging Ayam,44000.0,daging_ayam,True
+2023-10-10,Daging Ayam,44000.0,daging_ayam,True
+2023-10-17,Daging Ayam,45550.0,daging_ayam,True
+2023-10-24,Daging Ayam,47350.0,daging_ayam,True
+2023-10-31,Daging Ayam,47250.0,daging_ayam,True
+2023-11-07,Daging Ayam,47250.0,daging_ayam,True
+2023-11-14,Daging Ayam,45800.0,daging_ayam,True
+2023-11-21,Daging Ayam,45250.0,daging_ayam,True
+2023-11-28,Daging Ayam,44150.0,daging_ayam,True
+2023-12-05,Daging Ayam,43550.0,daging_ayam,True
+2023-12-12,Daging Ayam,42850.0,daging_ayam,True
+2023-12-19,Daging Ayam,41300.0,daging_ayam,True
+2023-12-26,Daging Ayam,,daging_ayam,False
+2024-01-02,Daging Ayam,43650.0,daging_ayam,True
+2024-01-09,Daging Ayam,40150.0,daging_ayam,True
+2024-01-16,Daging Ayam,38650.0,daging_ayam,True
+2024-01-23,Daging Ayam,38300.0,daging_ayam,True
+2024-01-30,Daging Ayam,38450.0,daging_ayam,True
+2024-02-06,Daging Ayam,37550.0,daging_ayam,True
+2024-02-13,Daging Ayam,37850.0,daging_ayam,True
+2024-02-20,Daging Ayam,36900.0,daging_ayam,True
+2024-02-27,Daging Ayam,37900.0,daging_ayam,True
+2024-03-05,Daging Ayam,38850.0,daging_ayam,True
+2024-03-12,Daging Ayam,38850.0,daging_ayam,True
+2024-03-19,Daging Ayam,43100.0,daging_ayam,True
+2024-03-26,Daging Ayam,44250.0,daging_ayam,True
+2024-04-02,Daging Ayam,44250.0,daging_ayam,True
+2024-04-09,Daging Ayam,44250.0,daging_ayam,True
+2024-04-16,Daging Ayam,44250.0,daging_ayam,True
+2024-04-23,Daging Ayam,45400.0,daging_ayam,True
+2024-04-30,Daging Ayam,43250.0,daging_ayam,True
+2024-05-07,Daging Ayam,42100.0,daging_ayam,True
+2024-05-14,Daging Ayam,42100.0,daging_ayam,True
+2024-05-21,Daging Ayam,41550.0,daging_ayam,True
+2024-05-28,Daging Ayam,42650.0,daging_ayam,True
+2024-06-04,Daging Ayam,42650.0,daging_ayam,True
+2024-06-11,Daging Ayam,42650.0,daging_ayam,True
+2024-06-18,Daging Ayam,42650.0,daging_ayam,True
+2024-06-25,Daging Ayam,43900.0,daging_ayam,True
+2024-07-02,Daging Ayam,44650.0,daging_ayam,True
+2024-07-09,Daging Ayam,44650.0,daging_ayam,True
+2024-07-16,Daging Ayam,44650.0,daging_ayam,True
+2024-07-23,Daging Ayam,44650.0,daging_ayam,True
+2024-07-30,Daging Ayam,44650.0,daging_ayam,True
+2024-08-06,Daging Ayam,44650.0,daging_ayam,True
+2024-08-13,Daging Ayam,44650.0,daging_ayam,True
+2024-08-20,Daging Ayam,43100.0,daging_ayam,True
+2024-08-27,Daging Ayam,42450.0,daging_ayam,True
+2024-09-03,Daging Ayam,42450.0,daging_ayam,True
+2024-09-10,Daging Ayam,41950.0,daging_ayam,True
+2024-09-17,Daging Ayam,41900.0,daging_ayam,True
+2024-09-24,Daging Ayam,41900.0,daging_ayam,True
+2024-10-01,Daging Ayam,41700.0,daging_ayam,True
+2024-10-08,Daging Ayam,41700.0,daging_ayam,True
+2024-10-15,Daging Ayam,42250.0,daging_ayam,True
+2024-10-22,Daging Ayam,43700.0,daging_ayam,True
+2024-10-29,Daging Ayam,43050.0,daging_ayam,True
+2024-11-05,Daging Ayam,42250.0,daging_ayam,True
+2024-11-12,Daging Ayam,42250.0,daging_ayam,True
+2024-11-19,Daging Ayam,42250.0,daging_ayam,True
+2024-11-26,Daging Ayam,41700.0,daging_ayam,True
+2024-12-03,Daging Ayam,42100.0,daging_ayam,True
+2024-12-10,Daging Ayam,40500.0,daging_ayam,True
+2024-12-17,Daging Ayam,40500.0,daging_ayam,True
+2024-12-24,Daging Ayam,40500.0,daging_ayam,True
+2024-12-31,Daging Ayam,40500.0,daging_ayam,True
+2025-01-07,Daging Ayam,41750.0,daging_ayam,True
+2025-01-14,Daging Ayam,41000.0,daging_ayam,True
+2025-01-21,Daging Ayam,40050.0,daging_ayam,True
+2025-01-28,Daging Ayam,41500.0,daging_ayam,True
+2025-02-04,Daging Ayam,41500.0,daging_ayam,True
+2025-02-11,Daging Ayam,,daging_ayam,False
+2025-02-18,Daging Ayam,40150.0,daging_ayam,True
+2025-02-25,Daging Ayam,40150.0,daging_ayam,True
+2025-03-04,Daging Ayam,40350.0,daging_ayam,True
+2025-03-11,Daging Ayam,40400.0,daging_ayam,True
+2025-03-18,Daging Ayam,40950.0,daging_ayam,True
+2025-03-25,Daging Ayam,40200.0,daging_ayam,True
+2025-04-01,Daging Ayam,40200.0,daging_ayam,True
+2025-04-08,Daging Ayam,40900.0,daging_ayam,True
+2025-04-15,Daging Ayam,41200.0,daging_ayam,True
+2025-04-22,Daging Ayam,41650.0,daging_ayam,True
+2025-04-29,Daging Ayam,41650.0,daging_ayam,True
+2025-05-06,Daging Ayam,41650.0,daging_ayam,True
+2025-05-13,Daging Ayam,41650.0,daging_ayam,True
+2025-05-20,Daging Ayam,41650.0,daging_ayam,True
+2025-05-27,Daging Ayam,40350.0,daging_ayam,True
+2025-06-03,Daging Ayam,40350.0,daging_ayam,True
+2025-06-10,Daging Ayam,40100.0,daging_ayam,True
+2025-06-17,Daging Ayam,40950.0,daging_ayam,True
+2025-06-24,Daging Ayam,40450.0,daging_ayam,True
+2025-07-01,Daging Ayam,40450.0,daging_ayam,True
+2025-07-08,Daging Ayam,40450.0,daging_ayam,True
+2025-07-15,Daging Ayam,40450.0,daging_ayam,True
+2025-07-22,Daging Ayam,40450.0,daging_ayam,True
+2025-07-29,Daging Ayam,40450.0,daging_ayam,True
+2025-08-05,Daging Ayam,40450.0,daging_ayam,True
+2025-08-12,Daging Ayam,40300.0,daging_ayam,True
+2025-08-19,Daging Ayam,40300.0,daging_ayam,True
+2025-08-26,Daging Ayam,40300.0,daging_ayam,True
+2025-09-02,Daging Ayam,40300.0,daging_ayam,True
+2025-09-09,Daging Ayam,40300.0,daging_ayam,True
+2025-09-16,Daging Ayam,40300.0,daging_ayam,True
+2025-09-23,Daging Ayam,40300.0,daging_ayam,True
+2025-09-30,Daging Ayam,39000.0,daging_ayam,True
+2025-10-07,Daging Ayam,39250.0,daging_ayam,True
+2025-10-14,Daging Ayam,39250.0,daging_ayam,True
+2025-10-21,Daging Ayam,39250.0,daging_ayam,True
+2025-10-28,Daging Ayam,39250.0,daging_ayam,True
+2025-11-04,Daging Ayam,39250.0,daging_ayam,True
+2025-11-11,Daging Ayam,40900.0,daging_ayam,True
+2025-11-18,Daging Ayam,40600.0,daging_ayam,True
+2025-11-25,Daging Ayam,42150.0,daging_ayam,True
+2025-12-02,Daging Ayam,41550.0,daging_ayam,True
+2025-12-09,Daging Ayam,41750.0,daging_ayam,True
+2025-12-16,Daging Ayam,44400.0,daging_ayam,True
+2025-12-23,Daging Ayam,43600.0,daging_ayam,True
+2025-12-30,Daging Ayam,43600.0,daging_ayam,True
+2026-01-06,Daging Ayam,44650.0,daging_ayam,True
+2026-01-13,Daging Ayam,45850.0,daging_ayam,True
+2026-01-20,Daging Ayam,59100.0,daging_ayam,True
+2026-01-27,Daging Ayam,43950.0,daging_ayam,True
+2026-02-03,Daging Ayam,47100.0,daging_ayam,True
+2026-02-10,Daging Ayam,45500.0,daging_ayam,True
+2026-02-17,Daging Ayam,45300.0,daging_ayam,True
+2026-02-24,Daging Ayam,49250.0,daging_ayam,True
+2026-03-03,Daging Ayam,49200.0,daging_ayam,True
+2026-03-10,Daging Ayam,49000.0,daging_ayam,True
+2026-03-17,Daging Ayam,49000.0,daging_ayam,True
+2026-03-24,Daging Ayam,49000.0,daging_ayam,True
+2026-03-31,Daging Ayam,49000.0,daging_ayam,True
+2026-04-07,Daging Ayam,49600.0,daging_ayam,True
+2026-04-14,Daging Ayam,50050.0,daging_ayam,True
+2026-04-21,Daging Ayam,49500.0,daging_ayam,True
+2026-04-28,Daging Ayam,47500.0,daging_ayam,True
+2026-05-05,Daging Ayam,47950.0,daging_ayam,True
+2026-05-12,Daging Ayam,47450.0,daging_ayam,True
+2026-05-19,Daging Ayam,47450.0,daging_ayam,True
+2026-05-26,Daging Ayam,47450.0,daging_ayam,True
+2026-06-02,Daging Ayam,47450.0,daging_ayam,True
+2026-06-09,Daging Ayam,47450.0,daging_ayam,True
+2026-06-16,Daging Ayam,47450.0,daging_ayam,True
+2026-06-23,Daging Ayam,47450.0,daging_ayam,True
+2026-06-30,Daging Ayam,46350.0,daging_ayam,True
+2026-07-07,Daging Ayam,46350.0,daging_ayam,True
+2026-07-14,Daging Ayam,46900.0,daging_ayam,True
+2026-07-21,Daging Ayam,46900.0,daging_ayam,True
+2026-07-28,Daging Ayam,46900.0,daging_ayam,True
+2026-08-04,Daging Ayam,46900.0,daging_ayam,True
+2026-08-11,Daging Ayam,46900.0,daging_ayam,True
+2026-08-18,Daging Ayam,47700.0,daging_ayam,True
+2026-08-25,Daging Ayam,46450.0,daging_ayam,True
+2023-01-31,Minyak Goreng,21550.0,minyak_goreng,True
+2023-02-07,Minyak Goreng,21500.0,minyak_goreng,True
+2023-02-14,Minyak Goreng,21550.0,minyak_goreng,True
+2023-02-21,Minyak Goreng,21800.0,minyak_goreng,True
+2023-02-28,Minyak Goreng,21800.0,minyak_goreng,True
+2023-03-07,Minyak Goreng,21800.0,minyak_goreng,True
+2023-03-14,Minyak Goreng,22000.0,minyak_goreng,True
+2023-03-21,Minyak Goreng,21950.0,minyak_goreng,True
+2023-03-28,Minyak Goreng,22000.0,minyak_goreng,True
+2023-04-04,Minyak Goreng,22000.0,minyak_goreng,True
+2023-04-11,Minyak Goreng,22000.0,minyak_goreng,True
+2023-04-18,Minyak Goreng,22000.0,minyak_goreng,True
+2023-04-25,Minyak Goreng,22000.0,minyak_goreng,True
+2023-05-02,Minyak Goreng,22000.0,minyak_goreng,True
+2023-05-09,Minyak Goreng,22100.0,minyak_goreng,True
+2023-05-16,Minyak Goreng,22100.0,minyak_goreng,True
+2023-05-23,Minyak Goreng,22300.0,minyak_goreng,True
+2023-05-30,Minyak Goreng,22300.0,minyak_goreng,True
+2023-06-06,Minyak Goreng,22300.0,minyak_goreng,True
+2023-06-13,Minyak Goreng,22050.0,minyak_goreng,True
+2023-06-20,Minyak Goreng,22050.0,minyak_goreng,True
+2023-06-27,Minyak Goreng,21900.0,minyak_goreng,True
+2023-07-04,Minyak Goreng,21750.0,minyak_goreng,True
+2023-07-11,Minyak Goreng,21750.0,minyak_goreng,True
+2023-07-18,Minyak Goreng,21750.0,minyak_goreng,True
+2023-07-25,Minyak Goreng,21800.0,minyak_goreng,True
+2023-08-01,Minyak Goreng,21550.0,minyak_goreng,True
+2023-08-08,Minyak Goreng,21950.0,minyak_goreng,True
+2023-08-15,Minyak Goreng,22000.0,minyak_goreng,True
+2023-08-22,Minyak Goreng,22000.0,minyak_goreng,True
+2023-08-29,Minyak Goreng,21900.0,minyak_goreng,True
+2023-09-05,Minyak Goreng,21900.0,minyak_goreng,True
+2023-09-12,Minyak Goreng,21700.0,minyak_goreng,True
+2023-09-19,Minyak Goreng,21700.0,minyak_goreng,True
+2023-09-26,Minyak Goreng,21700.0,minyak_goreng,True
+2023-10-03,Minyak Goreng,21300.0,minyak_goreng,True
+2023-10-10,Minyak Goreng,21300.0,minyak_goreng,True
+2023-10-17,Minyak Goreng,21100.0,minyak_goreng,True
+2023-10-24,Minyak Goreng,21000.0,minyak_goreng,True
+2023-10-31,Minyak Goreng,21000.0,minyak_goreng,True
+2023-11-07,Minyak Goreng,21100.0,minyak_goreng,True
+2023-11-14,Minyak Goreng,21100.0,minyak_goreng,True
+2023-11-21,Minyak Goreng,21200.0,minyak_goreng,True
+2023-11-28,Minyak Goreng,21200.0,minyak_goreng,True
+2023-12-05,Minyak Goreng,21200.0,minyak_goreng,True
+2023-12-12,Minyak Goreng,21200.0,minyak_goreng,True
+2023-12-19,Minyak Goreng,20950.0,minyak_goreng,True
+2023-12-26,Minyak Goreng,,minyak_goreng,False
+2024-01-02,Minyak Goreng,20900.0,minyak_goreng,True
+2024-01-09,Minyak Goreng,21050.0,minyak_goreng,True
+2024-01-16,Minyak Goreng,21050.0,minyak_goreng,True
+2024-01-23,Minyak Goreng,20950.0,minyak_goreng,True
+2024-01-30,Minyak Goreng,20950.0,minyak_goreng,True
+2024-02-06,Minyak Goreng,20950.0,minyak_goreng,True
+2024-02-13,Minyak Goreng,21050.0,minyak_goreng,True
+2024-02-20,Minyak Goreng,20950.0,minyak_goreng,True
+2024-02-27,Minyak Goreng,20950.0,minyak_goreng,True
+2024-03-05,Minyak Goreng,21000.0,minyak_goreng,True
+2024-03-12,Minyak Goreng,21000.0,minyak_goreng,True
+2024-03-19,Minyak Goreng,20900.0,minyak_goreng,True
+2024-03-26,Minyak Goreng,20900.0,minyak_goreng,True
+2024-04-02,Minyak Goreng,20900.0,minyak_goreng,True
+2024-04-09,Minyak Goreng,20900.0,minyak_goreng,True
+2024-04-16,Minyak Goreng,20900.0,minyak_goreng,True
+2024-04-23,Minyak Goreng,20900.0,minyak_goreng,True
+2024-04-30,Minyak Goreng,20900.0,minyak_goreng,True
+2024-05-07,Minyak Goreng,20900.0,minyak_goreng,True
+2024-05-14,Minyak Goreng,21000.0,minyak_goreng,True
+2024-05-21,Minyak Goreng,21000.0,minyak_goreng,True
+2024-05-28,Minyak Goreng,21000.0,minyak_goreng,True
+2024-06-04,Minyak Goreng,21000.0,minyak_goreng,True
+2024-06-11,Minyak Goreng,21000.0,minyak_goreng,True
+2024-06-18,Minyak Goreng,21000.0,minyak_goreng,True
+2024-06-25,Minyak Goreng,21000.0,minyak_goreng,True
+2024-07-02,Minyak Goreng,21150.0,minyak_goreng,True
+2024-07-09,Minyak Goreng,21150.0,minyak_goreng,True
+2024-07-16,Minyak Goreng,21150.0,minyak_goreng,True
+2024-07-23,Minyak Goreng,21150.0,minyak_goreng,True
+2024-07-30,Minyak Goreng,21100.0,minyak_goreng,True
+2024-08-06,Minyak Goreng,21200.0,minyak_goreng,True
+2024-08-13,Minyak Goreng,21350.0,minyak_goreng,True
+2024-08-20,Minyak Goreng,21350.0,minyak_goreng,True
+2024-08-27,Minyak Goreng,21250.0,minyak_goreng,True
+2024-09-03,Minyak Goreng,21200.0,minyak_goreng,True
+2024-09-10,Minyak Goreng,21200.0,minyak_goreng,True
+2024-09-17,Minyak Goreng,21250.0,minyak_goreng,True
+2024-09-24,Minyak Goreng,21250.0,minyak_goreng,True
+2024-10-01,Minyak Goreng,21400.0,minyak_goreng,True
+2024-10-08,Minyak Goreng,21400.0,minyak_goreng,True
+2024-10-15,Minyak Goreng,21400.0,minyak_goreng,True
+2024-10-22,Minyak Goreng,21400.0,minyak_goreng,True
+2024-10-29,Minyak Goreng,21400.0,minyak_goreng,True
+2024-11-05,Minyak Goreng,21500.0,minyak_goreng,True
+2024-11-12,Minyak Goreng,21550.0,minyak_goreng,True
+2024-11-19,Minyak Goreng,21500.0,minyak_goreng,True
+2024-11-26,Minyak Goreng,21500.0,minyak_goreng,True
+2024-12-03,Minyak Goreng,21500.0,minyak_goreng,True
+2024-12-10,Minyak Goreng,21450.0,minyak_goreng,True
+2024-12-17,Minyak Goreng,21700.0,minyak_goreng,True
+2024-12-24,Minyak Goreng,22050.0,minyak_goreng,True
+2024-12-31,Minyak Goreng,22050.0,minyak_goreng,True
+2025-01-07,Minyak Goreng,22050.0,minyak_goreng,True
+2025-01-14,Minyak Goreng,22300.0,minyak_goreng,True
+2025-01-21,Minyak Goreng,22300.0,minyak_goreng,True
+2025-01-28,Minyak Goreng,22250.0,minyak_goreng,True
+2025-02-04,Minyak Goreng,22300.0,minyak_goreng,True
+2025-02-11,Minyak Goreng,,minyak_goreng,False
+2025-02-18,Minyak Goreng,22950.0,minyak_goreng,True
+2025-02-25,Minyak Goreng,22900.0,minyak_goreng,True
+2025-03-04,Minyak Goreng,22900.0,minyak_goreng,True
+2025-03-11,Minyak Goreng,22900.0,minyak_goreng,True
+2025-03-18,Minyak Goreng,22950.0,minyak_goreng,True
+2025-03-25,Minyak Goreng,22950.0,minyak_goreng,True
+2025-04-01,Minyak Goreng,22950.0,minyak_goreng,True
+2025-04-08,Minyak Goreng,22950.0,minyak_goreng,True
+2025-04-15,Minyak Goreng,22950.0,minyak_goreng,True
+2025-04-22,Minyak Goreng,22950.0,minyak_goreng,True
+2025-04-29,Minyak Goreng,22950.0,minyak_goreng,True
+2025-05-06,Minyak Goreng,22950.0,minyak_goreng,True
+2025-05-13,Minyak Goreng,22950.0,minyak_goreng,True
+2025-05-20,Minyak Goreng,22950.0,minyak_goreng,True
+2025-05-27,Minyak Goreng,22950.0,minyak_goreng,True
+2025-06-03,Minyak Goreng,22950.0,minyak_goreng,True
+2025-06-10,Minyak Goreng,22950.0,minyak_goreng,True
+2025-06-17,Minyak Goreng,23200.0,minyak_goreng,True
+2025-06-24,Minyak Goreng,23200.0,minyak_goreng,True
+2025-07-01,Minyak Goreng,23200.0,minyak_goreng,True
+2025-07-08,Minyak Goreng,23200.0,minyak_goreng,True
+2025-07-15,Minyak Goreng,23200.0,minyak_goreng,True
+2025-07-22,Minyak Goreng,23200.0,minyak_goreng,True
+2025-07-29,Minyak Goreng,23200.0,minyak_goreng,True
+2025-08-05,Minyak Goreng,23300.0,minyak_goreng,True
+2025-08-12,Minyak Goreng,23300.0,minyak_goreng,True
+2025-08-19,Minyak Goreng,23350.0,minyak_goreng,True
+2025-08-26,Minyak Goreng,23300.0,minyak_goreng,True
+2025-09-02,Minyak Goreng,23300.0,minyak_goreng,True
+2025-09-09,Minyak Goreng,23300.0,minyak_goreng,True
+2025-09-16,Minyak Goreng,23200.0,minyak_goreng,True
+2025-09-23,Minyak Goreng,23250.0,minyak_goreng,True
+2025-09-30,Minyak Goreng,23250.0,minyak_goreng,True
+2025-10-07,Minyak Goreng,23250.0,minyak_goreng,True
+2025-10-14,Minyak Goreng,23250.0,minyak_goreng,True
+2025-10-21,Minyak Goreng,23250.0,minyak_goreng,True
+2025-10-28,Minyak Goreng,23250.0,minyak_goreng,True
+2025-11-04,Minyak Goreng,23250.0,minyak_goreng,True
+2025-11-11,Minyak Goreng,23250.0,minyak_goreng,True
+2025-11-18,Minyak Goreng,23250.0,minyak_goreng,True
+2025-11-25,Minyak Goreng,23250.0,minyak_goreng,True
+2025-12-02,Minyak Goreng,23250.0,minyak_goreng,True
+2025-12-09,Minyak Goreng,23250.0,minyak_goreng,True
+2025-12-16,Minyak Goreng,23250.0,minyak_goreng,True
+2025-12-23,Minyak Goreng,23250.0,minyak_goreng,True
+2025-12-30,Minyak Goreng,23250.0,minyak_goreng,True
+2026-01-06,Minyak Goreng,23250.0,minyak_goreng,True
+2026-01-13,Minyak Goreng,23250.0,minyak_goreng,True
+2026-01-20,Minyak Goreng,23250.0,minyak_goreng,True
+2026-01-27,Minyak Goreng,23250.0,minyak_goreng,True
+2026-02-03,Minyak Goreng,23250.0,minyak_goreng,True
+2026-02-10,Minyak Goreng,23250.0,minyak_goreng,True
+2026-02-17,Minyak Goreng,23250.0,minyak_goreng,True
+2026-02-24,Minyak Goreng,23550.0,minyak_goreng,True
+2026-03-03,Minyak Goreng,23550.0,minyak_goreng,True
+2026-03-10,Minyak Goreng,23550.0,minyak_goreng,True
+2026-03-17,Minyak Goreng,23600.0,minyak_goreng,True
+2026-03-24,Minyak Goreng,23600.0,minyak_goreng,True
+2026-03-31,Minyak Goreng,23600.0,minyak_goreng,True
+2026-04-07,Minyak Goreng,23700.0,minyak_goreng,True
+2026-04-14,Minyak Goreng,23700.0,minyak_goreng,True
+2026-04-21,Minyak Goreng,23750.0,minyak_goreng,True
+2026-04-28,Minyak Goreng,24450.0,minyak_goreng,True
+2026-05-05,Minyak Goreng,24150.0,minyak_goreng,True
+2026-05-12,Minyak Goreng,24200.0,minyak_goreng,True
+2026-05-19,Minyak Goreng,24250.0,minyak_goreng,True
+2026-05-26,Minyak Goreng,24350.0,minyak_goreng,True
+2026-06-02,Minyak Goreng,24600.0,minyak_goreng,True
+2026-06-09,Minyak Goreng,25000.0,minyak_goreng,True
+2026-06-16,Minyak Goreng,25200.0,minyak_goreng,True
+2026-06-23,Minyak Goreng,24950.0,minyak_goreng,True
+2026-06-30,Minyak Goreng,24950.0,minyak_goreng,True
+2026-07-07,Minyak Goreng,25100.0,minyak_goreng,True
+2026-07-14,Minyak Goreng,25150.0,minyak_goreng,True
+2026-07-21,Minyak Goreng,25550.0,minyak_goreng,True
+2026-07-28,Minyak Goreng,25550.0,minyak_goreng,True
+2026-08-04,Minyak Goreng,25500.0,minyak_goreng,True
+2026-08-11,Minyak Goreng,26500.0,minyak_goreng,True
+2026-08-18,Minyak Goreng,26900.0,minyak_goreng,True
+2026-08-25,Minyak Goreng,26900.0,minyak_goreng,True
+2023-01-31,Telur Ayam,38400.0,telur_ayam,True
+2023-02-07,Telur Ayam,38600.0,telur_ayam,True
+2023-02-14,Telur Ayam,38400.0,telur_ayam,True
+2023-02-21,Telur Ayam,38200.0,telur_ayam,True
+2023-02-28,Telur Ayam,38200.0,telur_ayam,True
+2023-03-07,Telur Ayam,37600.0,telur_ayam,True
+2023-03-14,Telur Ayam,37600.0,telur_ayam,True
+2023-03-21,Telur Ayam,38950.0,telur_ayam,True
+2023-03-28,Telur Ayam,39150.0,telur_ayam,True
+2023-04-04,Telur Ayam,38800.0,telur_ayam,True
+2023-04-11,Telur Ayam,38800.0,telur_ayam,True
+2023-04-18,Telur Ayam,38800.0,telur_ayam,True
+2023-04-25,Telur Ayam,38800.0,telur_ayam,True
+2023-05-02,Telur Ayam,39200.0,telur_ayam,True
+2023-05-09,Telur Ayam,39400.0,telur_ayam,True
+2023-05-16,Telur Ayam,39800.0,telur_ayam,True
+2023-05-23,Telur Ayam,40400.0,telur_ayam,True
+2023-05-30,Telur Ayam,40600.0,telur_ayam,True
+2023-06-06,Telur Ayam,41350.0,telur_ayam,True
+2023-06-13,Telur Ayam,39200.0,telur_ayam,True
+2023-06-20,Telur Ayam,39600.0,telur_ayam,True
+2023-06-27,Telur Ayam,37200.0,telur_ayam,True
+2023-07-04,Telur Ayam,37200.0,telur_ayam,True
+2023-07-11,Telur Ayam,37200.0,telur_ayam,True
+2023-07-18,Telur Ayam,37200.0,telur_ayam,True
+2023-07-25,Telur Ayam,37850.0,telur_ayam,True
+2023-08-01,Telur Ayam,37600.0,telur_ayam,True
+2023-08-08,Telur Ayam,37400.0,telur_ayam,True
+2023-08-15,Telur Ayam,37400.0,telur_ayam,True
+2023-08-22,Telur Ayam,37400.0,telur_ayam,True
+2023-08-29,Telur Ayam,36600.0,telur_ayam,True
+2023-09-05,Telur Ayam,36600.0,telur_ayam,True
+2023-09-12,Telur Ayam,36600.0,telur_ayam,True
+2023-09-19,Telur Ayam,36600.0,telur_ayam,True
+2023-09-26,Telur Ayam,36000.0,telur_ayam,True
+2023-10-03,Telur Ayam,35800.0,telur_ayam,True
+2023-10-10,Telur Ayam,35800.0,telur_ayam,True
+2023-10-17,Telur Ayam,35350.0,telur_ayam,True
+2023-10-24,Telur Ayam,35350.0,telur_ayam,True
+2023-10-31,Telur Ayam,35350.0,telur_ayam,True
+2023-11-07,Telur Ayam,34750.0,telur_ayam,True
+2023-11-14,Telur Ayam,34750.0,telur_ayam,True
+2023-11-21,Telur Ayam,32750.0,telur_ayam,True
+2023-11-28,Telur Ayam,34000.0,telur_ayam,True
+2023-12-05,Telur Ayam,34000.0,telur_ayam,True
+2023-12-12,Telur Ayam,35000.0,telur_ayam,True
+2023-12-19,Telur Ayam,35000.0,telur_ayam,True
+2023-12-26,Telur Ayam,,telur_ayam,False
+2024-01-02,Telur Ayam,35950.0,telur_ayam,True
+2024-01-09,Telur Ayam,35800.0,telur_ayam,True
+2024-01-16,Telur Ayam,35400.0,telur_ayam,True
+2024-01-23,Telur Ayam,35600.0,telur_ayam,True
+2024-01-30,Telur Ayam,35400.0,telur_ayam,True
+2024-02-06,Telur Ayam,35600.0,telur_ayam,True
+2024-02-13,Telur Ayam,35600.0,telur_ayam,True
+2024-02-20,Telur Ayam,35600.0,telur_ayam,True
+2024-02-27,Telur Ayam,36000.0,telur_ayam,True
+2024-03-05,Telur Ayam,36800.0,telur_ayam,True
+2024-03-12,Telur Ayam,37000.0,telur_ayam,True
+2024-03-19,Telur Ayam,38200.0,telur_ayam,True
+2024-03-26,Telur Ayam,38600.0,telur_ayam,True
+2024-04-02,Telur Ayam,38400.0,telur_ayam,True
+2024-04-09,Telur Ayam,38400.0,telur_ayam,True
+2024-04-16,Telur Ayam,38200.0,telur_ayam,True
+2024-04-23,Telur Ayam,37800.0,telur_ayam,True
+2024-04-30,Telur Ayam,38400.0,telur_ayam,True
+2024-05-07,Telur Ayam,38200.0,telur_ayam,True
+2024-05-14,Telur Ayam,37600.0,telur_ayam,True
+2024-05-21,Telur Ayam,37400.0,telur_ayam,True
+2024-05-28,Telur Ayam,37400.0,telur_ayam,True
+2024-06-04,Telur Ayam,37400.0,telur_ayam,True
+2024-06-11,Telur Ayam,37400.0,telur_ayam,True
+2024-06-18,Telur Ayam,37400.0,telur_ayam,True
+2024-06-25,Telur Ayam,37400.0,telur_ayam,True
+2024-07-02,Telur Ayam,37400.0,telur_ayam,True
+2024-07-09,Telur Ayam,37400.0,telur_ayam,True
+2024-07-16,Telur Ayam,37400.0,telur_ayam,True
+2024-07-23,Telur Ayam,37400.0,telur_ayam,True
+2024-07-30,Telur Ayam,36800.0,telur_ayam,True
+2024-08-06,Telur Ayam,36200.0,telur_ayam,True
+2024-08-13,Telur Ayam,36200.0,telur_ayam,True
+2024-08-20,Telur Ayam,36200.0,telur_ayam,True
+2024-08-27,Telur Ayam,36200.0,telur_ayam,True
+2024-09-03,Telur Ayam,36200.0,telur_ayam,True
+2024-09-10,Telur Ayam,36200.0,telur_ayam,True
+2024-09-17,Telur Ayam,36200.0,telur_ayam,True
+2024-09-24,Telur Ayam,35800.0,telur_ayam,True
+2024-10-01,Telur Ayam,35800.0,telur_ayam,True
+2024-10-08,Telur Ayam,35800.0,telur_ayam,True
+2024-10-15,Telur Ayam,35800.0,telur_ayam,True
+2024-10-22,Telur Ayam,34400.0,telur_ayam,True
+2024-10-29,Telur Ayam,34400.0,telur_ayam,True
+2024-11-05,Telur Ayam,35000.0,telur_ayam,True
+2024-11-12,Telur Ayam,35000.0,telur_ayam,True
+2024-11-19,Telur Ayam,35000.0,telur_ayam,True
+2024-11-26,Telur Ayam,35000.0,telur_ayam,True
+2024-12-03,Telur Ayam,35000.0,telur_ayam,True
+2024-12-10,Telur Ayam,35000.0,telur_ayam,True
+2024-12-17,Telur Ayam,36000.0,telur_ayam,True
+2024-12-24,Telur Ayam,37600.0,telur_ayam,True
+2024-12-31,Telur Ayam,37600.0,telur_ayam,True
+2025-01-07,Telur Ayam,37600.0,telur_ayam,True
+2025-01-14,Telur Ayam,37600.0,telur_ayam,True
+2025-01-21,Telur Ayam,37400.0,telur_ayam,True
+2025-01-28,Telur Ayam,37200.0,telur_ayam,True
+2025-02-04,Telur Ayam,36000.0,telur_ayam,True
+2025-02-11,Telur Ayam,,telur_ayam,False
+2025-02-18,Telur Ayam,36000.0,telur_ayam,True
+2025-02-25,Telur Ayam,36000.0,telur_ayam,True
+2025-03-04,Telur Ayam,36400.0,telur_ayam,True
+2025-03-11,Telur Ayam,36400.0,telur_ayam,True
+2025-03-18,Telur Ayam,36600.0,telur_ayam,True
+2025-03-25,Telur Ayam,36200.0,telur_ayam,True
+2025-04-01,Telur Ayam,37200.0,telur_ayam,True
+2025-04-08,Telur Ayam,36200.0,telur_ayam,True
+2025-04-15,Telur Ayam,35800.0,telur_ayam,True
+2025-04-22,Telur Ayam,36400.0,telur_ayam,True
+2025-04-29,Telur Ayam,36000.0,telur_ayam,True
+2025-05-06,Telur Ayam,35800.0,telur_ayam,True
+2025-05-13,Telur Ayam,35600.0,telur_ayam,True
+2025-05-20,Telur Ayam,35600.0,telur_ayam,True
+2025-05-27,Telur Ayam,35600.0,telur_ayam,True
+2025-06-03,Telur Ayam,35600.0,telur_ayam,True
+2025-06-10,Telur Ayam,35800.0,telur_ayam,True
+2025-06-17,Telur Ayam,35800.0,telur_ayam,True
+2025-06-24,Telur Ayam,35800.0,telur_ayam,True
+2025-07-01,Telur Ayam,35800.0,telur_ayam,True
+2025-07-08,Telur Ayam,35800.0,telur_ayam,True
+2025-07-15,Telur Ayam,35800.0,telur_ayam,True
+2025-07-22,Telur Ayam,35800.0,telur_ayam,True
+2025-07-29,Telur Ayam,35800.0,telur_ayam,True
+2025-08-05,Telur Ayam,35800.0,telur_ayam,True
+2025-08-12,Telur Ayam,35800.0,telur_ayam,True
+2025-08-19,Telur Ayam,35800.0,telur_ayam,True
+2025-08-26,Telur Ayam,37600.0,telur_ayam,True
+2025-09-02,Telur Ayam,37600.0,telur_ayam,True
+2025-09-09,Telur Ayam,34800.0,telur_ayam,True
+2025-09-16,Telur Ayam,34800.0,telur_ayam,True
+2025-09-23,Telur Ayam,34800.0,telur_ayam,True
+2025-09-30,Telur Ayam,35800.0,telur_ayam,True
+2025-10-07,Telur Ayam,35800.0,telur_ayam,True
+2025-10-14,Telur Ayam,36000.0,telur_ayam,True
+2025-10-21,Telur Ayam,36200.0,telur_ayam,True
+2025-10-28,Telur Ayam,37000.0,telur_ayam,True
+2025-11-04,Telur Ayam,36800.0,telur_ayam,True
+2025-11-11,Telur Ayam,36400.0,telur_ayam,True
+2025-11-18,Telur Ayam,36600.0,telur_ayam,True
+2025-11-25,Telur Ayam,36400.0,telur_ayam,True
+2025-12-02,Telur Ayam,36400.0,telur_ayam,True
+2025-12-09,Telur Ayam,36400.0,telur_ayam,True
+2025-12-16,Telur Ayam,36600.0,telur_ayam,True
+2025-12-23,Telur Ayam,38000.0,telur_ayam,True
+2025-12-30,Telur Ayam,40800.0,telur_ayam,True
+2026-01-06,Telur Ayam,38400.0,telur_ayam,True
+2026-01-13,Telur Ayam,37600.0,telur_ayam,True
+2026-01-20,Telur Ayam,37600.0,telur_ayam,True
+2026-01-27,Telur Ayam,37200.0,telur_ayam,True
+2026-02-03,Telur Ayam,37000.0,telur_ayam,True
+2026-02-10,Telur Ayam,36800.0,telur_ayam,True
+2026-02-17,Telur Ayam,36800.0,telur_ayam,True
+2026-02-24,Telur Ayam,37150.0,telur_ayam,True
+2026-03-03,Telur Ayam,37400.0,telur_ayam,True
+2026-03-10,Telur Ayam,38000.0,telur_ayam,True
+2026-03-17,Telur Ayam,47000.0,telur_ayam,True
+2026-03-24,Telur Ayam,47000.0,telur_ayam,True
+2026-03-31,Telur Ayam,39200.0,telur_ayam,True
+2026-04-07,Telur Ayam,38200.0,telur_ayam,True
+2026-04-14,Telur Ayam,38200.0,telur_ayam,True
+2026-04-21,Telur Ayam,37000.0,telur_ayam,True
+2026-04-28,Telur Ayam,37000.0,telur_ayam,True
+2026-05-05,Telur Ayam,37000.0,telur_ayam,True
+2026-05-12,Telur Ayam,36800.0,telur_ayam,True
+2026-05-19,Telur Ayam,35800.0,telur_ayam,True
+2026-05-26,Telur Ayam,35800.0,telur_ayam,True
+2026-06-02,Telur Ayam,35800.0,telur_ayam,True
+2026-06-09,Telur Ayam,36000.0,telur_ayam,True
+2026-06-16,Telur Ayam,35400.0,telur_ayam,True
+2026-06-23,Telur Ayam,34400.0,telur_ayam,True
+2026-06-30,Telur Ayam,34400.0,telur_ayam,True
+2026-07-07,Telur Ayam,34000.0,telur_ayam,True
+2026-07-14,Telur Ayam,33400.0,telur_ayam,True
+2026-07-21,Telur Ayam,33400.0,telur_ayam,True
+2026-07-28,Telur Ayam,33400.0,telur_ayam,True
+2026-08-04,Telur Ayam,34600.0,telur_ayam,True
+2026-08-11,Telur Ayam,35400.0,telur_ayam,True
+2026-08-18,Telur Ayam,35400.0,telur_ayam,True
+2026-08-25,Telur Ayam,35400.0,telur_ayam,True
+2023-01-31,Bawang Merah,44750.0,bawang_merah,True
+2023-02-07,Bawang Merah,45000.0,bawang_merah,True
+2023-02-14,Bawang Merah,43750.0,bawang_merah,True
+2023-02-21,Bawang Merah,43750.0,bawang_merah,True
+2023-02-28,Bawang Merah,43150.0,bawang_merah,True
+2023-03-07,Bawang Merah,42900.0,bawang_merah,True
+2023-03-14,Bawang Merah,41650.0,bawang_merah,True
+2023-03-21,Bawang Merah,42500.0,bawang_merah,True
+2023-03-28,Bawang Merah,43150.0,bawang_merah,True
+2023-04-04,Bawang Merah,42500.0,bawang_merah,True
+2023-04-11,Bawang Merah,42500.0,bawang_merah,True
+2023-04-18,Bawang Merah,40000.0,bawang_merah,True
+2023-04-25,Bawang Merah,40000.0,bawang_merah,True
+2023-05-02,Bawang Merah,40000.0,bawang_merah,True
+2023-05-09,Bawang Merah,44400.0,bawang_merah,True
+2023-05-16,Bawang Merah,51250.0,bawang_merah,True
+2023-05-23,Bawang Merah,50650.0,bawang_merah,True
+2023-05-30,Bawang Merah,47500.0,bawang_merah,True
+2023-06-06,Bawang Merah,46250.0,bawang_merah,True
+2023-06-13,Bawang Merah,45000.0,bawang_merah,True
+2023-06-20,Bawang Merah,45000.0,bawang_merah,True
+2023-06-27,Bawang Merah,44400.0,bawang_merah,True
+2023-07-04,Bawang Merah,43150.0,bawang_merah,True
+2023-07-11,Bawang Merah,45000.0,bawang_merah,True
+2023-07-18,Bawang Merah,44400.0,bawang_merah,True
+2023-07-25,Bawang Merah,42900.0,bawang_merah,True
+2023-08-01,Bawang Merah,39750.0,bawang_merah,True
+2023-08-08,Bawang Merah,36900.0,bawang_merah,True
+2023-08-15,Bawang Merah,35650.0,bawang_merah,True
+2023-08-22,Bawang Merah,35000.0,bawang_merah,True
+2023-08-29,Bawang Merah,34400.0,bawang_merah,True
+2023-09-05,Bawang Merah,33750.0,bawang_merah,True
+2023-09-12,Bawang Merah,32900.0,bawang_merah,True
+2023-09-19,Bawang Merah,32400.0,bawang_merah,True
+2023-09-26,Bawang Merah,33750.0,bawang_merah,True
+2023-10-03,Bawang Merah,32250.0,bawang_merah,True
+2023-10-10,Bawang Merah,32500.0,bawang_merah,True
+2023-10-17,Bawang Merah,32500.0,bawang_merah,True
+2023-10-24,Bawang Merah,32500.0,bawang_merah,True
+2023-10-31,Bawang Merah,30400.0,bawang_merah,True
+2023-11-07,Bawang Merah,31250.0,bawang_merah,True
+2023-11-14,Bawang Merah,31250.0,bawang_merah,True
+2023-11-21,Bawang Merah,31250.0,bawang_merah,True
+2023-11-28,Bawang Merah,31900.0,bawang_merah,True
+2023-12-05,Bawang Merah,34400.0,bawang_merah,True
+2023-12-12,Bawang Merah,34400.0,bawang_merah,True
+2023-12-19,Bawang Merah,35400.0,bawang_merah,True
+2023-12-26,Bawang Merah,,bawang_merah,False
+2024-01-02,Bawang Merah,41900.0,bawang_merah,True
+2024-01-09,Bawang Merah,48150.0,bawang_merah,True
+2024-01-16,Bawang Merah,49400.0,bawang_merah,True
+2024-01-23,Bawang Merah,51250.0,bawang_merah,True
+2024-01-30,Bawang Merah,50000.0,bawang_merah,True
+2024-02-06,Bawang Merah,48750.0,bawang_merah,True
+2024-02-13,Bawang Merah,43750.0,bawang_merah,True
+2024-02-20,Bawang Merah,41900.0,bawang_merah,True
+2024-02-27,Bawang Merah,40650.0,bawang_merah,True
+2024-03-05,Bawang Merah,41250.0,bawang_merah,True
+2024-03-12,Bawang Merah,41250.0,bawang_merah,True
+2024-03-19,Bawang Merah,39000.0,bawang_merah,True
+2024-03-26,Bawang Merah,39000.0,bawang_merah,True
+2024-04-02,Bawang Merah,39400.0,bawang_merah,True
+2024-04-09,Bawang Merah,40000.0,bawang_merah,True
+2024-04-16,Bawang Merah,58750.0,bawang_merah,True
+2024-04-23,Bawang Merah,65000.0,bawang_merah,True
+2024-04-30,Bawang Merah,62250.0,bawang_merah,True
+2024-05-07,Bawang Merah,56900.0,bawang_merah,True
+2024-05-14,Bawang Merah,60000.0,bawang_merah,True
+2024-05-21,Bawang Merah,53750.0,bawang_merah,True
+2024-05-28,Bawang Merah,51250.0,bawang_merah,True
+2024-06-04,Bawang Merah,50650.0,bawang_merah,True
+2024-06-11,Bawang Merah,49150.0,bawang_merah,True
+2024-06-18,Bawang Merah,49750.0,bawang_merah,True
+2024-06-25,Bawang Merah,48150.0,bawang_merah,True
+2024-07-02,Bawang Merah,46900.0,bawang_merah,True
+2024-07-09,Bawang Merah,45650.0,bawang_merah,True
+2024-07-16,Bawang Merah,43750.0,bawang_merah,True
+2024-07-23,Bawang Merah,40650.0,bawang_merah,True
+2024-07-30,Bawang Merah,40650.0,bawang_merah,True
+2024-08-06,Bawang Merah,39400.0,bawang_merah,True
+2024-08-13,Bawang Merah,38750.0,bawang_merah,True
+2024-08-20,Bawang Merah,37500.0,bawang_merah,True
+2024-08-27,Bawang Merah,37000.0,bawang_merah,True
+2024-09-03,Bawang Merah,36400.0,bawang_merah,True
+2024-09-10,Bawang Merah,36000.0,bawang_merah,True
+2024-09-17,Bawang Merah,36000.0,bawang_merah,True
+2024-09-24,Bawang Merah,37500.0,bawang_merah,True
+2024-10-01,Bawang Merah,36250.0,bawang_merah,True
+2024-10-08,Bawang Merah,36250.0,bawang_merah,True
+2024-10-15,Bawang Merah,36250.0,bawang_merah,True
+2024-10-22,Bawang Merah,36250.0,bawang_merah,True
+2024-10-29,Bawang Merah,36250.0,bawang_merah,True
+2024-11-05,Bawang Merah,36900.0,bawang_merah,True
+2024-11-12,Bawang Merah,39400.0,bawang_merah,True
+2024-11-19,Bawang Merah,46900.0,bawang_merah,True
+2024-11-26,Bawang Merah,47500.0,bawang_merah,True
+2024-12-03,Bawang Merah,47500.0,bawang_merah,True
+2024-12-10,Bawang Merah,51900.0,bawang_merah,True
+2024-12-17,Bawang Merah,51900.0,bawang_merah,True
+2024-12-24,Bawang Merah,51900.0,bawang_merah,True
+2024-12-31,Bawang Merah,52250.0,bawang_merah,True
+2025-01-07,Bawang Merah,49750.0,bawang_merah,True
+2025-01-14,Bawang Merah,47500.0,bawang_merah,True
+2025-01-21,Bawang Merah,46900.0,bawang_merah,True
+2025-01-28,Bawang Merah,43650.0,bawang_merah,True
+2025-02-04,Bawang Merah,43000.0,bawang_merah,True
+2025-02-11,Bawang Merah,,bawang_merah,False
+2025-02-18,Bawang Merah,43250.0,bawang_merah,True
+2025-02-25,Bawang Merah,43650.0,bawang_merah,True
+2025-03-04,Bawang Merah,46150.0,bawang_merah,True
+2025-03-11,Bawang Merah,45500.0,bawang_merah,True
+2025-03-18,Bawang Merah,46900.0,bawang_merah,True
+2025-03-25,Bawang Merah,54400.0,bawang_merah,True
+2025-04-01,Bawang Merah,53750.0,bawang_merah,True
+2025-04-08,Bawang Merah,50650.0,bawang_merah,True
+2025-04-15,Bawang Merah,55000.0,bawang_merah,True
+2025-04-22,Bawang Merah,53150.0,bawang_merah,True
+2025-04-29,Bawang Merah,48750.0,bawang_merah,True
+2025-05-06,Bawang Merah,46250.0,bawang_merah,True
+2025-05-13,Bawang Merah,46250.0,bawang_merah,True
+2025-05-20,Bawang Merah,45000.0,bawang_merah,True
+2025-05-27,Bawang Merah,45000.0,bawang_merah,True
+2025-06-03,Bawang Merah,44400.0,bawang_merah,True
+2025-06-10,Bawang Merah,45400.0,bawang_merah,True
+2025-06-17,Bawang Merah,48500.0,bawang_merah,True
+2025-06-24,Bawang Merah,59750.0,bawang_merah,True
+2025-07-01,Bawang Merah,60000.0,bawang_merah,True
+2025-07-08,Bawang Merah,58500.0,bawang_merah,True
+2025-07-15,Bawang Merah,58250.0,bawang_merah,True
+2025-07-22,Bawang Merah,56650.0,bawang_merah,True
+2025-07-29,Bawang Merah,55400.0,bawang_merah,True
+2025-08-05,Bawang Merah,59150.0,bawang_merah,True
+2025-08-12,Bawang Merah,60400.0,bawang_merah,True
+2025-08-19,Bawang Merah,61000.0,bawang_merah,True
+2025-08-26,Bawang Merah,64400.0,bawang_merah,True
+2025-09-02,Bawang Merah,62500.0,bawang_merah,True
+2025-09-09,Bawang Merah,59400.0,bawang_merah,True
+2025-09-16,Bawang Merah,55650.0,bawang_merah,True
+2025-09-23,Bawang Merah,53750.0,bawang_merah,True
+2025-09-30,Bawang Merah,53150.0,bawang_merah,True
+2025-10-07,Bawang Merah,46900.0,bawang_merah,True
+2025-10-14,Bawang Merah,44400.0,bawang_merah,True
+2025-10-21,Bawang Merah,43400.0,bawang_merah,True
+2025-10-28,Bawang Merah,42750.0,bawang_merah,True
+2025-11-04,Bawang Merah,43150.0,bawang_merah,True
+2025-11-11,Bawang Merah,43150.0,bawang_merah,True
+2025-11-18,Bawang Merah,43750.0,bawang_merah,True
+2025-11-25,Bawang Merah,43400.0,bawang_merah,True
+2025-12-02,Bawang Merah,45900.0,bawang_merah,True
+2025-12-09,Bawang Merah,51250.0,bawang_merah,True
+2025-12-16,Bawang Merah,58750.0,bawang_merah,True
+2025-12-23,Bawang Merah,61900.0,bawang_merah,True
+2025-12-30,Bawang Merah,61250.0,bawang_merah,True
+2026-01-06,Bawang Merah,60650.0,bawang_merah,True
+2026-01-13,Bawang Merah,57500.0,bawang_merah,True
+2026-01-20,Bawang Merah,55650.0,bawang_merah,True
+2026-01-27,Bawang Merah,50000.0,bawang_merah,True
+2026-02-03,Bawang Merah,47650.0,bawang_merah,True
+2026-02-10,Bawang Merah,48150.0,bawang_merah,True
+2026-02-17,Bawang Merah,47500.0,bawang_merah,True
+2026-02-24,Bawang Merah,48150.0,bawang_merah,True
+2026-03-03,Bawang Merah,48750.0,bawang_merah,True
+2026-03-10,Bawang Merah,47500.0,bawang_merah,True
+2026-03-17,Bawang Merah,48750.0,bawang_merah,True
+2026-03-24,Bawang Merah,48750.0,bawang_merah,True
+2026-03-31,Bawang Merah,55650.0,bawang_merah,True
+2026-04-07,Bawang Merah,57500.0,bawang_merah,True
+2026-04-14,Bawang Merah,55650.0,bawang_merah,True
+2026-04-21,Bawang Merah,53250.0,bawang_merah,True
+2026-04-28,Bawang Merah,53150.0,bawang_merah,True
+2026-05-05,Bawang Merah,53500.0,bawang_merah,True
+2026-05-12,Bawang Merah,53150.0,bawang_merah,True
+2026-05-19,Bawang Merah,53150.0,bawang_merah,True
+2026-05-26,Bawang Merah,55000.0,bawang_merah,True
+2026-06-02,Bawang Merah,55000.0,bawang_merah,True
+2026-06-09,Bawang Merah,62500.0,bawang_merah,True
+2026-06-16,Bawang Merah,73750.0,bawang_merah,True
+2026-06-23,Bawang Merah,66250.0,bawang_merah,True
+2026-06-30,Bawang Merah,61900.0,bawang_merah,True
+2026-07-07,Bawang Merah,56900.0,bawang_merah,True
+2026-07-14,Bawang Merah,55000.0,bawang_merah,True
+2026-07-21,Bawang Merah,51900.0,bawang_merah,True
+2026-07-28,Bawang Merah,50650.0,bawang_merah,True
+2026-08-04,Bawang Merah,48900.0,bawang_merah,True
+2026-08-11,Bawang Merah,48150.0,bawang_merah,True
+2026-08-18,Bawang Merah,44400.0,bawang_merah,True
+2026-08-25,Bawang Merah,45000.0,bawang_merah,True
+2023-01-31,Cabai Merah,51000.0,cabai_merah,True
+2023-02-07,Cabai Merah,56250.0,cabai_merah,True
+2023-02-14,Cabai Merah,58750.0,cabai_merah,True
+2023-02-21,Cabai Merah,65950.0,cabai_merah,True
+2023-02-28,Cabai Merah,64700.0,cabai_merah,True
+2023-03-07,Cabai Merah,70350.0,cabai_merah,True
+2023-03-14,Cabai Merah,71600.0,cabai_merah,True
+2023-03-21,Cabai Merah,85650.0,cabai_merah,True
+2023-03-28,Cabai Merah,76600.0,cabai_merah,True
+2023-04-04,Cabai Merah,72500.0,cabai_merah,True
+2023-04-11,Cabai Merah,74400.0,cabai_merah,True
+2023-04-18,Cabai Merah,67500.0,cabai_merah,True
+2023-04-25,Cabai Merah,67500.0,cabai_merah,True
+2023-05-02,Cabai Merah,82200.0,cabai_merah,True
+2023-05-09,Cabai Merah,62500.0,cabai_merah,True
+2023-05-16,Cabai Merah,65350.0,cabai_merah,True
+2023-05-23,Cabai Merah,70650.0,cabai_merah,True
+2023-05-30,Cabai Merah,83150.0,cabai_merah,True
+2023-06-06,Cabai Merah,77500.0,cabai_merah,True
+2023-06-13,Cabai Merah,70000.0,cabai_merah,True
+2023-06-20,Cabai Merah,85000.0,cabai_merah,True
+2023-06-27,Cabai Merah,81900.0,cabai_merah,True
+2023-07-04,Cabai Merah,136900.0,cabai_merah,True
+2023-07-11,Cabai Merah,93750.0,cabai_merah,True
+2023-07-18,Cabai Merah,79400.0,cabai_merah,True
+2023-07-25,Cabai Merah,68150.0,cabai_merah,True
+2023-08-01,Cabai Merah,69700.0,cabai_merah,True
+2023-08-08,Cabai Merah,65650.0,cabai_merah,True
+2023-08-15,Cabai Merah,69400.0,cabai_merah,True
+2023-08-22,Cabai Merah,65000.0,cabai_merah,True
+2023-08-29,Cabai Merah,70650.0,cabai_merah,True
+2023-09-05,Cabai Merah,69700.0,cabai_merah,True
+2023-09-12,Cabai Merah,65350.0,cabai_merah,True
+2023-09-19,Cabai Merah,64100.0,cabai_merah,True
+2023-09-26,Cabai Merah,64700.0,cabai_merah,True
+2023-10-03,Cabai Merah,67500.0,cabai_merah,True
+2023-10-10,Cabai Merah,72500.0,cabai_merah,True
+2023-10-17,Cabai Merah,84400.0,cabai_merah,True
+2023-10-24,Cabai Merah,81600.0,cabai_merah,True
+2023-10-31,Cabai Merah,85950.0,cabai_merah,True
+2023-11-07,Cabai Merah,89400.0,cabai_merah,True
+2023-11-14,Cabai Merah,83750.0,cabai_merah,True
+2023-11-21,Cabai Merah,79700.0,cabai_merah,True
+2023-11-28,Cabai Merah,83750.0,cabai_merah,True
+2023-12-05,Cabai Merah,82500.0,cabai_merah,True
+2023-12-12,Cabai Merah,83750.0,cabai_merah,True
+2023-12-19,Cabai Merah,92500.0,cabai_merah,True
+2023-12-26,Cabai Merah,,cabai_merah,False
+2024-01-02,Cabai Merah,88150.0,cabai_merah,True
+2024-01-09,Cabai Merah,87500.0,cabai_merah,True
+2024-01-16,Cabai Merah,75650.0,cabai_merah,True
+2024-01-23,Cabai Merah,76600.0,cabai_merah,True
+2024-01-30,Cabai Merah,62200.0,cabai_merah,True
+2024-02-06,Cabai Merah,59700.0,cabai_merah,True
+2024-02-13,Cabai Merah,58150.0,cabai_merah,True
+2024-02-20,Cabai Merah,57500.0,cabai_merah,True
+2024-02-27,Cabai Merah,65650.0,cabai_merah,True
+2024-03-05,Cabai Merah,59700.0,cabai_merah,True
+2024-03-12,Cabai Merah,66250.0,cabai_merah,True
+2024-03-19,Cabai Merah,80650.0,cabai_merah,True
+2024-03-26,Cabai Merah,74400.0,cabai_merah,True
+2024-04-02,Cabai Merah,71900.0,cabai_merah,True
+2024-04-09,Cabai Merah,70000.0,cabai_merah,True
+2024-04-16,Cabai Merah,86250.0,cabai_merah,True
+2024-04-23,Cabai Merah,69400.0,cabai_merah,True
+2024-04-30,Cabai Merah,68450.0,cabai_merah,True
+2024-05-07,Cabai Merah,68750.0,cabai_merah,True
+2024-05-14,Cabai Merah,64700.0,cabai_merah,True
+2024-05-21,Cabai Merah,65950.0,cabai_merah,True
+2024-05-28,Cabai Merah,70350.0,cabai_merah,True
+2024-06-04,Cabai Merah,76250.0,cabai_merah,True
+2024-06-11,Cabai Merah,91250.0,cabai_merah,True
+2024-06-18,Cabai Merah,78750.0,cabai_merah,True
+2024-06-25,Cabai Merah,111900.0,cabai_merah,True
+2024-07-02,Cabai Merah,83750.0,cabai_merah,True
+2024-07-09,Cabai Merah,83750.0,cabai_merah,True
+2024-07-16,Cabai Merah,77500.0,cabai_merah,True
+2024-07-23,Cabai Merah,97500.0,cabai_merah,True
+2024-07-30,Cabai Merah,81900.0,cabai_merah,True
+2024-08-06,Cabai Merah,84400.0,cabai_merah,True
+2024-08-13,Cabai Merah,82500.0,cabai_merah,True
+2024-08-20,Cabai Merah,90000.0,cabai_merah,True
+2024-08-27,Cabai Merah,90000.0,cabai_merah,True
+2024-09-03,Cabai Merah,83150.0,cabai_merah,True
+2024-09-10,Cabai Merah,77500.0,cabai_merah,True
+2024-09-17,Cabai Merah,82500.0,cabai_merah,True
+2024-09-24,Cabai Merah,71900.0,cabai_merah,True
+2024-10-01,Cabai Merah,66250.0,cabai_merah,True
+2024-10-08,Cabai Merah,64100.0,cabai_merah,True
+2024-10-15,Cabai Merah,65000.0,cabai_merah,True
+2024-10-22,Cabai Merah,63750.0,cabai_merah,True
+2024-10-29,Cabai Merah,57500.0,cabai_merah,True
+2024-11-05,Cabai Merah,52500.0,cabai_merah,True
+2024-11-12,Cabai Merah,47850.0,cabai_merah,True
+2024-11-19,Cabai Merah,52500.0,cabai_merah,True
+2024-11-26,Cabai Merah,57200.0,cabai_merah,True
+2024-12-03,Cabai Merah,66600.0,cabai_merah,True
+2024-12-10,Cabai Merah,65350.0,cabai_merah,True
+2024-12-17,Cabai Merah,61600.0,cabai_merah,True
+2024-12-24,Cabai Merah,73750.0,cabai_merah,True
+2024-12-31,Cabai Merah,107500.0,cabai_merah,True
+2025-01-07,Cabai Merah,97500.0,cabai_merah,True
+2025-01-14,Cabai Merah,106900.0,cabai_merah,True
+2025-01-21,Cabai Merah,88750.0,cabai_merah,True
+2025-01-28,Cabai Merah,84100.0,cabai_merah,True
+2025-02-04,Cabai Merah,72500.0,cabai_merah,True
+2025-02-11,Cabai Merah,,cabai_merah,False
+2025-02-18,Cabai Merah,80350.0,cabai_merah,True
+2025-02-25,Cabai Merah,85350.0,cabai_merah,True
+2025-03-04,Cabai Merah,93450.0,cabai_merah,True
+2025-03-11,Cabai Merah,94100.0,cabai_merah,True
+2025-03-18,Cabai Merah,89700.0,cabai_merah,True
+2025-03-25,Cabai Merah,103450.0,cabai_merah,True
+2025-04-01,Cabai Merah,115650.0,cabai_merah,True
+2025-04-08,Cabai Merah,97500.0,cabai_merah,True
+2025-04-15,Cabai Merah,104400.0,cabai_merah,True
+2025-04-22,Cabai Merah,99100.0,cabai_merah,True
+2025-04-29,Cabai Merah,98150.0,cabai_merah,True
+2025-05-06,Cabai Merah,91250.0,cabai_merah,True
+2025-05-13,Cabai Merah,91250.0,cabai_merah,True
+2025-05-20,Cabai Merah,98150.0,cabai_merah,True
+2025-05-27,Cabai Merah,97500.0,cabai_merah,True
+2025-06-03,Cabai Merah,92500.0,cabai_merah,True
+2025-06-10,Cabai Merah,94700.0,cabai_merah,True
+2025-06-17,Cabai Merah,95950.0,cabai_merah,True
+2025-06-24,Cabai Merah,93450.0,cabai_merah,True
+2025-07-01,Cabai Merah,92200.0,cabai_merah,True
+2025-07-08,Cabai Merah,85350.0,cabai_merah,True
+2025-07-15,Cabai Merah,85950.0,cabai_merah,True
+2025-07-22,Cabai Merah,85000.0,cabai_merah,True
+2025-07-29,Cabai Merah,75350.0,cabai_merah,True
+2025-08-05,Cabai Merah,74100.0,cabai_merah,True
+2025-08-12,Cabai Merah,70950.0,cabai_merah,True
+2025-08-19,Cabai Merah,69700.0,cabai_merah,True
+2025-08-26,Cabai Merah,66600.0,cabai_merah,True
+2025-09-02,Cabai Merah,65950.0,cabai_merah,True
+2025-09-09,Cabai Merah,67200.0,cabai_merah,True
+2025-09-16,Cabai Merah,65350.0,cabai_merah,True
+2025-09-23,Cabai Merah,61600.0,cabai_merah,True
+2025-09-30,Cabai Merah,67850.0,cabai_merah,True
+2025-10-07,Cabai Merah,68750.0,cabai_merah,True
+2025-10-14,Cabai Merah,63150.0,cabai_merah,True
+2025-10-21,Cabai Merah,63150.0,cabai_merah,True
+2025-10-28,Cabai Merah,59700.0,cabai_merah,True
+2025-11-04,Cabai Merah,56150.0,cabai_merah,True
+2025-11-11,Cabai Merah,64400.0,cabai_merah,True
+2025-11-18,Cabai Merah,62500.0,cabai_merah,True
+2025-11-25,Cabai Merah,61600.0,cabai_merah,True
+2025-12-02,Cabai Merah,66600.0,cabai_merah,True
+2025-12-09,Cabai Merah,63150.0,cabai_merah,True
+2025-12-16,Cabai Merah,66600.0,cabai_merah,True
+2025-12-23,Cabai Merah,85950.0,cabai_merah,True
+2025-12-30,Cabai Merah,78150.0,cabai_merah,True
+2026-01-06,Cabai Merah,74400.0,cabai_merah,True
+2026-01-13,Cabai Merah,73750.0,cabai_merah,True
+2026-01-20,Cabai Merah,81250.0,cabai_merah,True
+2026-01-27,Cabai Merah,69400.0,cabai_merah,True
+2026-02-03,Cabai Merah,60000.0,cabai_merah,True
+2026-02-10,Cabai Merah,62500.0,cabai_merah,True
+2026-02-17,Cabai Merah,65000.0,cabai_merah,True
+2026-02-24,Cabai Merah,80650.0,cabai_merah,True
+2026-03-03,Cabai Merah,76900.0,cabai_merah,True
+2026-03-10,Cabai Merah,76250.0,cabai_merah,True
+2026-03-17,Cabai Merah,91250.0,cabai_merah,True
+2026-03-24,Cabai Merah,91250.0,cabai_merah,True
+2026-03-31,Cabai Merah,88150.0,cabai_merah,True
+2026-04-07,Cabai Merah,90000.0,cabai_merah,True
+2026-04-14,Cabai Merah,71900.0,cabai_merah,True
+2026-04-21,Cabai Merah,71250.0,cabai_merah,True
+2026-04-28,Cabai Merah,63750.0,cabai_merah,True
+2026-05-05,Cabai Merah,70650.0,cabai_merah,True
+2026-05-12,Cabai Merah,71250.0,cabai_merah,True
+2026-05-19,Cabai Merah,70650.0,cabai_merah,True
+2026-05-26,Cabai Merah,82500.0,cabai_merah,True
+2026-06-02,Cabai Merah,81250.0,cabai_merah,True
+2026-06-09,Cabai Merah,93150.0,cabai_merah,True
+2026-06-16,Cabai Merah,89700.0,cabai_merah,True
+2026-06-23,Cabai Merah,88450.0,cabai_merah,True
+2026-06-30,Cabai Merah,92850.0,cabai_merah,True
+2026-07-07,Cabai Merah,85950.0,cabai_merah,True
+2026-07-14,Cabai Merah,83750.0,cabai_merah,True
+2026-07-21,Cabai Merah,82200.0,cabai_merah,True
+2026-07-28,Cabai Merah,75000.0,cabai_merah,True
+2026-08-04,Cabai Merah,75650.0,cabai_merah,True
+2026-08-11,Cabai Merah,85000.0,cabai_merah,True
+2026-08-18,Cabai Merah,88750.0,cabai_merah,True
+2026-08-25,Cabai Merah,97500.0,cabai_merah,True
+2023-01-31,Daging Sapi,135000.0,daging_sapi,True
+2023-02-07,Daging Sapi,135000.0,daging_sapi,True
+2023-02-14,Daging Sapi,135000.0,daging_sapi,True
+2023-02-21,Daging Sapi,135000.0,daging_sapi,True
+2023-02-28,Daging Sapi,135000.0,daging_sapi,True
+2023-03-07,Daging Sapi,135000.0,daging_sapi,True
+2023-03-14,Daging Sapi,135000.0,daging_sapi,True
+2023-03-21,Daging Sapi,135000.0,daging_sapi,True
+2023-03-28,Daging Sapi,135000.0,daging_sapi,True
+2023-04-04,Daging Sapi,135000.0,daging_sapi,True
+2023-04-11,Daging Sapi,135000.0,daging_sapi,True
+2023-04-18,Daging Sapi,135000.0,daging_sapi,True
+2023-04-25,Daging Sapi,135000.0,daging_sapi,True
+2023-05-02,Daging Sapi,135000.0,daging_sapi,True
+2023-05-09,Daging Sapi,135000.0,daging_sapi,True
+2023-05-16,Daging Sapi,135000.0,daging_sapi,True
+2023-05-23,Daging Sapi,135000.0,daging_sapi,True
+2023-05-30,Daging Sapi,135000.0,daging_sapi,True
+2023-06-06,Daging Sapi,140000.0,daging_sapi,True
+2023-06-13,Daging Sapi,135000.0,daging_sapi,True
+2023-06-20,Daging Sapi,135000.0,daging_sapi,True
+2023-06-27,Daging Sapi,135000.0,daging_sapi,True
+2023-07-04,Daging Sapi,135000.0,daging_sapi,True
+2023-07-11,Daging Sapi,135000.0,daging_sapi,True
+2023-07-18,Daging Sapi,135000.0,daging_sapi,True
+2023-07-25,Daging Sapi,135000.0,daging_sapi,True
+2023-08-01,Daging Sapi,135000.0,daging_sapi,True
+2023-08-08,Daging Sapi,133750.0,daging_sapi,True
+2023-08-15,Daging Sapi,132500.0,daging_sapi,True
+2023-08-22,Daging Sapi,132500.0,daging_sapi,True
+2023-08-29,Daging Sapi,132500.0,daging_sapi,True
+2023-09-05,Daging Sapi,132500.0,daging_sapi,True
+2023-09-12,Daging Sapi,132500.0,daging_sapi,True
+2023-09-19,Daging Sapi,135000.0,daging_sapi,True
+2023-09-26,Daging Sapi,135000.0,daging_sapi,True
+2023-10-03,Daging Sapi,135000.0,daging_sapi,True
+2023-10-10,Daging Sapi,135000.0,daging_sapi,True
+2023-10-17,Daging Sapi,135000.0,daging_sapi,True
+2023-10-24,Daging Sapi,135000.0,daging_sapi,True
+2023-10-31,Daging Sapi,131250.0,daging_sapi,True
+2023-11-07,Daging Sapi,131250.0,daging_sapi,True
+2023-11-14,Daging Sapi,131250.0,daging_sapi,True
+2023-11-21,Daging Sapi,131250.0,daging_sapi,True
+2023-11-28,Daging Sapi,131250.0,daging_sapi,True
+2023-12-05,Daging Sapi,131250.0,daging_sapi,True
+2023-12-12,Daging Sapi,131250.0,daging_sapi,True
+2023-12-19,Daging Sapi,131250.0,daging_sapi,True
+2023-12-26,Daging Sapi,,daging_sapi,False
+2024-01-02,Daging Sapi,133750.0,daging_sapi,True
+2024-01-09,Daging Sapi,131250.0,daging_sapi,True
+2024-01-16,Daging Sapi,133750.0,daging_sapi,True
+2024-01-23,Daging Sapi,133750.0,daging_sapi,True
+2024-01-30,Daging Sapi,133750.0,daging_sapi,True
+2024-02-06,Daging Sapi,133750.0,daging_sapi,True
+2024-02-13,Daging Sapi,133750.0,daging_sapi,True
+2024-02-20,Daging Sapi,132500.0,daging_sapi,True
+2024-02-27,Daging Sapi,133750.0,daging_sapi,True
+2024-03-05,Daging Sapi,132500.0,daging_sapi,True
+2024-03-12,Daging Sapi,133750.0,daging_sapi,True
+2024-03-19,Daging Sapi,132500.0,daging_sapi,True
+2024-03-26,Daging Sapi,133150.0,daging_sapi,True
+2024-04-02,Daging Sapi,132500.0,daging_sapi,True
+2024-04-09,Daging Sapi,133750.0,daging_sapi,True
+2024-04-16,Daging Sapi,137500.0,daging_sapi,True
+2024-04-23,Daging Sapi,137500.0,daging_sapi,True
+2024-04-30,Daging Sapi,137500.0,daging_sapi,True
+2024-05-07,Daging Sapi,137500.0,daging_sapi,True
+2024-05-14,Daging Sapi,137500.0,daging_sapi,True
+2024-05-21,Daging Sapi,137500.0,daging_sapi,True
+2024-05-28,Daging Sapi,137500.0,daging_sapi,True
+2024-06-04,Daging Sapi,137500.0,daging_sapi,True
+2024-06-11,Daging Sapi,137500.0,daging_sapi,True
+2024-06-18,Daging Sapi,137500.0,daging_sapi,True
+2024-06-25,Daging Sapi,137500.0,daging_sapi,True
+2024-07-02,Daging Sapi,137500.0,daging_sapi,True
+2024-07-09,Daging Sapi,137500.0,daging_sapi,True
+2024-07-16,Daging Sapi,137500.0,daging_sapi,True
+2024-07-23,Daging Sapi,137500.0,daging_sapi,True
+2024-07-30,Daging Sapi,138750.0,daging_sapi,True
+2024-08-06,Daging Sapi,138750.0,daging_sapi,True
+2024-08-13,Daging Sapi,138150.0,daging_sapi,True
+2024-08-20,Daging Sapi,138150.0,daging_sapi,True
+2024-08-27,Daging Sapi,138150.0,daging_sapi,True
+2024-09-03,Daging Sapi,138150.0,daging_sapi,True
+2024-09-10,Daging Sapi,138750.0,daging_sapi,True
+2024-09-17,Daging Sapi,136250.0,daging_sapi,True
+2024-09-24,Daging Sapi,139400.0,daging_sapi,True
+2024-10-01,Daging Sapi,138150.0,daging_sapi,True
+2024-10-08,Daging Sapi,138750.0,daging_sapi,True
+2024-10-15,Daging Sapi,138150.0,daging_sapi,True
+2024-10-22,Daging Sapi,138150.0,daging_sapi,True
+2024-10-29,Daging Sapi,138150.0,daging_sapi,True
+2024-11-05,Daging Sapi,138750.0,daging_sapi,True
+2024-11-12,Daging Sapi,138750.0,daging_sapi,True
+2024-11-19,Daging Sapi,138150.0,daging_sapi,True
+2024-11-26,Daging Sapi,138150.0,daging_sapi,True
+2024-12-03,Daging Sapi,136250.0,daging_sapi,True
+2024-12-10,Daging Sapi,138150.0,daging_sapi,True
+2024-12-17,Daging Sapi,138150.0,daging_sapi,True
+2024-12-24,Daging Sapi,138750.0,daging_sapi,True
+2024-12-31,Daging Sapi,141250.0,daging_sapi,True
+2025-01-07,Daging Sapi,138750.0,daging_sapi,True
+2025-01-14,Daging Sapi,140000.0,daging_sapi,True
+2025-01-21,Daging Sapi,140000.0,daging_sapi,True
+2025-01-28,Daging Sapi,140000.0,daging_sapi,True
+2025-02-04,Daging Sapi,140000.0,daging_sapi,True
+2025-02-11,Daging Sapi,,daging_sapi,False
+2025-02-18,Daging Sapi,137500.0,daging_sapi,True
+2025-02-25,Daging Sapi,137500.0,daging_sapi,True
+2025-03-04,Daging Sapi,137500.0,daging_sapi,True
+2025-03-11,Daging Sapi,140000.0,daging_sapi,True
+2025-03-18,Daging Sapi,137500.0,daging_sapi,True
+2025-03-25,Daging Sapi,140000.0,daging_sapi,True
+2025-04-01,Daging Sapi,141250.0,daging_sapi,True
+2025-04-08,Daging Sapi,140000.0,daging_sapi,True
+2025-04-15,Daging Sapi,137500.0,daging_sapi,True
+2025-04-22,Daging Sapi,136250.0,daging_sapi,True
+2025-04-29,Daging Sapi,136250.0,daging_sapi,True
+2025-05-06,Daging Sapi,138750.0,daging_sapi,True
+2025-05-13,Daging Sapi,136250.0,daging_sapi,True
+2025-05-20,Daging Sapi,136250.0,daging_sapi,True
+2025-05-27,Daging Sapi,136250.0,daging_sapi,True
+2025-06-03,Daging Sapi,136250.0,daging_sapi,True
+2025-06-10,Daging Sapi,137500.0,daging_sapi,True
+2025-06-17,Daging Sapi,137500.0,daging_sapi,True
+2025-06-24,Daging Sapi,136250.0,daging_sapi,True
+2025-07-01,Daging Sapi,138750.0,daging_sapi,True
+2025-07-08,Daging Sapi,136250.0,daging_sapi,True
+2025-07-15,Daging Sapi,136250.0,daging_sapi,True
+2025-07-22,Daging Sapi,136250.0,daging_sapi,True
+2025-07-29,Daging Sapi,136250.0,daging_sapi,True
+2025-08-05,Daging Sapi,136250.0,daging_sapi,True
+2025-08-12,Daging Sapi,137500.0,daging_sapi,True
+2025-08-19,Daging Sapi,137500.0,daging_sapi,True
+2025-08-26,Daging Sapi,137500.0,daging_sapi,True
+2025-09-02,Daging Sapi,137500.0,daging_sapi,True
+2025-09-09,Daging Sapi,137500.0,daging_sapi,True
+2025-09-16,Daging Sapi,137500.0,daging_sapi,True
+2025-09-23,Daging Sapi,137500.0,daging_sapi,True
+2025-09-30,Daging Sapi,137500.0,daging_sapi,True
+2025-10-07,Daging Sapi,136900.0,daging_sapi,True
+2025-10-14,Daging Sapi,136900.0,daging_sapi,True
+2025-10-21,Daging Sapi,136900.0,daging_sapi,True
+2025-10-28,Daging Sapi,136900.0,daging_sapi,True
+2025-11-04,Daging Sapi,136900.0,daging_sapi,True
+2025-11-11,Daging Sapi,138150.0,daging_sapi,True
+2025-11-18,Daging Sapi,138150.0,daging_sapi,True
+2025-11-25,Daging Sapi,141250.0,daging_sapi,True
+2025-12-02,Daging Sapi,141250.0,daging_sapi,True
+2025-12-09,Daging Sapi,141250.0,daging_sapi,True
+2025-12-16,Daging Sapi,141250.0,daging_sapi,True
+2025-12-23,Daging Sapi,141250.0,daging_sapi,True
+2025-12-30,Daging Sapi,140000.0,daging_sapi,True
+2026-01-06,Daging Sapi,146900.0,daging_sapi,True
+2026-01-13,Daging Sapi,153750.0,daging_sapi,True
+2026-01-20,Daging Sapi,153750.0,daging_sapi,True
+2026-01-27,Daging Sapi,153750.0,daging_sapi,True
+2026-02-03,Daging Sapi,153750.0,daging_sapi,True
+2026-02-10,Daging Sapi,153750.0,daging_sapi,True
+2026-02-17,Daging Sapi,151250.0,daging_sapi,True
+2026-02-24,Daging Sapi,148750.0,daging_sapi,True
+2026-03-03,Daging Sapi,147500.0,daging_sapi,True
+2026-03-10,Daging Sapi,146250.0,daging_sapi,True
+2026-03-17,Daging Sapi,147500.0,daging_sapi,True
+2026-03-24,Daging Sapi,147500.0,daging_sapi,True
+2026-03-31,Daging Sapi,151250.0,daging_sapi,True
+2026-04-07,Daging Sapi,148150.0,daging_sapi,True
+2026-04-14,Daging Sapi,150000.0,daging_sapi,True
+2026-04-21,Daging Sapi,149400.0,daging_sapi,True
+2026-04-28,Daging Sapi,149400.0,daging_sapi,True
+2026-05-05,Daging Sapi,147500.0,daging_sapi,True
+2026-05-12,Daging Sapi,147500.0,daging_sapi,True
+2026-05-19,Daging Sapi,147500.0,daging_sapi,True
+2026-05-26,Daging Sapi,147500.0,daging_sapi,True
+2026-06-02,Daging Sapi,147500.0,daging_sapi,True
+2026-06-09,Daging Sapi,145000.0,daging_sapi,True
+2026-06-16,Daging Sapi,145000.0,daging_sapi,True
+2026-06-23,Daging Sapi,145000.0,daging_sapi,True
+2026-06-30,Daging Sapi,150000.0,daging_sapi,True
+2026-07-07,Daging Sapi,150000.0,daging_sapi,True
+2026-07-14,Daging Sapi,150000.0,daging_sapi,True
+2026-07-21,Daging Sapi,150000.0,daging_sapi,True
+2026-07-28,Daging Sapi,150000.0,daging_sapi,True
+2026-08-04,Daging Sapi,150000.0,daging_sapi,True
+2026-08-11,Daging Sapi,142500.0,daging_sapi,True
+2026-08-18,Daging Sapi,142500.0,daging_sapi,True
+2026-08-25,Daging Sapi,143750.0,daging_sapi,True
