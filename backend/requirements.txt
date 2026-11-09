@@ -1,2 +1,5 @@
 Flask
-Flask-Cors
+flask-cors
+mysql-connector-python
+python-dotenv
+certifi
